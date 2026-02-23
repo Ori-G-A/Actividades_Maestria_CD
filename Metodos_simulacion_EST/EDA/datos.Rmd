@@ -1,0 +1,142 @@
+# Datos
+
+
+
+```{r datos_originales, results = "hide", message = FALSE, warning = FALSE}
+# -------------------------------------------------------------------------
+# CARGA Y EXPLORACIÓN INICIAL DEL DATASET
+# -------------------------------------------------------------------------
+
+# Importar base de datos
+# Cargamos la librería readxl para poder leer archivos en formato Excel (.xlsx)
+# (Se usa el operador :: para llamar la función sin cargar toda la librería)
+
+datos <- readxl::read_excel("data/data_actividad1.xlsx", sheet = 1) 
+# read_excel(): importa el archivo Excel ubicado en la ruta especificada
+# sheet = 1 indica que se está leyendo la primera hoja del archivo
+# El objeto resultante se almacena en el data frame llamado "datos"
+
+head(datos)  
+# head(): muestra las primeras 6 filas del dataset
+# Permite verificar que la importación fue correcta y revisar la estructura inicial
+
+dim(datos)  
+# dim(): devuelve las dimensiones del dataset (número de filas y columnas)
+# En este caso debe mostrar 2220 filas y el total de variables registradas
+
+class(datos)  
+# class(): indica la clase del objeto importado
+# Generalmente será "tbl_df", "tbl" y "data.frame" si se importa correctamente
+```
+
+
+La base de datos corresponde a la muestra obtenida durante la campaña piloto en la que se seleccionó aleatoriamente un subconjunto de clientes que fueron contactados por vía telefónica. En total, se recopiló información de 2220 clientes, donde cada uno reportó información sociodemográfica, hábitos de compra y respuesta a campañas de marketing. Cada registro contiene información sobre la aceptación de campañas anteriores (*AcceptedCmp1*, *AcceptedCmp2*, *AcceptedCmp3*, *AcceptedCmp4*, *AcceptedCmp5*), un indicador global de aceptación (*AcceptedCmpOverall*), la respuesta a la campaña piloto (*Response*), la existencia de quejas (*Complain*), y la antigüedad del cliente en días (*Customer_Days*).
+
+Asimismo, se incluye información sociodemográfica como el nivel educativo (*education_2n Cycle*, *education_Basic*, *education_Graduation*, *education_Master*, *education_PhD*), el estado civil (*marital_Single*, *marital_Together*, *marital_Married*, *marital_Divorced*, *marital_Widow*), el número de niños en el hogar (*Kidhome*), el número de adolescentes en el hogar (*Teenhome*), el ingreso anual del cliente (*Income*) y la edad (*Age*).
+
+Finalmente, la base de datos incorpora variables de comportamiento de compra, tales como el gasto en diferentes categorías de productos (*MntFishProducts*, *MntMeatProducts*, *MntFruits*, *MntSweetProducts*, *MntWines*, *MntGoldProds*), el gasto total (*MntTotal*), el gasto en productos regulares (*MntRegularProds*), el número de compras con descuento (*NumDealsPurchases*), compras por catálogo (*NumCatalogPurchases*), compras en tienda física (*NumStorePurchases*), compras en la web (*NumWebPurchases*), el número de visitas mensuales al sitio web (*NumWebVisitsMonth*) y la recencia de la última compra (*Recency*).
+
+Desde la perspectiva de su naturaleza, el dataset contiene un total de 17 variables cualitativas binarias que representan principalmente indicadores de respuesta a campañas previas y variables dummy asociadas a características educativas y del estado civil.
+
+Asimismo, se identifican 11 variables cuantitativas discretas que corresponden, en su mayoría, a métricas de comportamiento de compra, estructura del hogar e interacciones con la empresa, tales como número de adquisiciones, visitas a canales digitales, composición familiar y quejas.
+
+Finalmente, se incluyen 9 variables cuantitativas continuas que abarcan variables económicas y de gasto acumulado por categoría de producto, las cuales permiten aproximar el valor monetario del cliente para la organización.
+
+La Tabla \@ref(tab:data) presenta la descripción y la clasificación de cada variable de acuerdo con su naturaleza.
+
+
+```{r data, eval=TRUE,echo=FALSE}
+# -------------------------------------------------------------------------
+# CONSTRUCCIÓN DEL DICCIONARIO DE VARIABLES
+# -------------------------------------------------------------------------
+
+# Se crea manualmente un dataframe que funciona como diccionario del dataset
+# Contiene:
+# - Nombre: nombre exacto de la variable en el dataset
+# - Descripcion: significado de la variable
+# - Tipo: naturaleza estadística de la variable
+
+tabla_datos <- data.frame(
+  Nombre = c(
+    "AcceptedCmp1","AcceptedCmp2","AcceptedCmp3","AcceptedCmp4","AcceptedCmp5",
+    "AcceptedCmpOverall","Response","Complain",
+    "education_2n Cycle","education_Basic","education_Graduation",
+    "education_Master","education_PhD",
+    "marital_Single", "marital_Together", "marital_Married",
+     "marital_Divorced","marital_Widow",
+    "Kidhome","Teenhome","Income",
+    "MntFishProducts","MntMeatProducts","MntFruits","MntSweetProducts",
+    "MntWines","MntGoldProds","MntTotal","MntRegularProds",
+    "NumDealsPurchases","NumCatalogPurchases","NumStorePurchases",
+    "NumWebPurchases","NumWebVisitsMonth","Recency", "Customer_Days","Age"
+  ),
+  Descripcion = c(
+    "Aceptó la oferta en la primera campaña",
+    "Aceptó la oferta en la segunda campaña",
+    "Aceptó la oferta en la tercera campaña",
+    "Aceptó la oferta en la cuarta campaña",
+    "Aceptó la oferta en la quinta campaña",
+    "Número total de campañas aceptadas",
+    "Aceptó la oferta en la última campaña",
+    "Presentó una queja en los últimos dos años",
+    "Cliente con educación secundaria",
+    "Cliente con educación básica",
+    "Cliente con título universitario",
+    "Cliente con maestría",
+    "Cliente con doctorado",
+    "Cliente divorciado",
+    "Cliente casado",
+    "Cliente soltero",
+    "Cliente en relación",
+    "Cliente viudo",
+    "Número de niños pequeños en el hogar",
+    "Número de adolescentes en el hogar",
+    "Ingreso anual del hogar",
+    "Gasto en productos de pescado en los últimos dos años",
+    "Gasto en productos cárnicos en los últimos dos años",
+    "Gasto en frutas en los últimos dos años",
+    "Gasto en productos dulces en los últimos dos años",
+    "Gasto en vinos en los últimos dos años",
+    "Gasto en productos de oro en los últimos dos años",
+    "Gasto total en todos los productos",
+    "Gasto total en productos regulares",
+    "Número de compras con descuento",
+    "Número de compras por catálogo",
+    "Número de compras en tienda física",
+    "Número de compras vía web",
+    "Número de visitas al sitio web en el último mes",
+    "Días desde la última compra",
+    "Número de días desde el registro del cliente",
+    "Edad del cliente"
+  ),
+  Tipo = c(
+    rep("Cualitativa binaria", 5),
+    "Cuantitativa discreta",
+    "Cualitativa binaria","Cualitativa binaria",
+    rep("Cualitativa binaria", 5),
+    rep("Cualitativa binaria", 5),
+    "Cuantitativa discreta","Cuantitativa discreta","Cuantitativa continua",
+    rep("Cuantitativa continua", 8),
+    rep("Cuantitativa discreta", 8)
+  ),
+  # stringsAsFactors = FALSE evita que las variables tipo texto se conviertan automáticamente en factores
+  stringsAsFactors = FALSE
+)
+
+
+tabla_datos %>%
+  # kable(): genera una tabla formateada para el documento
+  kable(
+    format = "html",
+    caption = "Diccionario de variables del dataset"
+  ) %>%
+   # kable_styling(): aplica estilos visuales (rayado, resaltado al pasar el cursor y diseño adaptable)
+ kable_styling(
+    bootstrap_options = c("striped", "hover", "responsive"),
+    full_width = FALSE
+  ) %>%
+  # column_spec(): pone en negrita la primera columna (Nombre)
+  column_spec(1, bold = TRUE)
+
+```
+

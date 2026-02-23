@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6 Resumen estadístico | Informe-descriptivo</title>
+  <meta name="description" content="6 Resumen estadístico | Informe-descriptivo" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6 Resumen estadístico | Informe-descriptivo" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6 Resumen estadístico | Informe-descriptivo" />
+  
+  
+  
+
+<meta name="author" content="Oriana Giraldo Arcia" />
+
+
+<meta name="date" content="2026-02-13" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="procesamiento.html"/>
+<link rel="next" href="resultados.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Índice</a></li>
+<li class="chapter" data-level="2" data-path="descripción.html"><a href="descripción.html"><i class="fa fa-check"></i><b>2</b> Descripción</a></li>
+<li class="chapter" data-level="3" data-path="objetivos.html"><a href="objetivos.html"><i class="fa fa-check"></i><b>3</b> Objetivos</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="objetivos.html"><a href="objetivos.html#objetivo-general"><i class="fa fa-check"></i><b>3.1</b> Objetivo general</a></li>
+<li class="chapter" data-level="3.2" data-path="objetivos.html"><a href="objetivos.html#objetivos-espec%C3%ADficos"><i class="fa fa-check"></i><b>3.2</b> Objetivos específicos</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="datos.html"><a href="datos.html"><i class="fa fa-check"></i><b>4</b> Datos</a></li>
+<li class="chapter" data-level="5" data-path="procesamiento.html"><a href="procesamiento.html"><i class="fa fa-check"></i><b>5</b> Procesamiento</a></li>
+<li class="chapter" data-level="6" data-path="resumen-estadístico.html"><a href="resumen-estadístico.html"><i class="fa fa-check"></i><b>6</b> Resumen estadístico</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="resumen-estadístico.html"><a href="resumen-estadístico.html#identificaci%C3%B3n-y-eliminaci%C3%B3n-de-duplicados"><i class="fa fa-check"></i><b>6.1</b> identificación y eliminación de duplicados</a></li>
+<li class="chapter" data-level="6.2" data-path="resumen-estadístico.html"><a href="resumen-estadístico.html#errores-e-inconsistencias"><i class="fa fa-check"></i><b>6.2</b> Errores e inconsistencias</a></li>
+<li class="chapter" data-level="6.3" data-path="resumen-estadístico.html"><a href="resumen-estadístico.html#identificaci%C3%B3n-de-valores-at%C3%ADpicos-para-variables-binarias"><i class="fa fa-check"></i><b>6.3</b> Identificación de valores atípicos para variables binarias</a></li>
+<li class="chapter" data-level="6.4" data-path="resumen-estadístico.html"><a href="resumen-estadístico.html#identificaci%C3%B3n-de-valores-at%C3%ADpicos-para-variables-discretas"><i class="fa fa-check"></i><b>6.4</b> Identificación de valores atípicos para variables discretas</a></li>
+<li class="chapter" data-level="6.5" data-path="resumen-estadístico.html"><a href="resumen-estadístico.html#identificaci%C3%B3n-de-valores-at%C3%ADpicos-para-variables-continuas"><i class="fa fa-check"></i><b>6.5</b> Identificación de valores atípicos para variables continuas</a></li>
+<li class="chapter" data-level="6.6" data-path="resumen-estadístico.html"><a href="resumen-estadístico.html#an%C3%A1lisis-de-datos-at%C3%ADpicos"><i class="fa fa-check"></i><b>6.6</b> Análisis de datos atípicos</a></li>
+<li class="chapter" data-level="6.7" data-path="resumen-estadístico.html"><a href="resumen-estadístico.html#identificaci%C3%B3n-de-datos-faltantes"><i class="fa fa-check"></i><b>6.7</b> Identificación de datos faltantes</a></li>
+<li class="chapter" data-level="6.8" data-path="resumen-estadístico.html"><a href="resumen-estadístico.html#imputaci%C3%B3n-de-datos"><i class="fa fa-check"></i><b>6.8</b> Imputación de datos</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="resultados.html"><a href="resultados.html"><i class="fa fa-check"></i><b>7</b> Resultados</a></li>
+<li class="chapter" data-level="8" data-path="conclusiones.html"><a href="conclusiones.html"><i class="fa fa-check"></i><b>8</b> Conclusiones</a></li>
+<li class="chapter" data-level="9" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>9</b> Referencias</a></li>
+<li class="chapter" data-level="10" data-path="anexos.html"><a href="anexos.html"><i class="fa fa-check"></i><b>10</b> Anexos</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Informe-descriptivo</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="resumen-estadístico" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">6</span> Resumen estadístico<a href="resumen-estadístico.html#resumen-estad%C3%ADstico" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="resumen-estadístico.html#cb2-1" tabindex="-1"></a><span class="co"># Crear función para calcular estadísticas (sin asimetría y curtosis)</span></span>
+<span id="cb2-2"><a href="resumen-estadístico.html#cb2-2" tabindex="-1"></a>resumen_estadistico <span class="ot">&lt;-</span> <span class="cf">function</span>(variable, nombre_variable){</span>
+<span id="cb2-3"><a href="resumen-estadístico.html#cb2-3" tabindex="-1"></a>  <span class="fu">tibble</span>(</span>
+<span id="cb2-4"><a href="resumen-estadístico.html#cb2-4" tabindex="-1"></a>    <span class="at">Variable =</span> nombre_variable, </span>
+<span id="cb2-5"><a href="resumen-estadístico.html#cb2-5" tabindex="-1"></a>    <span class="at">Min =</span> <span class="fu">min</span>(variable, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb2-6"><a href="resumen-estadístico.html#cb2-6" tabindex="-1"></a>    <span class="at">Max =</span> <span class="fu">max</span>(variable, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb2-7"><a href="resumen-estadístico.html#cb2-7" tabindex="-1"></a>    <span class="at">Median =</span> <span class="fu">median</span>(variable, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb2-8"><a href="resumen-estadístico.html#cb2-8" tabindex="-1"></a>    <span class="at">Media =</span> <span class="fu">round</span>(<span class="fu">mean</span>(variable, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="dv">2</span>),</span>
+<span id="cb2-9"><a href="resumen-estadístico.html#cb2-9" tabindex="-1"></a>    <span class="at">std =</span> <span class="fu">round</span>(<span class="fu">sd</span>(variable, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="dv">2</span>),</span>
+<span id="cb2-10"><a href="resumen-estadístico.html#cb2-10" tabindex="-1"></a>    <span class="at">Q_1 =</span> <span class="fu">quantile</span>(variable, <span class="fl">0.25</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb2-11"><a href="resumen-estadístico.html#cb2-11" tabindex="-1"></a>    <span class="at">Q_3 =</span> <span class="fu">quantile</span>(variable, <span class="fl">0.75</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-12"><a href="resumen-estadístico.html#cb2-12" tabindex="-1"></a>  )</span>
+<span id="cb2-13"><a href="resumen-estadístico.html#cb2-13" tabindex="-1"></a>}</span>
+<span id="cb2-14"><a href="resumen-estadístico.html#cb2-14" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="resumen-estadístico.html#cb2-15" tabindex="-1"></a><span class="co"># Identificar columnas numéricas</span></span>
+<span id="cb2-16"><a href="resumen-estadístico.html#cb2-16" tabindex="-1"></a>columnas_numericas <span class="ot">&lt;-</span> <span class="fu">names</span>(data_act1)[<span class="fu">sapply</span>(data_act1, is.numeric)]</span>
+<span id="cb2-17"><a href="resumen-estadístico.html#cb2-17" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="resumen-estadístico.html#cb2-18" tabindex="-1"></a><span class="co"># Aplicar la función a todas las variables numéricas</span></span>
+<span id="cb2-19"><a href="resumen-estadístico.html#cb2-19" tabindex="-1"></a>estadisticas <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(</span>
+<span id="cb2-20"><a href="resumen-estadístico.html#cb2-20" tabindex="-1"></a>  <span class="fu">lapply</span>(columnas_numericas, <span class="cf">function</span>(col) {</span>
+<span id="cb2-21"><a href="resumen-estadístico.html#cb2-21" tabindex="-1"></a>    <span class="fu">resumen_estadistico</span>(data_act1[[col]], col)</span>
+<span id="cb2-22"><a href="resumen-estadístico.html#cb2-22" tabindex="-1"></a>  })</span>
+<span id="cb2-23"><a href="resumen-estadístico.html#cb2-23" tabindex="-1"></a>)</span>
+<span id="cb2-24"><a href="resumen-estadístico.html#cb2-24" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="resumen-estadístico.html#cb2-25" tabindex="-1"></a><span class="co"># Calcular datos faltantes</span></span>
+<span id="cb2-26"><a href="resumen-estadístico.html#cb2-26" tabindex="-1"></a>faltantes <span class="ot">&lt;-</span> <span class="fu">colSums</span>(<span class="fu">is.na</span>(data_act1)) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-27"><a href="resumen-estadístico.html#cb2-27" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb2-28"><a href="resumen-estadístico.html#cb2-28" tabindex="-1"></a>  tibble<span class="sc">::</span><span class="fu">rownames_to_column</span>(<span class="st">&quot;Variable&quot;</span>)</span>
+<span id="cb2-29"><a href="resumen-estadístico.html#cb2-29" tabindex="-1"></a><span class="fu">colnames</span>(faltantes) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Variable&quot;</span>, <span class="st">&quot;NA&#39;s&quot;</span>)</span>
+<span id="cb2-30"><a href="resumen-estadístico.html#cb2-30" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="resumen-estadístico.html#cb2-31" tabindex="-1"></a><span class="co"># Concatenar tablas</span></span>
+<span id="cb2-32"><a href="resumen-estadístico.html#cb2-32" tabindex="-1"></a>tabla_completa <span class="ot">&lt;-</span> <span class="fu">left_join</span>(estadisticas, faltantes, <span class="at">by =</span> <span class="st">&quot;Variable&quot;</span>)</span>
+<span id="cb2-33"><a href="resumen-estadístico.html#cb2-33" tabindex="-1"></a></span>
+<span id="cb2-34"><a href="resumen-estadístico.html#cb2-34" tabindex="-1"></a><span class="co"># Crear tabla con kable</span></span>
+<span id="cb2-35"><a href="resumen-estadístico.html#cb2-35" tabindex="-1"></a><span class="fu">kable</span>(tabla_completa, <span class="at">format =</span> <span class="st">&quot;html&quot;</span>, </span>
+<span id="cb2-36"><a href="resumen-estadístico.html#cb2-36" tabindex="-1"></a>      <span class="at">caption =</span> <span class="st">&quot;Tabla 1.12 Estadísticas descriptivas y datos faltantes&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-37"><a href="resumen-estadístico.html#cb2-37" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">&quot;striped&quot;</span>, <span class="st">&quot;hover&quot;</span>, <span class="st">&quot;responsive&quot;</span>), </span>
+<span id="cb2-38"><a href="resumen-estadístico.html#cb2-38" tabindex="-1"></a>                <span class="at">full_width =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-39"><a href="resumen-estadístico.html#cb2-39" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">1</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<table class="table table-striped table-hover table-responsive" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-2">Table 6.1: </span>Tabla 1.12 Estadísticas descriptivas y datos faltantes
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:right;">
+Min
+</th>
+<th style="text-align:right;">
+Max
+</th>
+<th style="text-align:right;">
+Median
+</th>
+<th style="text-align:right;">
+Media
+</th>
+<th style="text-align:right;">
+std
+</th>
+<th style="text-align:right;">
+Q_1
+</th>
+<th style="text-align:right;">
+Q_3
+</th>
+<th style="text-align:right;">
+NA’s
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Income
+</td>
+<td style="text-align:right;">
+17300
+</td>
+<td style="text-align:right;">
+1137340
+</td>
+<td style="text-align:right;">
+513815.0
+</td>
+<td style="text-align:right;">
+516535.57
+</td>
+<td style="text-align:right;">
+207041.06
+</td>
+<td style="text-align:right;">
+351295.00
+</td>
+<td style="text-align:right;">
+682757.50
+</td>
+<td style="text-align:right;">
+68
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Kidhome
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.44
+</td>
+<td style="text-align:right;">
+0.54
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Teenhome
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.50
+</td>
+<td style="text-align:right;">
+0.54
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Recency
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+99
+</td>
+<td style="text-align:right;">
+49.0
+</td>
+<td style="text-align:right;">
+48.97
+</td>
+<td style="text-align:right;">
+28.89
+</td>
+<td style="text-align:right;">
+24.00
+</td>
+<td style="text-align:right;">
+74.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntWines
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1493
+</td>
+<td style="text-align:right;">
+174.5
+</td>
+<td style="text-align:right;">
+301.05
+</td>
+<td style="text-align:right;">
+331.64
+</td>
+<td style="text-align:right;">
+24.00
+</td>
+<td style="text-align:right;">
+496.00
+</td>
+<td style="text-align:right;">
+20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntFruits
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+199
+</td>
+<td style="text-align:right;">
+8.0
+</td>
+<td style="text-align:right;">
+26.59
+</td>
+<td style="text-align:right;">
+40.17
+</td>
+<td style="text-align:right;">
+2.00
+</td>
+<td style="text-align:right;">
+33.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntMeatProducts
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1725
+</td>
+<td style="text-align:right;">
+68.0
+</td>
+<td style="text-align:right;">
+165.77
+</td>
+<td style="text-align:right;">
+218.16
+</td>
+<td style="text-align:right;">
+16.00
+</td>
+<td style="text-align:right;">
+232.25
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntFishProducts
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+259
+</td>
+<td style="text-align:right;">
+12.0
+</td>
+<td style="text-align:right;">
+37.74
+</td>
+<td style="text-align:right;">
+54.78
+</td>
+<td style="text-align:right;">
+3.00
+</td>
+<td style="text-align:right;">
+50.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntSweetProducts
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+262
+</td>
+<td style="text-align:right;">
+8.0
+</td>
+<td style="text-align:right;">
+27.11
+</td>
+<td style="text-align:right;">
+41.06
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+33.25
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntGoldProds
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+321
+</td>
+<td style="text-align:right;">
+25.0
+</td>
+<td style="text-align:right;">
+44.30
+</td>
+<td style="text-align:right;">
+52.09
+</td>
+<td style="text-align:right;">
+9.00
+</td>
+<td style="text-align:right;">
+57.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumDealsPurchases
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+2.0
+</td>
+<td style="text-align:right;">
+2.32
+</td>
+<td style="text-align:right;">
+1.89
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+3.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumWebPurchases
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:right;">
+4.0
+</td>
+<td style="text-align:right;">
+4.10
+</td>
+<td style="text-align:right;">
+2.74
+</td>
+<td style="text-align:right;">
+2.00
+</td>
+<td style="text-align:right;">
+6.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumCatalogPurchases
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+2.0
+</td>
+<td style="text-align:right;">
+2.65
+</td>
+<td style="text-align:right;">
+2.80
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+4.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumStorePurchases
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+5.0
+</td>
+<td style="text-align:right;">
+5.82
+</td>
+<td style="text-align:right;">
+3.24
+</td>
+<td style="text-align:right;">
+3.00
+</td>
+<td style="text-align:right;">
+8.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumWebVisitsMonth
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+6.0
+</td>
+<td style="text-align:right;">
+5.33
+</td>
+<td style="text-align:right;">
+2.41
+</td>
+<td style="text-align:right;">
+3.00
+</td>
+<td style="text-align:right;">
+7.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmp3
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.07
+</td>
+<td style="text-align:right;">
+0.26
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmp4
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.07
+</td>
+<td style="text-align:right;">
+0.26
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmp5
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.07
+</td>
+<td style="text-align:right;">
+0.26
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmp1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.06
+</td>
+<td style="text-align:right;">
+0.25
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmp2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Complain
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:right;">
+0.09
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Response
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.15
+</td>
+<td style="text-align:right;">
+0.36
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Age
+</td>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:right;">
+240
+</td>
+<td style="text-align:right;">
+50.0
+</td>
+<td style="text-align:right;">
+51.31
+</td>
+<td style="text-align:right;">
+12.98
+</td>
+<td style="text-align:right;">
+43.00
+</td>
+<td style="text-align:right;">
+61.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Customer_Days
+</td>
+<td style="text-align:right;">
+2159
+</td>
+<td style="text-align:right;">
+2858
+</td>
+<td style="text-align:right;">
+2515.0
+</td>
+<td style="text-align:right;">
+2512.84
+</td>
+<td style="text-align:right;">
+202.76
+</td>
+<td style="text-align:right;">
+2338.75
+</td>
+<td style="text-align:right;">
+2688.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+marital_Divorced
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+100
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.37
+</td>
+<td style="text-align:right;">
+5.20
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+marital_Married
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.39
+</td>
+<td style="text-align:right;">
+0.49
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+marital_Single
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.22
+</td>
+<td style="text-align:right;">
+0.41
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+marital_Together
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.26
+</td>
+<td style="text-align:right;">
+0.44
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+marital_Widow
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+<td style="text-align:right;">
+0.18
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+education_2n Cycle
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.09
+</td>
+<td style="text-align:right;">
+0.29
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+education_Basic
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+<td style="text-align:right;">
+0.16
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+education_Graduation
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1.0
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+<td style="text-align:right;">
+0.50
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+education_Master
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.17
+</td>
+<td style="text-align:right;">
+0.37
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+education_PhD
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.21
+</td>
+<td style="text-align:right;">
+0.41
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntTotal
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+2491
+</td>
+<td style="text-align:right;">
+344.5
+</td>
+<td style="text-align:right;">
+563.51
+</td>
+<td style="text-align:right;">
+575.84
+</td>
+<td style="text-align:right;">
+56.00
+</td>
+<td style="text-align:right;">
+965.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntRegularProds
+</td>
+<td style="text-align:right;">
+-283
+</td>
+<td style="text-align:right;">
+2458
+</td>
+<td style="text-align:right;">
+288.5
+</td>
+<td style="text-align:right;">
+519.21
+</td>
+<td style="text-align:right;">
+553.65
+</td>
+<td style="text-align:right;">
+42.00
+</td>
+<td style="text-align:right;">
+886.25
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmpOverall
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.30
+</td>
+<td style="text-align:right;">
+0.68
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+</tbody>
+</table>
+<div id="identificación-y-eliminación-de-duplicados" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> identificación y eliminación de duplicados<a href="resumen-estadístico.html#identificaci%C3%B3n-y-eliminaci%C3%B3n-de-duplicados" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>del dataset datos_act1 vamos a detectar y eliminar lso registros duplicados</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="resumen-estadístico.html#cb3-1" tabindex="-1"></a><span class="co"># Verificar filas duplicadas</span></span>
+<span id="cb3-2"><a href="resumen-estadístico.html#cb3-2" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="resumen-estadístico.html#cb3-3" tabindex="-1"></a>total_datos <span class="ot">&lt;-</span> <span class="fu">nrow</span>(data_act1)</span>
+<span id="cb3-4"><a href="resumen-estadístico.html#cb3-4" tabindex="-1"></a>filas_duplicadas <span class="ot">&lt;-</span> <span class="fu">duplicated</span>(data_act1)</span>
+<span id="cb3-5"><a href="resumen-estadístico.html#cb3-5" tabindex="-1"></a>total_filas_duplicadas <span class="ot">&lt;-</span> <span class="fu">sum</span>(filas_duplicadas)</span>
+<span id="cb3-6"><a href="resumen-estadístico.html#cb3-6" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="resumen-estadístico.html#cb3-7" tabindex="-1"></a><span class="co">#eliminar duplicados</span></span>
+<span id="cb3-8"><a href="resumen-estadístico.html#cb3-8" tabindex="-1"></a>data_sin_dup <span class="ot">&lt;-</span> data_act1[<span class="sc">!</span>filas_duplicadas, ]</span>
+<span id="cb3-9"><a href="resumen-estadístico.html#cb3-9" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="resumen-estadístico.html#cb3-10" tabindex="-1"></a>total_filas_sin_duplicados <span class="ot">&lt;-</span> <span class="fu">nrow</span>(data_sin_dup)</span>
+<span id="cb3-11"><a href="resumen-estadístico.html#cb3-11" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="resumen-estadístico.html#cb3-12" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&#39;Número inicial de filas&#39;</span>, total_datos, <span class="st">&#39;</span><span class="sc">\n</span><span class="st">&#39;</span>)</span></code></pre></div>
+<pre><code>## Número inicial de filas 2220</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="resumen-estadístico.html#cb5-1" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&#39;Número de filas duplicadas&#39;</span>, total_filas_duplicadas, <span class="st">&#39;</span><span class="sc">\n</span><span class="st">&#39;</span>)</span></code></pre></div>
+<pre><code>## Número de filas duplicadas 179</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="resumen-estadístico.html#cb7-1" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&#39;Número de filas sin duplicados&#39;</span>, total_filas_sin_duplicados)</span></code></pre></div>
+<pre><code>## Número de filas sin duplicados 2041</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="resumen-estadístico.html#cb9-1" tabindex="-1"></a><span class="co">#Exportamos a archivo CSV los datos sin duplicados</span></span>
+<span id="cb9-2"><a href="resumen-estadístico.html#cb9-2" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="resumen-estadístico.html#cb9-3" tabindex="-1"></a><span class="fu">write.csv</span>(</span>
+<span id="cb9-4"><a href="resumen-estadístico.html#cb9-4" tabindex="-1"></a>  data_sin_dup, </span>
+<span id="cb9-5"><a href="resumen-estadístico.html#cb9-5" tabindex="-1"></a>  <span class="at">file =</span> <span class="st">&#39;data_sin_duplicados.csv&#39;</span>,</span>
+<span id="cb9-6"><a href="resumen-estadístico.html#cb9-6" tabindex="-1"></a>  <span class="at">row.names =</span> <span class="cn">FALSE</span></span>
+<span id="cb9-7"><a href="resumen-estadístico.html#cb9-7" tabindex="-1"></a>)</span></code></pre></div>
+<p>Número inicial de filas 2220
+Se eliminaron 179 filas duplicadas y los datos sin duplicados se guardaron en un nuevo archivo csv.
+Número de filas sin duplicados 2041</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="resumen-estadístico.html#cb10-1" tabindex="-1"></a>data_act1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data_sin_duplicados.csv&quot;</span>)</span></code></pre></div>
+<p>Veamos la estructura general del nuevo dataset</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="resumen-estadístico.html#cb11-1" tabindex="-1"></a><span class="fu">str</span>(data_act1)</span></code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    2041 obs. of  37 variables:
+##  $ Income              : num  581380 463440 716130 266460 582930 ...
+##  $ Kidhome             : int  0 1 0 1 1 0 0 1 1 1 ...
+##  $ Teenhome            : int  0 1 0 0 0 1 1 0 0 1 ...
+##  $ Recency             : int  58 38 26 26 94 16 34 32 19 68 ...
+##  $ MntWines            : int  635 11 426 11 173 NA 235 76 14 28 ...
+##  $ MntFruits           : int  88 1 49 4 43 42 65 10 0 0 ...
+##  $ MntMeatProducts     : int  546 6 127 20 118 98 164 56 24 6 ...
+##  $ MntFishProducts     : int  172 2 111 10 46 0 50 3 3 1 ...
+##  $ MntSweetProducts    : int  88 1 21 3 27 42 49 1 3 1 ...
+##  $ MntGoldProds        : int  88 6 42 5 15 14 27 23 2 13 ...
+##  $ NumDealsPurchases   : int  3 2 1 2 5 2 4 2 1 1 ...
+##  $ NumWebPurchases     : int  8 1 8 2 5 6 7 4 3 1 ...
+##  $ NumCatalogPurchases : int  10 1 2 0 3 4 3 0 0 0 ...
+##  $ NumStorePurchases   : int  4 2 10 4 6 10 7 4 2 0 ...
+##  $ NumWebVisitsMonth   : int  7 5 4 6 5 6 6 8 9 20 ...
+##  $ AcceptedCmp3        : int  0 0 0 0 0 0 0 0 0 1 ...
+##  $ AcceptedCmp4        : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ AcceptedCmp5        : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ AcceptedCmp1        : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ AcceptedCmp2        : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ Complain            : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ Response            : int  1 0 0 0 0 0 0 0 1 0 ...
+##  $ Age                 : int  63 66 55 36 39 53 49 35 46 70 ...
+##  $ Customer_Days       : int  2822 2272 2471 2298 2320 2452 2752 2576 2547 2267 ...
+##  $ marital_Divorced    : int  0 0 0 0 0 0 1 0 0 0 ...
+##  $ marital_Married     : int  0 0 0 0 1 0 0 1 0 0 ...
+##  $ marital_Single      : int  1 1 0 0 0 0 0 0 0 0 ...
+##  $ marital_Together    : int  0 0 1 1 0 1 0 0 1 1 ...
+##  $ marital_Widow       : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ education_2n.Cycle  : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ education_Basic     : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ education_Graduation: int  1 1 1 1 0 0 1 0 0 0 ...
+##  $ education_Master    : int  0 0 0 0 0 1 0 0 0 0 ...
+##  $ education_PhD       : int  0 0 0 0 1 0 0 1 1 1 ...
+##  $ MntTotal            : int  1529 21 734 48 407 702 563 146 44 36 ...
+##  $ MntRegularProds     : int  1441 15 692 43 392 688 536 123 42 23 ...
+##  $ AcceptedCmpOverall  : int  0 0 0 0 0 0 0 0 0 1 ...</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="resumen-estadístico.html#cb13-1" tabindex="-1"></a><span class="co">#estadisticas generales</span></span>
+<span id="cb13-2"><a href="resumen-estadístico.html#cb13-2" tabindex="-1"></a><span class="fu">summary</span>(data_act1)</span></code></pre></div>
+<pre><code>##      Income           Kidhome          Teenhome         Recency         MntWines        MntFruits      MntMeatProducts MntFishProducts 
+##  Min.   :  17300   Min.   :0.0000   Min.   :0.0000   Min.   : 0.00   Min.   :   0.0   Min.   :  0.00   Min.   :   0    Min.   :  0.00  
+##  1st Qu.: 352460   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:24.00   1st Qu.:  24.0   1st Qu.:  2.00   1st Qu.:  16    1st Qu.:  3.00  
+##  Median : 514120   Median :0.0000   Median :0.0000   Median :49.00   Median : 174.0   Median :  8.00   Median :  68    Median : 12.00  
+##  Mean   : 516809   Mean   :0.4415   Mean   :0.5076   Mean   :48.91   Mean   : 301.5   Mean   : 26.34   Mean   : 166    Mean   : 37.58  
+##  3rd Qu.: 681480   3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:74.00   3rd Qu.: 499.0   3rd Qu.: 33.00   3rd Qu.: 230    3rd Qu.: 50.00  
+##  Max.   :1137340   Max.   :2.0000   Max.   :2.0000   Max.   :99.00   Max.   :1493.0   Max.   :199.00   Max.   :1725    Max.   :259.00  
+##  NA&#39;s   :68                                                          NA&#39;s   :20                                                        
+##  MntSweetProducts  MntGoldProds    NumDealsPurchases NumWebPurchases  NumCatalogPurchases NumStorePurchases NumWebVisitsMonth  AcceptedCmp3    
+##  Min.   :  0.00   Min.   :  0.00   Min.   : 0.000    Min.   : 0.000   Min.   : 0.000      Min.   : 0.000    Min.   : 0.00     Min.   :0.00000  
+##  1st Qu.:  1.00   1st Qu.:  9.00   1st Qu.: 1.000    1st Qu.: 2.000   1st Qu.: 0.000      1st Qu.: 3.000    1st Qu.: 3.00     1st Qu.:0.00000  
+##  Median :  8.00   Median : 24.00   Median : 2.000    Median : 4.000   Median : 2.000      Median : 5.000    Median : 6.00     Median :0.00000  
+##  Mean   : 27.34   Mean   : 43.88   Mean   : 2.323    Mean   : 4.114   Mean   : 2.646      Mean   : 5.805    Mean   : 5.34     Mean   :0.07398  
+##  3rd Qu.: 34.00   3rd Qu.: 56.00   3rd Qu.: 3.000    3rd Qu.: 6.000   3rd Qu.: 4.000      3rd Qu.: 8.000    3rd Qu.: 7.00     3rd Qu.:0.00000  
+##  Max.   :262.00   Max.   :321.00   Max.   :15.000    Max.   :27.000   Max.   :28.000      Max.   :13.000    Max.   :20.00     Max.   :1.00000  
+##                                                                                                                                                
+##   AcceptedCmp4      AcceptedCmp5      AcceptedCmp1      AcceptedCmp2        Complain           Response           Age         Customer_Days 
+##  Min.   :0.00000   Min.   :0.00000   Min.   :0.00000   Min.   :0.00000   Min.   :0.000000   Min.   :0.0000   Min.   : 25.00   Min.   :2159  
+##  1st Qu.:0.00000   1st Qu.:0.00000   1st Qu.:0.00000   1st Qu.:0.00000   1st Qu.:0.000000   1st Qu.:0.0000   1st Qu.: 43.00   1st Qu.:2337  
+##  Median :0.00000   Median :0.00000   Median :0.00000   Median :0.00000   Median :0.000000   Median :0.0000   Median : 50.00   Median :2510  
+##  Mean   :0.07741   Mean   :0.07349   Mean   :0.06565   Mean   :0.01323   Mean   :0.009309   Mean   :0.1538   Mean   : 51.35   Mean   :2511  
+##  3rd Qu.:0.00000   3rd Qu.:0.00000   3rd Qu.:0.00000   3rd Qu.:0.00000   3rd Qu.:0.000000   3rd Qu.:0.0000   3rd Qu.: 61.00   3rd Qu.:2688  
+##  Max.   :1.00000   Max.   :1.00000   Max.   :1.00000   Max.   :1.00000   Max.   :1.000000   Max.   :1.0000   Max.   :240.00   Max.   :2858  
+##                                                                                                                                             
+##  marital_Divorced   marital_Married  marital_Single   marital_Together marital_Widow     education_2n.Cycle education_Basic  
+##  Min.   :  0.0000   Min.   :0.0000   Min.   :0.0000   Min.   :0.0000   Min.   :0.00000   Min.   :0.00000    Min.   :0.00000  
+##  1st Qu.:  0.0000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.00000   1st Qu.:0.00000    1st Qu.:0.00000  
+##  Median :  0.0000   Median :0.0000   Median :0.0000   Median :0.0000   Median :0.00000   Median :0.00000    Median :0.00000  
+##  Mean   :  0.3964   Mean   :0.3871   Mean   :0.2195   Mean   :0.2528   Mean   :0.03528   Mean   :0.09064    Mean   :0.02401  
+##  3rd Qu.:  0.0000   3rd Qu.:1.0000   3rd Qu.:0.0000   3rd Qu.:1.0000   3rd Qu.:0.00000   3rd Qu.:0.00000    3rd Qu.:0.00000  
+##  Max.   :100.0000   Max.   :1.0000   Max.   :1.0000   Max.   :1.0000   Max.   :1.00000   Max.   :1.00000    Max.   :1.00000  
+##                                                                                                                              
+##  education_Graduation education_Master education_PhD      MntTotal      MntRegularProds  AcceptedCmpOverall
+##  Min.   :0.0000       Min.   :0.0000   Min.   :0.000   Min.   :   4.0   Min.   :-283.0   Min.   :0.0000    
+##  1st Qu.:0.0000       1st Qu.:0.0000   1st Qu.:0.000   1st Qu.:  55.0   1st Qu.:  42.0   1st Qu.:0.0000    
+##  Median :1.0000       Median :0.0000   Median :0.000   Median : 343.0   Median : 288.0   Median :0.0000    
+##  Mean   :0.5012       Mean   :0.1661   Mean   :0.218   Mean   : 564.5   Mean   : 520.6   Mean   :0.3038    
+##  3rd Qu.:1.0000       3rd Qu.:0.0000   3rd Qu.:0.000   3rd Qu.: 965.0   3rd Qu.: 886.0   3rd Qu.:0.0000    
+##  Max.   :1.0000       Max.   :1.0000   Max.   :1.000   Max.   :2491.0   Max.   :2458.0   Max.   :4.0000    
+## </code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="resumen-estadístico.html#cb15-1" tabindex="-1"></a><span class="co"># Detección del % de valores perdidos en cada una de </span></span>
+<span id="cb15-2"><a href="resumen-estadístico.html#cb15-2" tabindex="-1"></a><span class="co">#las columnas que presenta la tabla</span></span>
+<span id="cb15-3"><a href="resumen-estadístico.html#cb15-3" tabindex="-1"></a>porcentaje_faltantes <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">colMeans</span>(<span class="fu">is.na</span>(data_act1)),<span class="dv">2</span>)</span>
+<span id="cb15-4"><a href="resumen-estadístico.html#cb15-4" tabindex="-1"></a>porcentaje_faltantes</span></code></pre></div>
+<pre><code>##               Income              Kidhome             Teenhome              Recency             MntWines            MntFruits 
+##                 0.03                 0.00                 0.00                 0.00                 0.01                 0.00 
+##      MntMeatProducts      MntFishProducts     MntSweetProducts         MntGoldProds    NumDealsPurchases      NumWebPurchases 
+##                 0.00                 0.00                 0.00                 0.00                 0.00                 0.00 
+##  NumCatalogPurchases    NumStorePurchases    NumWebVisitsMonth         AcceptedCmp3         AcceptedCmp4         AcceptedCmp5 
+##                 0.00                 0.00                 0.00                 0.00                 0.00                 0.00 
+##         AcceptedCmp1         AcceptedCmp2             Complain             Response                  Age        Customer_Days 
+##                 0.00                 0.00                 0.00                 0.00                 0.00                 0.00 
+##     marital_Divorced      marital_Married       marital_Single     marital_Together        marital_Widow   education_2n.Cycle 
+##                 0.00                 0.00                 0.00                 0.00                 0.00                 0.00 
+##      education_Basic education_Graduation     education_Master        education_PhD             MntTotal      MntRegularProds 
+##                 0.00                 0.00                 0.00                 0.00                 0.00                 0.00 
+##   AcceptedCmpOverall 
+##                 0.00</code></pre>
+</div>
+<div id="errores-e-inconsistencias" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Errores e inconsistencias<a href="resumen-estadístico.html#errores-e-inconsistencias" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="identificación-de-valores-atípicos-para-variables-binarias" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Identificación de valores atípicos para variables binarias<a href="resumen-estadístico.html#identificaci%C3%B3n-de-valores-at%C3%ADpicos-para-variables-binarias" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="resumen-estadístico.html#cb17-1" tabindex="-1"></a>variables_binarias <span class="ot">&lt;-</span> data_act1 <span class="sc">%&gt;%</span></span>
+<span id="cb17-2"><a href="resumen-estadístico.html#cb17-2" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(AcceptedCmp1,AcceptedCmp2,AcceptedCmp3,AcceptedCmp4,AcceptedCmp5, Response, Complain,</span>
+<span id="cb17-3"><a href="resumen-estadístico.html#cb17-3" tabindex="-1"></a>    education_2n.Cycle,education_Basic,education_Graduation,</span>
+<span id="cb17-4"><a href="resumen-estadístico.html#cb17-4" tabindex="-1"></a>    education_Master,education_PhD,</span>
+<span id="cb17-5"><a href="resumen-estadístico.html#cb17-5" tabindex="-1"></a>    marital_Divorced,marital_Married,marital_Single,</span>
+<span id="cb17-6"><a href="resumen-estadístico.html#cb17-6" tabindex="-1"></a>    marital_Together, marital_Widow)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:barplot-binarias"></span>
+<img src="Informe-descriptivo_files/figure-html/barplot-binarias-1.png" alt="Distribución de variables binarias" width="1344" />
+<p class="caption">
+Figure 6.1: Distribución de variables binarias
+</p>
+</div>
+</div>
+<div id="identificación-de-valores-atípicos-para-variables-discretas" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Identificación de valores atípicos para variables discretas<a href="resumen-estadístico.html#identificaci%C3%B3n-de-valores-at%C3%ADpicos-para-variables-discretas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="resumen-estadístico.html#cb18-1" tabindex="-1"></a><span class="co">#función para detectar atípicos por medio de IQR</span></span>
+<span id="cb18-2"><a href="resumen-estadístico.html#cb18-2" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="resumen-estadístico.html#cb18-3" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="resumen-estadístico.html#cb18-4" tabindex="-1"></a>detectar_atipicos <span class="ot">&lt;-</span> <span class="cf">function</span>(var){</span>
+<span id="cb18-5"><a href="resumen-estadístico.html#cb18-5" tabindex="-1"></a>  Q1 <span class="ot">&lt;-</span> <span class="fu">quantile</span>(var,<span class="fl">0.25</span>,<span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb18-6"><a href="resumen-estadístico.html#cb18-6" tabindex="-1"></a>  Q3 <span class="ot">&lt;-</span> <span class="fu">quantile</span>(var,<span class="fl">0.75</span>,<span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb18-7"><a href="resumen-estadístico.html#cb18-7" tabindex="-1"></a>  IQR <span class="ot">&lt;-</span> Q3<span class="sc">-</span>Q1</span>
+<span id="cb18-8"><a href="resumen-estadístico.html#cb18-8" tabindex="-1"></a>  <span class="fu">which</span>(var <span class="sc">&lt;</span> (Q1<span class="fl">-1.5</span><span class="sc">*</span>IQR) <span class="sc">|</span> var <span class="sc">&gt;</span> (Q3<span class="fl">+1.5</span><span class="sc">*</span>IQR))</span>
+<span id="cb18-9"><a href="resumen-estadístico.html#cb18-9" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="resumen-estadístico.html#cb19-1" tabindex="-1"></a>variables_discretas <span class="ot">&lt;-</span> data_act1 <span class="sc">%&gt;%</span></span>
+<span id="cb19-2"><a href="resumen-estadístico.html#cb19-2" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(Kidhome, Teenhome, Age, Recency, Customer_Days,   AcceptedCmpOverall, NumDealsPurchases, NumCatalogPurchases, NumStorePurchases,  NumWebPurchases, NumWebVisitsMonth)</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="resumen-estadístico.html#cb20-1" tabindex="-1"></a><span class="co">#Vamos a identificar valroes atípicos por variable.</span></span>
+<span id="cb20-2"><a href="resumen-estadístico.html#cb20-2" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="resumen-estadístico.html#cb20-3" tabindex="-1"></a>atipicos_d <span class="ot">&lt;-</span> <span class="fu">lapply</span>(variables_discretas, detectar_atipicos)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="resumen-estadístico.html#cb21-1" tabindex="-1"></a><span class="co">#Tabla de valores atípicos</span></span>
+<span id="cb21-2"><a href="resumen-estadístico.html#cb21-2" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="resumen-estadístico.html#cb21-3" tabindex="-1"></a>tabla_atipicos_d <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb21-4"><a href="resumen-estadístico.html#cb21-4" tabindex="-1"></a>  <span class="at">variable =</span> <span class="fu">names</span>(atipicos_d),</span>
+<span id="cb21-5"><a href="resumen-estadístico.html#cb21-5" tabindex="-1"></a>  <span class="at">total_atipicos_d =</span> <span class="fu">sapply</span>(atipicos_d, length),</span>
+<span id="cb21-6"><a href="resumen-estadístico.html#cb21-6" tabindex="-1"></a>  <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb21-7"><a href="resumen-estadístico.html#cb21-7" tabindex="-1"></a>)</span>
+<span id="cb21-8"><a href="resumen-estadístico.html#cb21-8" tabindex="-1"></a></span>
+<span id="cb21-9"><a href="resumen-estadístico.html#cb21-9" tabindex="-1"></a></span>
+<span id="cb21-10"><a href="resumen-estadístico.html#cb21-10" tabindex="-1"></a><span class="co"># Crear tabla con kable</span></span>
+<span id="cb21-11"><a href="resumen-estadístico.html#cb21-11" tabindex="-1"></a><span class="fu">kable</span>(tabla_atipicos_d, <span class="at">format =</span> <span class="st">&quot;html&quot;</span>, </span>
+<span id="cb21-12"><a href="resumen-estadístico.html#cb21-12" tabindex="-1"></a>      <span class="at">caption =</span> <span class="st">&quot;Tabla 1.x Tabla de valores atípicos por variable&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb21-13"><a href="resumen-estadístico.html#cb21-13" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">&quot;striped&quot;</span>, <span class="st">&quot;hover&quot;</span>, <span class="st">&quot;responsive&quot;</span>), </span>
+<span id="cb21-14"><a href="resumen-estadístico.html#cb21-14" tabindex="-1"></a>                <span class="at">full_width =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb21-15"><a href="resumen-estadístico.html#cb21-15" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">1</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<table class="table table-striped table-hover table-responsive" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-12">Table 6.2: </span>Tabla 1.x Tabla de valores atípicos por variable
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+variable
+</th>
+<th style="text-align:right;">
+total_atipicos_d
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Kidhome
+</td>
+<td style="text-align:left;">
+Kidhome
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Teenhome
+</td>
+<td style="text-align:left;">
+Teenhome
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Age
+</td>
+<td style="text-align:left;">
+Age
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Recency
+</td>
+<td style="text-align:left;">
+Recency
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Customer_Days
+</td>
+<td style="text-align:left;">
+Customer_Days
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmpOverall
+</td>
+<td style="text-align:left;">
+AcceptedCmpOverall
+</td>
+<td style="text-align:right;">
+431
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumDealsPurchases
+</td>
+<td style="text-align:left;">
+NumDealsPurchases
+</td>
+<td style="text-align:right;">
+74
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumCatalogPurchases
+</td>
+<td style="text-align:left;">
+NumCatalogPurchases
+</td>
+<td style="text-align:right;">
+19
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumStorePurchases
+</td>
+<td style="text-align:left;">
+NumStorePurchases
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumWebPurchases
+</td>
+<td style="text-align:left;">
+NumWebPurchases
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumWebVisitsMonth
+</td>
+<td style="text-align:left;">
+NumWebVisitsMonth
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="resumen-estadístico.html#cb22-1" tabindex="-1"></a>vars <span class="ot">&lt;-</span> <span class="fu">names</span>(variables_discretas)</span>
+<span id="cb22-2"><a href="resumen-estadístico.html#cb22-2" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="resumen-estadístico.html#cb22-3" tabindex="-1"></a><span class="co"># Crear todos los gráficos</span></span>
+<span id="cb22-4"><a href="resumen-estadístico.html#cb22-4" tabindex="-1"></a>plots_list <span class="ot">&lt;-</span> <span class="fu">lapply</span>(vars, <span class="cf">function</span>(var) {</span>
+<span id="cb22-5"><a href="resumen-estadístico.html#cb22-5" tabindex="-1"></a>  <span class="fu">ggplot</span>(data_act1, <span class="fu">aes</span>(<span class="at">y =</span> .data[[var]])) <span class="sc">+</span></span>
+<span id="cb22-6"><a href="resumen-estadístico.html#cb22-6" tabindex="-1"></a>    <span class="fu">geom_boxplot</span>(<span class="at">fill =</span> <span class="st">&quot;lightpink&quot;</span>,</span>
+<span id="cb22-7"><a href="resumen-estadístico.html#cb22-7" tabindex="-1"></a>                 <span class="at">median.colour =</span> <span class="st">&quot;firebrick&quot;</span>)  <span class="sc">+</span></span>
+<span id="cb22-8"><a href="resumen-estadístico.html#cb22-8" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
+<span id="cb22-9"><a href="resumen-estadístico.html#cb22-9" tabindex="-1"></a>      <span class="at">title =</span> <span class="fu">paste</span>(<span class="st">&quot;Boxplot de&quot;</span>, var),</span>
+<span id="cb22-10"><a href="resumen-estadístico.html#cb22-10" tabindex="-1"></a>      <span class="at">y =</span> var</span>
+<span id="cb22-11"><a href="resumen-estadístico.html#cb22-11" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb22-12"><a href="resumen-estadístico.html#cb22-12" tabindex="-1"></a>    <span class="fu">theme_minimal</span>()</span>
+<span id="cb22-13"><a href="resumen-estadístico.html#cb22-13" tabindex="-1"></a>})</span>
+<span id="cb22-14"><a href="resumen-estadístico.html#cb22-14" tabindex="-1"></a></span>
+<span id="cb22-15"><a href="resumen-estadístico.html#cb22-15" tabindex="-1"></a><span class="co"># Dividir en grupos de 6 u 8 gráficos</span></span>
+<span id="cb22-16"><a href="resumen-estadístico.html#cb22-16" tabindex="-1"></a>n_plots_per_page <span class="ot">&lt;-</span> <span class="dv">4</span>  <span class="co"># Ajusta este número según prefieras</span></span>
+<span id="cb22-17"><a href="resumen-estadístico.html#cb22-17" tabindex="-1"></a>n_plots <span class="ot">&lt;-</span> <span class="fu">length</span>(plots_list)</span>
+<span id="cb22-18"><a href="resumen-estadístico.html#cb22-18" tabindex="-1"></a>n_pages <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(n_plots <span class="sc">/</span> n_plots_per_page)</span>
+<span id="cb22-19"><a href="resumen-estadístico.html#cb22-19" tabindex="-1"></a></span>
+<span id="cb22-20"><a href="resumen-estadístico.html#cb22-20" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n_pages) {</span>
+<span id="cb22-21"><a href="resumen-estadístico.html#cb22-21" tabindex="-1"></a>  start_idx <span class="ot">&lt;-</span> (i <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">*</span> n_plots_per_page <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb22-22"><a href="resumen-estadístico.html#cb22-22" tabindex="-1"></a>  end_idx <span class="ot">&lt;-</span> <span class="fu">min</span>(i <span class="sc">*</span> n_plots_per_page, n_plots)</span>
+<span id="cb22-23"><a href="resumen-estadístico.html#cb22-23" tabindex="-1"></a>  </span>
+<span id="cb22-24"><a href="resumen-estadístico.html#cb22-24" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">wrap_plots</span>(plots_list[start_idx<span class="sc">:</span>end_idx], <span class="at">ncol =</span> <span class="dv">2</span>))</span>
+<span id="cb22-25"><a href="resumen-estadístico.html#cb22-25" tabindex="-1"></a>}</span></code></pre></div>
+<p><img src="Informe-descriptivo_files/figure-html/unnamed-chunk-13-1.png" alt="" width="672" /><img src="Informe-descriptivo_files/figure-html/unnamed-chunk-13-2.png" alt="" width="672" /><img src="Informe-descriptivo_files/figure-html/unnamed-chunk-13-3.png" alt="" width="672" /></p>
+</div>
+<div id="identificación-de-valores-atípicos-para-variables-continuas" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Identificación de valores atípicos para variables continuas<a href="resumen-estadístico.html#identificaci%C3%B3n-de-valores-at%C3%ADpicos-para-variables-continuas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="resumen-estadístico.html#cb23-1" tabindex="-1"></a>variables_continuas <span class="ot">&lt;-</span> data_act1 <span class="sc">%&gt;%</span></span>
+<span id="cb23-2"><a href="resumen-estadístico.html#cb23-2" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(Income, MntWines, MntFruits, MntMeatProducts, MntFishProducts, MntSweetProducts, MntGoldProds,  MntTotal, MntRegularProds)</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="resumen-estadístico.html#cb24-1" tabindex="-1"></a><span class="co">#Vamos a identificar valroes atípicos por variable.</span></span>
+<span id="cb24-2"><a href="resumen-estadístico.html#cb24-2" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="resumen-estadístico.html#cb24-3" tabindex="-1"></a>atipicos_c <span class="ot">&lt;-</span> <span class="fu">lapply</span>(variables_continuas, detectar_atipicos)</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="resumen-estadístico.html#cb25-1" tabindex="-1"></a><span class="co">#Tabla de valores atípicos</span></span>
+<span id="cb25-2"><a href="resumen-estadístico.html#cb25-2" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="resumen-estadístico.html#cb25-3" tabindex="-1"></a>tabla_atipicos_c <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb25-4"><a href="resumen-estadístico.html#cb25-4" tabindex="-1"></a>  <span class="at">variable =</span> <span class="fu">names</span>(atipicos_c),</span>
+<span id="cb25-5"><a href="resumen-estadístico.html#cb25-5" tabindex="-1"></a>  <span class="at">total_atipicos_c =</span> <span class="fu">sapply</span>(atipicos_c, length),</span>
+<span id="cb25-6"><a href="resumen-estadístico.html#cb25-6" tabindex="-1"></a>  <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb25-7"><a href="resumen-estadístico.html#cb25-7" tabindex="-1"></a>)</span>
+<span id="cb25-8"><a href="resumen-estadístico.html#cb25-8" tabindex="-1"></a></span>
+<span id="cb25-9"><a href="resumen-estadístico.html#cb25-9" tabindex="-1"></a></span>
+<span id="cb25-10"><a href="resumen-estadístico.html#cb25-10" tabindex="-1"></a><span class="co"># Crear tabla con kable</span></span>
+<span id="cb25-11"><a href="resumen-estadístico.html#cb25-11" tabindex="-1"></a><span class="fu">kable</span>(tabla_atipicos_c, <span class="at">format =</span> <span class="st">&quot;html&quot;</span>, </span>
+<span id="cb25-12"><a href="resumen-estadístico.html#cb25-12" tabindex="-1"></a>      <span class="at">caption =</span> <span class="st">&quot;Tabla 1.x Tabla de valores atípicos por variable&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb25-13"><a href="resumen-estadístico.html#cb25-13" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">&quot;striped&quot;</span>, <span class="st">&quot;hover&quot;</span>, <span class="st">&quot;responsive&quot;</span>), </span>
+<span id="cb25-14"><a href="resumen-estadístico.html#cb25-14" tabindex="-1"></a>                <span class="at">full_width =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb25-15"><a href="resumen-estadístico.html#cb25-15" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">1</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<table class="table table-striped table-hover table-responsive" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-16">Table 6.3: </span>Tabla 1.x Tabla de valores atípicos por variable
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+variable
+</th>
+<th style="text-align:right;">
+total_atipicos_c
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Income
+</td>
+<td style="text-align:left;">
+Income
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntWines
+</td>
+<td style="text-align:left;">
+MntWines
+</td>
+<td style="text-align:right;">
+35
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntFruits
+</td>
+<td style="text-align:left;">
+MntFruits
+</td>
+<td style="text-align:right;">
+222
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntMeatProducts
+</td>
+<td style="text-align:left;">
+MntMeatProducts
+</td>
+<td style="text-align:right;">
+170
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntFishProducts
+</td>
+<td style="text-align:left;">
+MntFishProducts
+</td>
+<td style="text-align:right;">
+204
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntSweetProducts
+</td>
+<td style="text-align:left;">
+MntSweetProducts
+</td>
+<td style="text-align:right;">
+223
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntGoldProds
+</td>
+<td style="text-align:left;">
+MntGoldProds
+</td>
+<td style="text-align:right;">
+186
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntTotal
+</td>
+<td style="text-align:left;">
+MntTotal
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntRegularProds
+</td>
+<td style="text-align:left;">
+MntRegularProds
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="resumen-estadístico.html#cb26-1" tabindex="-1"></a>vars <span class="ot">&lt;-</span> <span class="fu">names</span>(variables_continuas)</span>
+<span id="cb26-2"><a href="resumen-estadístico.html#cb26-2" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="resumen-estadístico.html#cb26-3" tabindex="-1"></a><span class="co"># Crear todos los gráficos</span></span>
+<span id="cb26-4"><a href="resumen-estadístico.html#cb26-4" tabindex="-1"></a>plots_list <span class="ot">&lt;-</span> <span class="fu">lapply</span>(vars, <span class="cf">function</span>(var) {</span>
+<span id="cb26-5"><a href="resumen-estadístico.html#cb26-5" tabindex="-1"></a>  <span class="fu">ggplot</span>(data_act1, <span class="fu">aes</span>(<span class="at">y =</span> .data[[var]])) <span class="sc">+</span></span>
+<span id="cb26-6"><a href="resumen-estadístico.html#cb26-6" tabindex="-1"></a>    <span class="fu">geom_boxplot</span>(<span class="at">fill =</span> <span class="st">&quot;lightpink&quot;</span>,</span>
+<span id="cb26-7"><a href="resumen-estadístico.html#cb26-7" tabindex="-1"></a>                 <span class="at">median.colour =</span> <span class="st">&quot;firebrick&quot;</span>) <span class="sc">+</span></span>
+<span id="cb26-8"><a href="resumen-estadístico.html#cb26-8" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
+<span id="cb26-9"><a href="resumen-estadístico.html#cb26-9" tabindex="-1"></a>      <span class="at">title =</span> <span class="fu">paste</span>(<span class="st">&quot;Boxplot de&quot;</span>, var),</span>
+<span id="cb26-10"><a href="resumen-estadístico.html#cb26-10" tabindex="-1"></a>      <span class="at">y =</span> var</span>
+<span id="cb26-11"><a href="resumen-estadístico.html#cb26-11" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb26-12"><a href="resumen-estadístico.html#cb26-12" tabindex="-1"></a>    <span class="fu">theme_minimal</span>()</span>
+<span id="cb26-13"><a href="resumen-estadístico.html#cb26-13" tabindex="-1"></a>})</span>
+<span id="cb26-14"><a href="resumen-estadístico.html#cb26-14" tabindex="-1"></a></span>
+<span id="cb26-15"><a href="resumen-estadístico.html#cb26-15" tabindex="-1"></a><span class="co"># Dividir en grupos de 6 u 8 gráficos</span></span>
+<span id="cb26-16"><a href="resumen-estadístico.html#cb26-16" tabindex="-1"></a>n_plots_per_page <span class="ot">&lt;-</span> <span class="dv">4</span>  <span class="co"># Ajusta este número según prefieras</span></span>
+<span id="cb26-17"><a href="resumen-estadístico.html#cb26-17" tabindex="-1"></a>n_plots <span class="ot">&lt;-</span> <span class="fu">length</span>(plots_list)</span>
+<span id="cb26-18"><a href="resumen-estadístico.html#cb26-18" tabindex="-1"></a>n_pages <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(n_plots <span class="sc">/</span> n_plots_per_page)</span>
+<span id="cb26-19"><a href="resumen-estadístico.html#cb26-19" tabindex="-1"></a></span>
+<span id="cb26-20"><a href="resumen-estadístico.html#cb26-20" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n_pages) {</span>
+<span id="cb26-21"><a href="resumen-estadístico.html#cb26-21" tabindex="-1"></a>  start_idx <span class="ot">&lt;-</span> (i <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">*</span> n_plots_per_page <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb26-22"><a href="resumen-estadístico.html#cb26-22" tabindex="-1"></a>  end_idx <span class="ot">&lt;-</span> <span class="fu">min</span>(i <span class="sc">*</span> n_plots_per_page, n_plots)</span>
+<span id="cb26-23"><a href="resumen-estadístico.html#cb26-23" tabindex="-1"></a>  </span>
+<span id="cb26-24"><a href="resumen-estadístico.html#cb26-24" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">wrap_plots</span>(plots_list[start_idx<span class="sc">:</span>end_idx], <span class="at">ncol =</span> <span class="dv">2</span>))</span>
+<span id="cb26-25"><a href="resumen-estadístico.html#cb26-25" tabindex="-1"></a>}</span></code></pre></div>
+<p><img src="Informe-descriptivo_files/figure-html/unnamed-chunk-17-1.png" alt="" width="672" /><img src="Informe-descriptivo_files/figure-html/unnamed-chunk-17-2.png" alt="" width="672" /><img src="Informe-descriptivo_files/figure-html/unnamed-chunk-17-3.png" alt="" width="672" /></p>
+</div>
+<div id="análisis-de-datos-atípicos" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Análisis de datos atípicos<a href="resumen-estadístico.html#an%C3%A1lisis-de-datos-at%C3%ADpicos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="identificación-de-datos-faltantes" class="section level2 hasAnchor" number="6.7">
+<h2><span class="header-section-number">6.7</span> Identificación de datos faltantes<a href="resumen-estadístico.html#identificaci%C3%B3n-de-datos-faltantes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="imputación-de-datos" class="section level2 hasAnchor" number="6.8">
+<h2><span class="header-section-number">6.8</span> Imputación de datos<a href="resumen-estadístico.html#imputaci%C3%B3n-de-datos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="procesamiento.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="resultados.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

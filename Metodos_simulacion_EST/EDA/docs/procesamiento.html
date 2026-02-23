@@ -1,0 +1,3664 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Procesamiento | Informe-descriptivo</title>
+  <meta name="description" content="5 Procesamiento | Informe-descriptivo" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Procesamiento | Informe-descriptivo" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Procesamiento | Informe-descriptivo" />
+  
+  
+  
+
+<meta name="author" content="Oriana Giraldo Arcia" />
+
+
+<meta name="date" content="2026-02-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="datos.html"/>
+<link rel="next" href="resultados-y-discusión.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Índice</a></li>
+<li class="chapter" data-level="2" data-path="descripción.html"><a href="descripción.html"><i class="fa fa-check"></i><b>2</b> Descripción</a></li>
+<li class="chapter" data-level="3" data-path="objetivos.html"><a href="objetivos.html"><i class="fa fa-check"></i><b>3</b> Objetivos</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="objetivos.html"><a href="objetivos.html#objetivo-general"><i class="fa fa-check"></i><b>3.1</b> Objetivo general</a></li>
+<li class="chapter" data-level="3.2" data-path="objetivos.html"><a href="objetivos.html#objetivos-espec%C3%ADficos"><i class="fa fa-check"></i><b>3.2</b> Objetivos específicos</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="datos.html"><a href="datos.html"><i class="fa fa-check"></i><b>4</b> Datos</a></li>
+<li class="chapter" data-level="5" data-path="procesamiento.html"><a href="procesamiento.html"><i class="fa fa-check"></i><b>5</b> Procesamiento</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="procesamiento.html"><a href="procesamiento.html#resumen-estad%C3%ADstico"><i class="fa fa-check"></i><b>5.1</b> Resumen estadístico</a></li>
+<li class="chapter" data-level="5.2" data-path="procesamiento.html"><a href="procesamiento.html#identificaci%C3%B3n-y-eliminaci%C3%B3n-de-duplicados"><i class="fa fa-check"></i><b>5.2</b> Identificación y eliminación de duplicados</a></li>
+<li class="chapter" data-level="5.3" data-path="procesamiento.html"><a href="procesamiento.html#errores-e-inconsistencias"><i class="fa fa-check"></i><b>5.3</b> Errores e inconsistencias</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="procesamiento.html"><a href="procesamiento.html#identificaci%C3%B3n-de-valores-at%C3%ADpicos-para-variables-cualitativas-binarias"><i class="fa fa-check"></i><b>5.3.1</b> Identificación de valores atípicos para variables cualitativas binarias</a></li>
+<li class="chapter" data-level="5.3.2" data-path="procesamiento.html"><a href="procesamiento.html#identificaci%C3%B3n-de-valores-at%C3%ADpicos-para-variables-discretas"><i class="fa fa-check"></i><b>5.3.2</b> Identificación de valores atípicos para variables discretas</a></li>
+<li class="chapter" data-level="5.3.3" data-path="procesamiento.html"><a href="procesamiento.html#identificaci%C3%B3n-de-valores-at%C3%ADpicos-para-variables-continuas"><i class="fa fa-check"></i><b>5.3.3</b> Identificación de valores atípicos para variables continuas</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="procesamiento.html"><a href="procesamiento.html#soluci%C3%B3n-de-inconsistencias"><i class="fa fa-check"></i><b>5.4</b> Solución de inconsistencias</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="procesamiento.html"><a href="procesamiento.html#inspecci%C3%B3n-y-depuraci%C3%B3n-de-la-variable-marital_divorced"><i class="fa fa-check"></i><b>5.4.1</b> Inspección y depuración de la variable <em>marital_Divorced</em></a></li>
+<li class="chapter" data-level="5.4.2" data-path="procesamiento.html"><a href="procesamiento.html#inspecci%C3%B3n-y-depuraci%C3%B3n-de-la-variable-age"><i class="fa fa-check"></i><b>5.4.2</b> Inspección y depuración de la variable <em>Age</em></a></li>
+<li class="chapter" data-level="5.4.3" data-path="procesamiento.html"><a href="procesamiento.html#inspecci%C3%B3n-y-depuraci%C3%B3n-de-la-variable-mntregularprods"><i class="fa fa-check"></i><b>5.4.3</b> Inspección y depuración de la variable <em>MntRegularProds</em></a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="procesamiento.html"><a href="procesamiento.html#identificaci%C3%B3n-de-datos-faltantes"><i class="fa fa-check"></i><b>5.5</b> Identificación de datos faltantes</a></li>
+<li class="chapter" data-level="5.6" data-path="procesamiento.html"><a href="procesamiento.html#tratamiento-de-datos-faltantes"><i class="fa fa-check"></i><b>5.6</b> Tratamiento de datos faltantes</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="procesamiento.html"><a href="procesamiento.html#evaluaci%C3%B3n-de-la-aleatoriedad-de-los-datos-faltantes"><i class="fa fa-check"></i><b>5.6.1</b> Evaluación de la aleatoriedad de los datos faltantes</a></li>
+<li class="chapter" data-level="5.6.2" data-path="procesamiento.html"><a href="procesamiento.html#preparaci%C3%B3n-del-conjunto-de-datos-para-imputaci%C3%B3n"><i class="fa fa-check"></i><b>5.6.2</b> Preparación del conjunto de datos para imputación</a></li>
+<li class="chapter" data-level="5.6.3" data-path="procesamiento.html"><a href="procesamiento.html#comparaci%C3%B3n-de-m%C3%A9todos-de-imputaci%C3%B3n"><i class="fa fa-check"></i><b>5.6.3</b> Comparación de métodos de imputación</a></li>
+<li class="chapter" data-level="5.6.4" data-path="procesamiento.html"><a href="procesamiento.html#verificaci%C3%B3n-de-estabilidad-y-construcci%C3%B3n-del-dataset-imputado"><i class="fa fa-check"></i><b>5.6.4</b> Verificación de estabilidad y construcción del dataset imputado</a></li>
+<li class="chapter" data-level="5.6.5" data-path="procesamiento.html"><a href="procesamiento.html#comparaci%C3%B3n-de-estad%C3%ADsticos-antes-y-despu%C3%A9s-de-la-imputaci%C3%B3n"><i class="fa fa-check"></i><b>5.6.5</b> Comparación de estadísticos antes y después de la imputación</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html"><i class="fa fa-check"></i><b>6</b> Resultados y discusión</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html#matriz-de-correlaciones-del-dataset-procesado"><i class="fa fa-check"></i><b>6.1</b> Matriz de correlaciones del dataset procesado</a></li>
+<li class="chapter" data-level="6.2" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html#relaci%C3%B3n-entre-response-y-acceptedcmpoverall"><i class="fa fa-check"></i><b>6.2</b> Relación entre Response y AcceptedCmpOverall</a></li>
+<li class="chapter" data-level="6.3" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html#an%C3%A1lisis-bivariado-variables-num%C3%A9ricas-por-grupo-de-respuesta"><i class="fa fa-check"></i><b>6.3</b> Análisis bivariado: variables numéricas por grupo de respuesta</a></li>
+<li class="chapter" data-level="6.4" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html#an%C3%A1lisis-bivariado-variables-categ%C3%B3ricas-por-grupo-de-respuesta"><i class="fa fa-check"></i><b>6.4</b> Análisis bivariado: variables categóricas por grupo de respuesta</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html#nivel-educativo"><i class="fa fa-check"></i><b>6.4.1</b> Nivel educativo</a></li>
+<li class="chapter" data-level="6.4.2" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html#estado-civil"><i class="fa fa-check"></i><b>6.4.2</b> Estado civil</a></li>
+<li class="chapter" data-level="6.4.3" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html#composici%C3%B3n-del-hogar"><i class="fa fa-check"></i><b>6.4.3</b> Composición del hogar</a></li>
+<li class="chapter" data-level="6.4.4" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html#pruebas-de-independencia"><i class="fa fa-check"></i><b>6.4.4</b> Pruebas de independencia</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html#perfil-del-gasto-por-categor%C3%ADa-de-producto-y-canal-de-compra"><i class="fa fa-check"></i><b>6.5</b> Perfil del gasto por categoría de producto y canal de compra</a></li>
+<li class="chapter" data-level="6.6" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html#discusi%C3%B3n"><i class="fa fa-check"></i><b>6.6</b> Discusión</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="conclusiones.html"><a href="conclusiones.html"><i class="fa fa-check"></i><b>7</b> Conclusiones</a></li>
+<li class="chapter" data-level="8" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>8</b> Referencias</a></li>
+<li class="chapter" data-level="9" data-path="anexos.html"><a href="anexos.html"><i class="fa fa-check"></i><b>9</b> Anexos</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Informe-descriptivo</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="procesamiento" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Procesamiento<a href="procesamiento.html#procesamiento" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<ul>
+<li>Vamos Leer el archivo de datos <em>data_actividad1</em></li>
+</ul>
+<div id="resumen-estadístico" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Resumen estadístico<a href="procesamiento.html#resumen-estad%C3%ADstico" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La Tabla <a href="procesamiento.html#tab:resumenestadistico">5.1</a> presenta un resumen de las principales estadísticas descriptivas para las variables numéricas del dataset, incluyendo medidas de tendencia central, dispersión y el número de datos faltantes por variable.</p>
+<table class="table table-striped table-hover table-responsive" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:resumenestadistico">Table 5.1: </span>Estadísticas descriptivas y datos faltantes
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:right;">
+Min
+</th>
+<th style="text-align:right;">
+Max
+</th>
+<th style="text-align:right;">
+Median
+</th>
+<th style="text-align:right;">
+Media
+</th>
+<th style="text-align:right;">
+std
+</th>
+<th style="text-align:right;">
+Q_1
+</th>
+<th style="text-align:right;">
+Q_3
+</th>
+<th style="text-align:right;">
+NA’s
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Income
+</td>
+<td style="text-align:right;">
+17300
+</td>
+<td style="text-align:right;">
+1137340
+</td>
+<td style="text-align:right;">
+513815.0
+</td>
+<td style="text-align:right;">
+516535.57
+</td>
+<td style="text-align:right;">
+207041.06
+</td>
+<td style="text-align:right;">
+351295.00
+</td>
+<td style="text-align:right;">
+682757.50
+</td>
+<td style="text-align:right;">
+68
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Kidhome
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.44
+</td>
+<td style="text-align:right;">
+0.54
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Teenhome
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.50
+</td>
+<td style="text-align:right;">
+0.54
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Recency
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+99
+</td>
+<td style="text-align:right;">
+49.0
+</td>
+<td style="text-align:right;">
+48.97
+</td>
+<td style="text-align:right;">
+28.89
+</td>
+<td style="text-align:right;">
+24.00
+</td>
+<td style="text-align:right;">
+74.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntWines
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1493
+</td>
+<td style="text-align:right;">
+174.5
+</td>
+<td style="text-align:right;">
+301.05
+</td>
+<td style="text-align:right;">
+331.64
+</td>
+<td style="text-align:right;">
+24.00
+</td>
+<td style="text-align:right;">
+496.00
+</td>
+<td style="text-align:right;">
+20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntFruits
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+199
+</td>
+<td style="text-align:right;">
+8.0
+</td>
+<td style="text-align:right;">
+26.59
+</td>
+<td style="text-align:right;">
+40.17
+</td>
+<td style="text-align:right;">
+2.00
+</td>
+<td style="text-align:right;">
+33.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntMeatProducts
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1725
+</td>
+<td style="text-align:right;">
+68.0
+</td>
+<td style="text-align:right;">
+165.77
+</td>
+<td style="text-align:right;">
+218.16
+</td>
+<td style="text-align:right;">
+16.00
+</td>
+<td style="text-align:right;">
+232.25
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntFishProducts
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+259
+</td>
+<td style="text-align:right;">
+12.0
+</td>
+<td style="text-align:right;">
+37.74
+</td>
+<td style="text-align:right;">
+54.78
+</td>
+<td style="text-align:right;">
+3.00
+</td>
+<td style="text-align:right;">
+50.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntSweetProducts
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+262
+</td>
+<td style="text-align:right;">
+8.0
+</td>
+<td style="text-align:right;">
+27.11
+</td>
+<td style="text-align:right;">
+41.06
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+33.25
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntGoldProds
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+321
+</td>
+<td style="text-align:right;">
+25.0
+</td>
+<td style="text-align:right;">
+44.30
+</td>
+<td style="text-align:right;">
+52.09
+</td>
+<td style="text-align:right;">
+9.00
+</td>
+<td style="text-align:right;">
+57.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumDealsPurchases
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+2.0
+</td>
+<td style="text-align:right;">
+2.32
+</td>
+<td style="text-align:right;">
+1.89
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+3.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumWebPurchases
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:right;">
+4.0
+</td>
+<td style="text-align:right;">
+4.10
+</td>
+<td style="text-align:right;">
+2.74
+</td>
+<td style="text-align:right;">
+2.00
+</td>
+<td style="text-align:right;">
+6.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumCatalogPurchases
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+2.0
+</td>
+<td style="text-align:right;">
+2.65
+</td>
+<td style="text-align:right;">
+2.80
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+4.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumStorePurchases
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+5.0
+</td>
+<td style="text-align:right;">
+5.82
+</td>
+<td style="text-align:right;">
+3.24
+</td>
+<td style="text-align:right;">
+3.00
+</td>
+<td style="text-align:right;">
+8.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumWebVisitsMonth
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+6.0
+</td>
+<td style="text-align:right;">
+5.33
+</td>
+<td style="text-align:right;">
+2.41
+</td>
+<td style="text-align:right;">
+3.00
+</td>
+<td style="text-align:right;">
+7.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmp3
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.07
+</td>
+<td style="text-align:right;">
+0.26
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmp4
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.07
+</td>
+<td style="text-align:right;">
+0.26
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmp5
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.07
+</td>
+<td style="text-align:right;">
+0.26
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmp1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.06
+</td>
+<td style="text-align:right;">
+0.25
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmp2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Complain
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:right;">
+0.09
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Response
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.15
+</td>
+<td style="text-align:right;">
+0.36
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Age
+</td>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:right;">
+240
+</td>
+<td style="text-align:right;">
+50.0
+</td>
+<td style="text-align:right;">
+51.31
+</td>
+<td style="text-align:right;">
+12.98
+</td>
+<td style="text-align:right;">
+43.00
+</td>
+<td style="text-align:right;">
+61.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Customer_Days
+</td>
+<td style="text-align:right;">
+2159
+</td>
+<td style="text-align:right;">
+2858
+</td>
+<td style="text-align:right;">
+2515.0
+</td>
+<td style="text-align:right;">
+2512.84
+</td>
+<td style="text-align:right;">
+202.76
+</td>
+<td style="text-align:right;">
+2338.75
+</td>
+<td style="text-align:right;">
+2688.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+marital_Divorced
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+100
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.37
+</td>
+<td style="text-align:right;">
+5.20
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+marital_Married
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.39
+</td>
+<td style="text-align:right;">
+0.49
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+marital_Single
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.22
+</td>
+<td style="text-align:right;">
+0.41
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+marital_Together
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.26
+</td>
+<td style="text-align:right;">
+0.44
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+marital_Widow
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+<td style="text-align:right;">
+0.18
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+education_2n Cycle
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.09
+</td>
+<td style="text-align:right;">
+0.29
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+education_Basic
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+<td style="text-align:right;">
+0.16
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+education_Graduation
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1.0
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+<td style="text-align:right;">
+0.50
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+1.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+education_Master
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.17
+</td>
+<td style="text-align:right;">
+0.37
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+education_PhD
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.21
+</td>
+<td style="text-align:right;">
+0.41
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntTotal
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+2491
+</td>
+<td style="text-align:right;">
+344.5
+</td>
+<td style="text-align:right;">
+563.51
+</td>
+<td style="text-align:right;">
+575.84
+</td>
+<td style="text-align:right;">
+56.00
+</td>
+<td style="text-align:right;">
+965.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntRegularProds
+</td>
+<td style="text-align:right;">
+-283
+</td>
+<td style="text-align:right;">
+2458
+</td>
+<td style="text-align:right;">
+288.5
+</td>
+<td style="text-align:right;">
+519.21
+</td>
+<td style="text-align:right;">
+553.65
+</td>
+<td style="text-align:right;">
+42.00
+</td>
+<td style="text-align:right;">
+886.25
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmpOverall
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.30
+</td>
+<td style="text-align:right;">
+0.68
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0.00
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+</tbody>
+</table>
+<p>A continuación, se procederá con una revisión detallada de valores faltantes, datos atípicos e inconsistencias. Sin embargo, desde esta primera visualización ya emergen algunos aspectos relevantes que merecen atención.</p>
+<p>En primer lugar, resulta llamativa la magnitud de la desviación estándar en la variable <em>Income</em>, así como en todas aquellas variables cuyo nombre inicia con <em>Mnt</em>, lo que sugiere una alta dispersión en los ingresos reportados y en los niveles de gasto, especialmente en el caso de las variables de gasto específico. Esta variabilidad se refleja también en la diferencia observable entre media y mediana, lo cual podría indicar la presencia de asimetrías positivas.</p>
+<p>Particularmente en <em>Income</em>, se observa una diferencia cercana al millón entre el valor mínimo y el máximo. Además, esta variable, junto con <em>MntWines</em>, son las únicas que presentan valores nulos, lo que sugiere que el tratamiento de datos faltantes deberá considerarse con especial cuidado en el análisis posterior.</p>
+<p>Otro aspecto relevante es que <em>MntRegularProds</em> es la única variable cuyo valor mínimo es negativo, lo que podría indicar un posible error de registro, ajustes contables o devoluciones que deben ser verificados en etapas posteriores del análisis de calidad de datos.</p>
+<p>Así mismo, la variable <em>marital_Divorced</em> tenga como valor valor máximo 100. Esto teniendo en cuenta que, junto a las otras variables relacionadas al estado civil, fue clasificada como variable cualitativa binaria, por lo que se presume un error de registo.</p>
+<p>También, llama la atención que <em>AcceptedCmpOverall</em> presenta tiene como mediana el valor 0.0, lo que podría sugerir que, en su gran mayoría, los cientes contactados no respondieron de manera positiva a ninguna de las 5 campañas anteriores.</p>
+<p>Finalmente, dentro de las variables de gasto específico, se observa que <em>MntWines</em> y <em>MntMeatProducts</em> son las únicas que presentan valores máximos superiores a 1000 unidades monetarias, lo que podría señalar categorías de consumo con alta concentración de gasto en determinados clientes.</p>
+</div>
+<div id="identificación-y-eliminación-de-duplicados" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Identificación y eliminación de duplicados<a href="procesamiento.html#identificaci%C3%B3n-y-eliminaci%C3%B3n-de-duplicados" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>En esta etapa se procede a verificar la existencia de registros duplicados en el dataset, con el objetivo de garantizar que cada fila represente una observación única.</p>
+<table>
+<caption><span id="tab:tabladuplicados">Table 5.2: </span>Detección y eliminación de duplicados</caption>
+<thead>
+<tr class="header">
+<th align="left">Concepto</th>
+<th align="left">Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Total de datos original</td>
+<td align="left">2220</td>
+</tr>
+<tr class="even">
+<td align="left">Total de duplicados</td>
+<td align="left">179</td>
+</tr>
+<tr class="odd">
+<td align="left">Porcentaje de duplicados (%)</td>
+<td align="left">8.06 %</td>
+</tr>
+<tr class="even">
+<td align="left">Total de datos sin duplicados</td>
+<td align="left">2041</td>
+</tr>
+</tbody>
+</table>
+<p>La Tabla <a href="procesamiento.html#tab:tabladuplicados">5.2</a> muestra que inicialmente se contaba con 2220 observaciones, de las cuales 179 correspondían a registros duplicados representando el 8.06 % del total de registros. Tras su eliminación, el conjunto de datos quedó conformado por 2041 registros únicos.</p>
+<p>Veamos el resumen estadístico del nuevo dataset en la tabla <a href="procesamiento.html#tab:resumenpostlimpieza">5.3</a></p>
+<table class="table table-striped table-hover table-responsive" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:resumenpostlimpieza">Table 5.3: </span>Estadísticas descriptivas y datos faltantes (post eliminación de duplicados)
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:right;">
+Min
+</th>
+<th style="text-align:right;">
+Max
+</th>
+<th style="text-align:right;">
+Median
+</th>
+<th style="text-align:right;">
+Media
+</th>
+<th style="text-align:right;">
+std
+</th>
+<th style="text-align:right;">
+Q_1
+</th>
+<th style="text-align:right;">
+Q_3
+</th>
+<th style="text-align:right;">
+NA’s
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Income
+</td>
+<td style="text-align:right;">
+17300
+</td>
+<td style="text-align:right;">
+1137340
+</td>
+<td style="text-align:right;">
+514120
+</td>
+<td style="text-align:right;">
+516809.10
+</td>
+<td style="text-align:right;">
+207352.46
+</td>
+<td style="text-align:right;">
+352460
+</td>
+<td style="text-align:right;">
+681480
+</td>
+<td style="text-align:right;">
+68
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Kidhome
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.44
+</td>
+<td style="text-align:right;">
+0.54
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Teenhome
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.51
+</td>
+<td style="text-align:right;">
+0.55
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Recency
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+99
+</td>
+<td style="text-align:right;">
+49
+</td>
+<td style="text-align:right;">
+48.91
+</td>
+<td style="text-align:right;">
+28.94
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntWines
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1493
+</td>
+<td style="text-align:right;">
+174
+</td>
+<td style="text-align:right;">
+301.52
+</td>
+<td style="text-align:right;">
+332.87
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+499
+</td>
+<td style="text-align:right;">
+20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntFruits
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+199
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+26.34
+</td>
+<td style="text-align:right;">
+39.80
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntMeatProducts
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1725
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+165.99
+</td>
+<td style="text-align:right;">
+219.77
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+230
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntFishProducts
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+259
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+37.58
+</td>
+<td style="text-align:right;">
+54.81
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+50
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntSweetProducts
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+262
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+27.34
+</td>
+<td style="text-align:right;">
+41.64
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+34
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntGoldProds
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+321
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+43.88
+</td>
+<td style="text-align:right;">
+51.75
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+56
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumDealsPurchases
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+2.32
+</td>
+<td style="text-align:right;">
+1.89
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumWebPurchases
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+4.11
+</td>
+<td style="text-align:right;">
+2.75
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumCatalogPurchases
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+2.65
+</td>
+<td style="text-align:right;">
+2.80
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumStorePurchases
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+5.80
+</td>
+<td style="text-align:right;">
+3.23
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumWebVisitsMonth
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+5.34
+</td>
+<td style="text-align:right;">
+2.43
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmp3
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.07
+</td>
+<td style="text-align:right;">
+0.26
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmp4
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.08
+</td>
+<td style="text-align:right;">
+0.27
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmp5
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.07
+</td>
+<td style="text-align:right;">
+0.26
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmp1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.07
+</td>
+<td style="text-align:right;">
+0.25
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmp2
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:right;">
+0.11
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Complain
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.01
+</td>
+<td style="text-align:right;">
+0.10
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Response
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.15
+</td>
+<td style="text-align:right;">
+0.36
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Age
+</td>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:right;">
+240
+</td>
+<td style="text-align:right;">
+50
+</td>
+<td style="text-align:right;">
+51.35
+</td>
+<td style="text-align:right;">
+13.04
+</td>
+<td style="text-align:right;">
+43
+</td>
+<td style="text-align:right;">
+61
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Customer_Days
+</td>
+<td style="text-align:right;">
+2159
+</td>
+<td style="text-align:right;">
+2858
+</td>
+<td style="text-align:right;">
+2510
+</td>
+<td style="text-align:right;">
+2511.35
+</td>
+<td style="text-align:right;">
+202.60
+</td>
+<td style="text-align:right;">
+2337
+</td>
+<td style="text-align:right;">
+2688
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+marital_Divorced
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+100
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.40
+</td>
+<td style="text-align:right;">
+5.42
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+marital_Married
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.39
+</td>
+<td style="text-align:right;">
+0.49
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+marital_Single
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.22
+</td>
+<td style="text-align:right;">
+0.41
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+marital_Together
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.25
+</td>
+<td style="text-align:right;">
+0.43
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+marital_Widow
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.04
+</td>
+<td style="text-align:right;">
+0.18
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+education_2n.Cycle
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.09
+</td>
+<td style="text-align:right;">
+0.29
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+education_Basic
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.02
+</td>
+<td style="text-align:right;">
+0.15
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+education_Graduation
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.50
+</td>
+<td style="text-align:right;">
+0.50
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+education_Master
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.17
+</td>
+<td style="text-align:right;">
+0.37
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+education_PhD
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.22
+</td>
+<td style="text-align:right;">
+0.41
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntTotal
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+2491
+</td>
+<td style="text-align:right;">
+343
+</td>
+<td style="text-align:right;">
+564.48
+</td>
+<td style="text-align:right;">
+577.84
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+965
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntRegularProds
+</td>
+<td style="text-align:right;">
+-283
+</td>
+<td style="text-align:right;">
+2458
+</td>
+<td style="text-align:right;">
+288
+</td>
+<td style="text-align:right;">
+520.59
+</td>
+<td style="text-align:right;">
+555.88
+</td>
+<td style="text-align:right;">
+42
+</td>
+<td style="text-align:right;">
+886
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmpOverall
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.30
+</td>
+<td style="text-align:right;">
+0.68
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+</tbody>
+</table>
+<p>Tomando como referencia los aspectos clave presentados en la Tabla <a href="procesamiento.html#tab:resumenestadistico">5.1</a>, y tras contrastarlos con la información contenida en la Tabla <a href="procesamiento.html#tab:resumenpostlimpieza">5.3</a>, se concluye que no se produjo cambios observaron cambios significativos tras la eliminación de los registros duplicados. Únicamente se evidenciaron ligeras variaciones en algunas medidas de tendencia central, sin modificaciones en los valores mínimos, máximos ni en la cantidad de datos faltantes. Asimismo, los patrones previamente identificados (como la alta dispersión en <em>Income</em> y en las variables de gasto, así como la presencia de valores extremos) se mantienen.</p>
+<p>Esto sugiere que los registros duplicados no estaban concentrados en perfiles atípicos ni alteraban de forma sustancial la estructura descriptiva del dataset, sino que se encontraban distribuidos de manera relativamente homogénea.</p>
+</div>
+<div id="errores-e-inconsistencias" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Errores e inconsistencias<a href="procesamiento.html#errores-e-inconsistencias" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="identificación-de-valores-atípicos-para-variables-cualitativas-binarias" class="section level3 hasAnchor" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Identificación de valores atípicos para variables cualitativas binarias<a href="procesamiento.html#identificaci%C3%B3n-de-valores-at%C3%ADpicos-para-variables-cualitativas-binarias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A continuación, se analizan las variables cualitativas binarias con el objetivo de detectar posibles inconsistencias, categorías inesperadas o desbalances extremos en las frecuencias.</p>
+<p>Posteriormente, se construyen diagramas de barras para visualizar la distribución de frecuencias de cada variable binaria y realizar un análisis gráfico que permita identificar las variables que aporten información relevante y las que requieran un tratamiento especial.</p>
+<div class="figure"><span style="display:block;" id="fig:barplotbinarias"></span>
+<img src="Informe-descriptivo_files/figure-html/barplotbinarias-1.png" alt="Distribución de variables binarias" width="1344" />
+<p class="caption">
+Figure 5.1: Distribución de variables binarias
+</p>
+</div>
+<p>El análisis gráfico obtenido de la Figura <a href="procesamiento.html#fig:barplotbinarias">5.1</a> permite identificar varios patrones relevantes en las variables binarias.</p>
+<p>En primer lugar, la respuesta de los clientes a las campañas 1 a la 5 fue considerablemente baja oscilando entre 27 y 158 respuestas afirmativas. En contraste, la campaña piloto presenta 314 respuestas positivas, lo que sugiere una mejora sustancial en la efectividad de la estrategia implementada o en la segmentación utilizada para su ejecución.</p>
+<p>En relación con la variable <em>Complain</em>, únicamente se registran 19 quejas, lo que evidencia una baja proporción de inconformidades. Este resultado podría interpretarse como un indicador favorable en términos de calidad del servicio y satisfacción del cliente; sin embargo, también conviene verificar que el proceso de registro de quejas sea exhaustivo y consistente.</p>
+<p>Respecto al estado civil, se observa que la mayoría de los clientes se encuentran casados o conviven en unión libre. No obstante, llama la atención que para 6 clientes aparece una tercera respuesta en la categoría <em>marital_Divorced</em>, que como se había mencionado en el estudio del resumen estadístico está codificada con el valor 100. Dado que se trata de una variable binaria, la presencia de un valor distinto de 0 y 1 constituye una inconsistencia que debe ser corregida.</p>
+<p>En cuanto al nivel educativo, aproximadamente la mitad de los clientes (1023) cuentan con título universitario, lo que sugiere un perfil educativo relativamente alto dentro de la muestra.</p>
+</div>
+<div id="identificación-de-valores-atípicos-para-variables-discretas" class="section level3 hasAnchor" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Identificación de valores atípicos para variables discretas<a href="procesamiento.html#identificaci%C3%B3n-de-valores-at%C3%ADpicos-para-variables-discretas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En esta sección se identifican posibles valores atípicos en las variables cuantitativas discretas del conjunto de datos. Para ello, se emplea el criterio basado en el rango intercuartílico (IQR).</p>
+<p>La Tabla <a href="procesamiento.html#tab:tablaatipicosdiscretos">5.4</a> indica el número total de valores atípicos encontrados en cada variable. Esto permite evaluar rápidamente cuáles presentan mayor concentración de observaciones extremas.</p>
+<table class="table table-striped table-hover table-responsive" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:tablaatipicosdiscretos">Table 5.4: </span>Tabla de valores atípicos por variable
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+variable
+</th>
+<th style="text-align:right;">
+total_atipicos_d
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Kidhome
+</td>
+<td style="text-align:left;">
+Kidhome
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Teenhome
+</td>
+<td style="text-align:left;">
+Teenhome
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Age
+</td>
+<td style="text-align:left;">
+Age
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Recency
+</td>
+<td style="text-align:left;">
+Recency
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Customer_Days
+</td>
+<td style="text-align:left;">
+Customer_Days
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmpOverall
+</td>
+<td style="text-align:left;">
+AcceptedCmpOverall
+</td>
+<td style="text-align:right;">
+431
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumDealsPurchases
+</td>
+<td style="text-align:left;">
+NumDealsPurchases
+</td>
+<td style="text-align:right;">
+74
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumCatalogPurchases
+</td>
+<td style="text-align:left;">
+NumCatalogPurchases
+</td>
+<td style="text-align:right;">
+19
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumStorePurchases
+</td>
+<td style="text-align:left;">
+NumStorePurchases
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumWebPurchases
+</td>
+<td style="text-align:left;">
+NumWebPurchases
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumWebVisitsMonth
+</td>
+<td style="text-align:left;">
+NumWebVisitsMonth
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+</tbody>
+</table>
+<p>Al analizar la distribución de valores atípicos en la Tabla <a href="procesamiento.html#tab:tablaatipicosdiscretos">5.4</a> se observa que la variable Age presenta únicamente 2 observaciones extremas (≈0.1% del total).</p>
+<p>En variables asociadas al comportamiento de compra y navegación (NumWebPurchases y NumWebVisitsMonth) se identifican menos de 10 valores atípicos en cada caso (menos del 0.5% de la muestra). Estos registros podrían corresponder a clientes con una actividad comercial particularmente intensa, pero no constituyen una proporción preocupante desde el punto de vista estadístico.</p>
+<p>Por su parte, NumDealsPurchases (compras en oferta) registra 74 valores atípicos (≈3.6%), mientras que NumCatalogPurchases presenta 19 (≈0.9%). En el primer caso, la magnitud sugiere la posible existencia de un subgrupo de clientes altamente sensibles a promociones.</p>
+<p>El resultado más llamativo corresponde a AcceptedCmpOverall, con 431 valores atípicos (≈21.1% de la muestra).</p>
+<p>Con el fin de emitir un juicio más preciso sobre estos casos, se realiza a continuación una inspección visual mediante diagramas de caja (boxplots) para cada variable discreta.</p>
+<div class="figure"><span style="display:block;" id="fig:boxplotdiscreta"></span>
+<img src="Informe-descriptivo_files/figure-html/boxplotdiscreta-1.png" alt="Distribución de variables discretas" width="672" />
+<p class="caption">
+Figure 5.2: Distribución de variables discretas
+</p>
+</div>
+<p>La inspección visual de los diagramas de caja en la Figura <a href="procesamiento.html#fig:boxplotdiscreta">5.2</a> permite complementar la lectura obtenida a partir del criterio del rango intercuartílico (IQR) y aportar mayor claridad sobre la naturaleza de los valores identificados como atípicos.</p>
+<p>En el caso de la variable <em>Age</em>, los valores extremos detectados corresponden a edades superiores a 200 años. Desde una perspectiva demográfica, estos registros son imposibles en términos de expectativa de vida humana, por lo que no pueden interpretarse como comportamientos extremos plausibles, sino como errores evidentes en los datos. En consecuencia, estos casos requieren corrección o depuración antes de cualquier análisis posterior.</p>
+<p>Por su parte, en <em>AcceptedCmpOverall</em> se observa una fuerte concentración en el valor 0. Visualmente, no se aprecia una caja definida; únicamente se distingue la línea correspondiente a la mediana, ubicada en 0, junto con cuatro puntos aislados en las alturas 1, 2, 3 y 4. Esta configuración gráfica confirma lo mencionado durante la inspección de las estadísticas del dataset: que la mayoría de los clientes no aceptaron campañas, lo que hace que aceptar una o más campañas constituya un comportamiento poco frecuente dentro del conjunto de datos.</p>
+<p>Una situación similar se observa en <em>NumDealsPurchases</em> y <em>NumCatalogPurchases</em>, cuyas distribuciones también se encuentran fuertemente concentradas en valores cercanos a cero. La cercanía de la caja al origen y la presencia de algunos valores superiores aislados sugieren que la mayoría de los clientes realiza pocas compras en oferta o por catálogo, mientras que un grupo reducido presenta una actividad más intensa en estos canales.</p>
+<p>En conjunto, los boxplots evidencian que, salvo en el caso de <em>Age</em>, los valores identificados como atípicos responden principalmente a distribuciones discretas con alta concentración en cero y marcada asimetría positiva.</p>
+</div>
+<div id="identificación-de-valores-atípicos-para-variables-continuas" class="section level3 hasAnchor" number="5.3.3">
+<h3><span class="header-section-number">5.3.3</span> Identificación de valores atípicos para variables continuas<a href="procesamiento.html#identificaci%C3%B3n-de-valores-at%C3%ADpicos-para-variables-continuas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Finalmente, se analiza la presencia de valores atípicos en las variables cuantitativas continuas, principalmente asociadas a ingresos y montos de gasto por categoría de producto.</p>
+<table class="table table-striped table-hover table-responsive" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:tablaatipicoscontinuas">Table 5.5: </span>Tabla de valores atípicos por variable
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+variable
+</th>
+<th style="text-align:right;">
+total_atipicos_c
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Income
+</td>
+<td style="text-align:left;">
+Income
+</td>
+<td style="text-align:right;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntWines
+</td>
+<td style="text-align:left;">
+MntWines
+</td>
+<td style="text-align:right;">
+35
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntFruits
+</td>
+<td style="text-align:left;">
+MntFruits
+</td>
+<td style="text-align:right;">
+222
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntMeatProducts
+</td>
+<td style="text-align:left;">
+MntMeatProducts
+</td>
+<td style="text-align:right;">
+170
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntFishProducts
+</td>
+<td style="text-align:left;">
+MntFishProducts
+</td>
+<td style="text-align:right;">
+204
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntSweetProducts
+</td>
+<td style="text-align:left;">
+MntSweetProducts
+</td>
+<td style="text-align:right;">
+223
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntGoldProds
+</td>
+<td style="text-align:left;">
+MntGoldProds
+</td>
+<td style="text-align:right;">
+186
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntTotal
+</td>
+<td style="text-align:left;">
+MntTotal
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntRegularProds
+</td>
+<td style="text-align:left;">
+MntRegularProds
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+</tbody>
+</table>
+<p>En el estudio de la Tabla <a href="procesamiento.html#tab:resumenestadistico">5.1</a> se señaló que, dentro de las variables de gasto específico, <em>MntWines</em> y <em>MntMeatProducts</em> eran las únicas que presentaban valores máximos superiores a 1000 unidades monetarias, lo que podía indicar categorías con alta concentración de gasto en determinados clientes.</p>
+<p>Sin embargo, el análisis formal de valores atípicos mediante el criterio del rango intercuartílico (IQR) de la Tabla <a href="procesamiento.html#tab:tablaatipicoscontinuas">5.5</a> muestra un comportamiento diferente al esperado. Las variables con mayor número de observaciones extremas no son necesariamente aquellas con los máximos absolutos más elevados. En particular, <em>MntFruits</em>, <em>MntFishProducts</em> y <em>MntSweetProducts</em> registran más de 200 valores atípicos cada una.</p>
+<p>Este resultado sugiere que, aunque los montos máximos en estas categorías no superen los de vinos o carnes, su distribución presenta una asimetría importante y una fuerte concentración en valores bajos, lo que provoca que los consumos relativamente altos queden rápidamente por fuera del rango intercuartílico.</p>
+<p>En segundo lugar, se encuentra <em>MntMeatProducts</em>, con 170 valores atípicos. Este comportamiento resulta coherente con lo anticipado en el análisis descriptivo, dado que se trata de una categoría con altos montos máximos y, por tanto, mayor dispersión potencial.</p>
+<p>La única variable de esta naturaleza que no presenta datos atípicos es <em>Income</em></p>
+<p>Con el fin de emitir un juicio más preciso sobre estos casos, se realiza a continuación una inspección visual mediante diagramas de caja (boxplots) para cada variable continua.</p>
+<div class="figure"><span style="display:block;" id="fig:boxplotcontinuas"></span>
+<img src="Informe-descriptivo_files/figure-html/boxplotcontinuas-1.png" alt="Distribución de variables continuas" width="672" />
+<p class="caption">
+Figure 5.3: Distribución de variables continuas
+</p>
+</div>
+<p>Al revisar los diagramas de caja de la Figura <a href="procesamiento.html#fig:boxplotcontinuas">5.3</a> notamos que todas las cajas de las variables de gasto que inician con <em>Mnt</em> se concentran en la parte inferior de la figura. Este comportamiento indica una fuerte acumulación de observaciones en niveles bajos de gasto, acompañada de colas superiores extendidas que reflejan consumos elevados en un grupo reducido de clientes.</p>
+<p>La única excepción parcial es <em>MntRegularProds</em>, cuyo eje se extiende ligeramente más hacia la parte inferior debido a la presencia de valores negativos previamente detectados en la Tabla <a href="procesamiento.html#tab:resumenestadistico">5.1</a>.</p>
+<p>La concentración de las cajas en la zona baja del gráfico sugiere que, la mayoría de las categorías de producto estudiadas no son consumidos de manera homogénea por la totalidad de los clientes, es decir, una proporción importante de clientes presenta gasto nulo o reducido. Esto implica que los valores identificados como atípicos no necesariamente representan anomalías, sino que más bien un subconjunto de clientes actúa como consumidor habitual o intensivo en cada categoría, aspecto que, de hecho, ayudaría mucho en la tarea de análisis y segmentación de los clientes.</p>
+</div>
+</div>
+<div id="solución-de-inconsistencias" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Solución de inconsistencias<a href="procesamiento.html#soluci%C3%B3n-de-inconsistencias" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Con base en los hallazgos obtenidos en el análisis descriptivo y en la detección de valores atípicos, se procede a identificar formalmente registros inconsistentes en variables específicas mendiante la tabla <a href="procesamiento.html#tab:tabinconsistencia">5.6</a>.</p>
+<table>
+<caption><span id="tab:tabinconsistencia">Table 5.6: </span>Cantidad y valores de registros inconsistentes por variable</caption>
+<thead>
+<tr class="header">
+<th align="left">Variable</th>
+<th align="center">Registros_invalidos</th>
+<th align="left">Valores_invalidos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">MntRegularProds</td>
+<td align="center">3</td>
+<td align="left">-151, -166, -283</td>
+</tr>
+<tr class="even">
+<td align="left">Age</td>
+<td align="center">2</td>
+<td align="left">240</td>
+</tr>
+<tr class="odd">
+<td align="left">marital_Divorced</td>
+<td align="center">6</td>
+<td align="left">100</td>
+</tr>
+</tbody>
+</table>
+<div id="inspección-y-depuración-de-la-variable-marital_divorced" class="section level3 hasAnchor" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Inspección y depuración de la variable <em>marital_Divorced</em><a href="procesamiento.html#inspecci%C3%B3n-y-depuraci%C3%B3n-de-la-variable-marital_divorced" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Dado que se detectaron valores fuera del dominio esperado (0 y 1) en <em>marital_Divorced</em>, se realiza una inspección detallada de sus categorías en la Figura <a href="procesamiento.html#fig:divorcedF">5.4</a>.</p>
+<div class="figure"><span style="display:block;" id="fig:divorcedF"></span>
+<img src="Informe-descriptivo_files/figure-html/divorcedF-1.png" alt="Distribución de Estado de Divorcio" width="672" />
+<p class="caption">
+Figure 5.4: Distribución de Estado de Divorcio
+</p>
+</div>
+<p>Posteriormente, se construye la Tabla <a href="procesamiento.html#tab:divorcetab">5.7</a> que permiten visualizar la distribución de los valores en las variables relacionadas al estado civil sólo en los registros que contienen el valor 100 como posible error de codificación.</p>
+<table>
+<caption><span id="tab:divorcetab">Table 5.7: </span>Registros con valor anómalo en variables de estado civil</caption>
+<colgroup>
+<col width="19%" />
+<col width="21%" />
+<col width="20%" />
+<col width="21%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">marital_Single</th>
+<th align="center">marital_Together</th>
+<th align="center">marital_Married</th>
+<th align="center">marital_Divorced</th>
+<th align="center">marital_Widow</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">100</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">100</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">100</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">100</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">100</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">100</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<p>Dado que en el resto de variables dummy de estado civil los valores posibles son 0 o 1, y que por definición el estado civil de cada cliente debe tomar el valor 1 en <strong>una sola</strong> de las variables indicadoras, puede concluirse que el valor 100 observado en <em>marital_Divorced</em> corresponde a un error de digitación. No existe una justificación lógica ni estructural para que esta variable adopte dicho valor dentro del esquema de codificación binaria.</p>
+<p>En consecuencia, y priorizando la integridad estructural del conjunto de datos (es decir, preservando la coherencia del sistema de variables dummy sin eliminar registros, mientras sea posible) se procede a reemplazar el valor 100 por 1.</p>
+<p>Para evaluar el impacto de esta corrección, se comparan las proporciones antes y después del ajuste.</p>
+<p>Antes de la corrección, la distribución era la siguiente:</p>
+<ul>
+<li>1826 registros con valor 0 (≈ 89.47%)</li>
+<li>209 registros con valor 1 (≈ 10.24%)</li>
+<li>6 registros con valor 100 (≈ 0.29%)</li>
+</ul>
+<p>Tras la corrección, la distribución pasa a ser:</p>
+<ul>
+<li>1826 registros con valor 0 (≈ 89.47%)</li>
+<li>215 registros con valor 1 (≈ 10.53%)</li>
+</ul>
+<p>El incremento en la proporción de clientes clasificados como divorciados es de apenas 0.29 puntos porcentuales, lo que constituye una variación mínima. Es decir, este cambio es demasiado pequeño para suponer una alteración significativa en la estructura de la variable <em>marital_Divorced</em>, de manera que, la corrección preserva la coherencia interna de las variables de estado civil sin introducir distorsiones relevantes en la distribución original.</p>
+</div>
+<div id="inspección-y-depuración-de-la-variable-age" class="section level3 hasAnchor" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> Inspección y depuración de la variable <em>Age</em><a href="procesamiento.html#inspecci%C3%B3n-y-depuraci%C3%B3n-de-la-variable-age" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En la revisión preliminar (ver Tabla <a href="procesamiento.html#tab:tabinconsistencia">5.6</a>), se identificaron 2 registros con valor 240 en la variable <em>Age</em>, valor que excede claramente el rango biológicamente plausible para la edad humana.</p>
+<div class="figure"><span style="display:block;" id="fig:inspedades"></span>
+<img src="Informe-descriptivo_files/figure-html/inspedades-1.png" alt="Distribución de la variable Edad con histograma y curva de densidad" width="672" />
+<p class="caption">
+Figure 5.5: Distribución de la variable Edad con histograma y curva de densidad
+</p>
+</div>
+<p>Tal como se observa en la Figura <a href="procesamiento.html#fig:inspedades">5.5</a>, la mayor concentración de edades se acumula aproximadamente entre los 25 y 75 años, con una distribución continua y como se podría comprobar revisando también el boxplot correspondiente en la Figura <a href="procesamiento.html#fig:boxplotdiscreta">5.2</a>, no hay indicios visuales de valores extremos en el rango superior, salvo los dos casos mencionados.</p>
+<p>Si el valor 240 correspondiera a un error de digitación, una hipótesis razonable sería que el valor correcto fuese 24. No obstante, realizar dicha sustitución implicaría introducir un supuesto no verificable, además de modificar potencialmente al menos una de las medidas descriptivas globales del conjunto de datos (mínimo, media, desviación estándar y asimetría).</p>
+<p>Dado que únicamente se trata de 2 registros sobre un total de 2041 observaciones (≈ 0.098%), y considerando la urgencia de no alterar innecesariamente los datos originales cuando no existe información adicional que permita una imputación fundamentada, se opta por eliminar dichos registros del conjunto de datos quedando con un total de 2039 registros.</p>
+</div>
+<div id="inspección-y-depuración-de-la-variable-mntregularprods" class="section level3 hasAnchor" number="5.4.3">
+<h3><span class="header-section-number">5.4.3</span> Inspección y depuración de la variable <em>MntRegularProds</em><a href="procesamiento.html#inspecci%C3%B3n-y-depuraci%C3%B3n-de-la-variable-mntregularprods" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En la Tabla <a href="procesamiento.html#tab:tabinconsistencia">5.6</a> se identificaron tres valores negativos en la variable <em>MntRegularProds</em> (-151, -166 y -283). Dado que esta variable representa un monto de gasto, los valores negativos no resultan coherentes bajo una interpretación directa del indicador.</p>
+<p>La Figura <a href="procesamiento.html#fig:distmntregularantes">5.6</a> muestra la distribución de la variable. Visualmente, los valores negativos aparecen como observaciones aisladas en el extremo izquierdo de la distribución.</p>
+<div class="figure"><span style="display:block;" id="fig:distmntregularantes"></span>
+<img src="Informe-descriptivo_files/figure-html/distmntregularantes-1.png" alt="Distribución original de MntRegularProds con histograma y curva de densidad" width="672" />
+<p class="caption">
+Figure 5.6: Distribución original de MntRegularProds con histograma y curva de densidad
+</p>
+</div>
+<p>Dado que no se dispone de documentación que respalde la hipótesis de devoluciones o ajustes contables, y considerando que se cuenta con el detalle de los montos por tipo de producto, se plantea la hipótesis de que MntRegularProds podría corresponder a:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Monto total menos productos de oro</strong>.</li>
+<li><strong>Suma de productos regulares específicos (vinos, frutas, carne, pescado y dulces)</strong>.</li>
+</ol>
+<p>Para evitar decisiones arbitrarias, se calcularon ambos métodos únicamente para los registros inconsistentes y se compararon los resultados, donde la decisión metodológica se tomará según el siguiente criterio:</p>
+<ul>
+<li>Si la columna <strong>Diferencia</strong> es igual a 0 en todos los registros, se procederá a recalcular los valores inconsistentes.</li>
+<li>En caso contrario, y ante la imposibilidad de justificar el origen del error, se eliminarán los registros afectados.</li>
+</ul>
+<table>
+<caption><span id="tab:tablaverificacionmntregular">Table 5.8: </span>Comparación de métodos de cálculo para registros con MntRegularProds negativo</caption>
+<thead>
+<tr class="header">
+<th align="center">Metodo_Total_menos_Oro</th>
+<th align="center">Metodo_Suma_Regular</th>
+<th align="center">Diferencia</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">111</td>
+<td align="center">111</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">125</td>
+<td align="center">125</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">38</td>
+<td align="center">38</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<p>Los resultados presentados en la Tabla <a href="procesamiento.html#tab:tablaverificacionmntregular">5.8</a> muestran que la columna Diferencia toma valor 0 en los tres registros evaluados. Esto confirma que ambos métodos de cálculo producen exactamente el mismo resultado y, por tanto, valida la hipótesis de que la variable <em>MntRegularProds</em> corresponde a la suma de los productos regulares (excluyendo oro).</p>
+<p>En consecuencia, se optó por recalcular los valores inconsistentes, preservando así los registros originales y manteniendo la coherencia interna de las variables de gasto.</p>
+<p>Dado que únicamente tres observaciones (3/2039) fueron modificadas, se espera que el impacto distributivo sea mínimo. A continuación, se presentan las comparaciones gráficas del dataset original y el dataset corregido .</p>
+<div class="figure"><span style="display:block;" id="fig:comparacionmntregularfinal"></span>
+<img src="Informe-descriptivo_files/figure-html/comparacionmntregularfinal-1.png" alt="Distribución comparativa de MntRegularProds antes (rosa) y después (verde) de la corrección" width="672" />
+<p class="caption">
+Figure 5.7: Distribución comparativa de MntRegularProds antes (rosa) y después (verde) de la corrección
+</p>
+</div>
+<p>En la Figura <a href="procesamiento.html#fig:comparacionmntregularfinal">5.7</a> se observa una superposición prácticamente total entre las distribuciones. Incluso con la diferenciación por color y leyenda, no se distinguen variaciones visuales relevantes entre el conjunto original y el corregido.</p>
+</div>
+</div>
+<div id="identificación-de-datos-faltantes" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Identificación de datos faltantes<a href="procesamiento.html#identificaci%C3%B3n-de-datos-faltantes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>En esta etapa se cuantifica la presencia de valores nulos en tres momentos clave del proceso de limpieza. Este ejercicio permite verificar si la depuración de duplicados o la corrección de inconsistencias alteraron la estructura de los datos faltantes.</p>
+<p>La Tabla <a href="procesamiento.html#tab:tablanulos">5.9</a> presenta la evolución de los datos faltantes en cada etapa del proceso de depuración: dataset original (n = 2220), tras la eliminación de duplicados (n = 2041) y tras la corrección de inconsistencias (n = 2039).</p>
+<table class="table table-striped table-hover table-responsive" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:tablanulos">Table 5.9: </span>Evolución de datos faltantes por etapa de depuración
+</caption>
+<thead>
+<tr>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Original
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Sin duplicados
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Consistente
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:right;">
+NA
+</th>
+<th style="text-align:right;">
+(%)
+</th>
+<th style="text-align:right;">
+NA
+</th>
+<th style="text-align:right;">
+(%)
+</th>
+<th style="text-align:right;">
+NA
+</th>
+<th style="text-align:right;">
+(%)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Income
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+3.06
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+3.33
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+3.33
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntWines
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+0.90
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+0.98
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+0.98
+</td>
+</tr>
+</tbody>
+</table>
+<p>Como se observa en la Tabla <a href="procesamiento.html#tab:tablanulos">5.9</a>, los datos faltantes se concentran exclusivamente en las variables <strong>Income</strong> y <strong>MntWines</strong> a lo largo de las tres etapas. La eliminación de duplicados redujo ligeramente las cantidades absolutas, mientras que la corrección de inconsistencias (remoción de 2 registros con edades no plausibles) no alteró el conteo de faltantes. En el dataset final de trabajo (n = 2039), <strong>Income</strong> presenta 68 valores faltantes (3.33%) y <strong>MntWines</strong> registra 20 (0.98%).</p>
+<p>Para identificar posibles patrones de co-ausencia, la Figura <a href="procesamiento.html#fig:aggrfaltantes">5.8</a> muestra el gráfico de agregación. Las barras de la izquierda indican la proporción de faltantes por variable, mientras que la matriz de la derecha señala si existen registros que carecen de información en múltiples variables simultáneamente.</p>
+<div class="figure"><span style="display:block;" id="fig:aggrfaltantes"></span>
+<img src="Informe-descriptivo_files/figure-html/aggrfaltantes-1.png" alt="Gráfico de agregación: Proporción de nulos y combinaciones de co-ausencia." width="960" />
+<p class="caption">
+Figure 5.8: Gráfico de agregación: Proporción de nulos y combinaciones de co-ausencia.
+</p>
+</div>
+<p>Finalmente, la Figura <a href="procesamiento.html#fig:missingmap">5.9</a> presenta el mapa de valores faltantes, que permite observar la distribución espacial de los vacíos a lo largo de todas las observaciones del dataset.</p>
+<div class="figure"><span style="display:block;" id="fig:missingmap"></span>
+<img src="Informe-descriptivo_files/figure-html/missingmap-1.png" alt="Mapa de valores faltantes (Matriz de presencia espacial)." width="1152" />
+<p class="caption">
+Figure 5.9: Mapa de valores faltantes (Matriz de presencia espacial).
+</p>
+</div>
+<p>La revisión conjunta de las Figuras <a href="procesamiento.html#fig:aggrfaltantes">5.8</a> y <a href="procesamiento.html#fig:missingmap">5.9</a> confirma que los faltantes aparecen de forma esporádica y dispersa, sin evidencia de patrones estructurados ni bloques sistemáticos de co-ausencia; en particular, la ausencia en <em>Income</em> no se encuentra ligada a la ausencia en <em>MntWines</em>. Dado que ambas proporciones se sitúan por debajo del umbral del 5% sugerido por la literatura (Little y Rubin, 2002), se espera un impacto limitado sobre los análisis posteriores. No obstante, el tratamiento definitivo de estos datos se determinará tras la ejecución de la prueba de aleatoriedad de Little.</p>
+</div>
+<div id="tratamiento-de-datos-faltantes" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Tratamiento de datos faltantes<a href="procesamiento.html#tratamiento-de-datos-faltantes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="evaluación-de-la-aleatoriedad-de-los-datos-faltantes" class="section level3 hasAnchor" number="5.6.1">
+<h3><span class="header-section-number">5.6.1</span> Evaluación de la aleatoriedad de los datos faltantes<a href="procesamiento.html#evaluaci%C3%B3n-de-la-aleatoriedad-de-los-datos-faltantes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Antes de proceder con la imputación, resulta necesario determinar si los datos faltantes siguen un patrón completamente aleatorio (MCAR) o si, por el contrario, su ausencia está asociada a otras variables del conjunto de datos. Para ello, se aplica el test de Little (1988), incluyendo un conjunto amplio de variables potencialmente relacionadas con la probabilidad de ausencia: ingresos, gasto en vinos, edad, composición del hogar, antigüedad, frecuencia de compras y variables demográficas reconstruidas como factores.</p>
+<table class="table table-striped table-hover table-responsive" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:test-mcar">Table 5.10: </span>Resultado del test de Little para MCAR
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+Estadístico
+</th>
+<th style="text-align:right;">
+gl
+</th>
+<th style="text-align:right;">
+p_valor
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+41.3285
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+0.0034
+</td>
+</tr>
+</tbody>
+</table>
+<p>La Tabla <a href="procesamiento.html#tab:test-mcar">5.10</a> presenta el resultado del test de Little, cuyas hipótesis son:</p>
+<p><span class="math display">\[H_0: \text{Los datos faltantes son MCAR (completamente al azar)}\]</span>
+<span class="math display">\[H_1: \text{Los datos faltantes NO son MCAR}\]</span></p>
+<p>Dado que el p-valor = 0.0034 resulta inferior al nivel de significancia convencional (<span class="math inline">\(\alpha = 0.05\)</span>), se rechaza <span class="math inline">\(H_0\)</span>. En consecuencia, los datos no siguen un mecanismo completamente aleatorio (MCAR).</p>
+<p>Dado el bajo porcentaje de ausencia (inferior al 5% en ambas variables) y la falta de evidencia estructural que sugiera un mecanismo de tipo MNAR (Missing Not At Random), se seguirá un mecanismo MAR (Missing At Random) para realizar la imputación de los datos. Es decir, se asume que la eliminación de los registros podría inducir sesgo en el estudio, por lo que se opta por imputación múltiple según el marco de Rubin (1987).</p>
+</div>
+<div id="preparación-del-conjunto-de-datos-para-imputación" class="section level3 hasAnchor" number="5.6.2">
+<h3><span class="header-section-number">5.6.2</span> Preparación del conjunto de datos para imputación<a href="procesamiento.html#preparaci%C3%B3n-del-conjunto-de-datos-para-imputaci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Antes de realizar la imputación, es necesario excluir las variables que son el resultado de realizar combinaciones lineales exactas de otras ya presentes en el dataset, esto con el fin de evitar la multicolinealidad perfecta y por lo tanto que resulten matrices singulares en el algoritmo de imputación. Las variables excluidas son:</p>
+<ul>
+<li><strong>MntTotal</strong>: suma de todos los montos de gasto por categoría.</li>
+<li><strong>MntRegularProds</strong>: suma de los montos de productos regulares (vinos, frutas, cárnicos, pescado y dulces).</li>
+<li><strong>AcceptedCmpOverall</strong>: suma de las respuestas a las cinco campañas anteriores.</li>
+</ul>
+<p>Estas variables serán recalculadas a partir de sus componentes una vez completada la imputación.</p>
+</div>
+<div id="comparación-de-métodos-de-imputación" class="section level3 hasAnchor" number="5.6.3">
+<h3><span class="header-section-number">5.6.3</span> Comparación de métodos de imputación<a href="procesamiento.html#comparaci%C3%B3n-de-m%C3%A9todos-de-imputaci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Se evalúan tres métodos de imputación múltiple, cada uno con <span class="math inline">\(m = 5\)</span> imputaciones y 10 iteraciones: PMM (<em>Predictive Mean Matching</em>) con regularización ridge, CART (<em>Classification and Regression Trees</em>) y regresión ridge. En todos los casos se emplea un subconjunto de variables predictoras seleccionadas por su relevancia teórica y su capacidad explicativa.</p>
+<p>Para seleccionar el método que mejor preserva la estructura de los datos observados, se evalúan tres criterios: estabilidad de las imputaciones (desviación estándar de las medias entre las 5 réplicas), preservación de momentos (comparación de medias y desviaciones estándar con los datos observados) y preservación de correlaciones.</p>
+<div id="criterio-1-estabilidad-de-las-imputaciones" class="section level4 hasAnchor" number="5.6.3.1">
+<h4><span class="header-section-number">5.6.3.1</span> Criterio 1: Estabilidad de las imputaciones<a href="procesamiento.html#criterio-1-estabilidad-de-las-imputaciones" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>La Tabla <a href="procesamiento.html#tab:tabla-estabilidad">5.11</a> presenta la desviación estándar de las medias imputadas entre las 5 réplicas para cada método. Un valor menor indica mayor estabilidad, es decir, que las distintas imputaciones producen resultados más consistentes entre sí.</p>
+<table class="table table-striped table-hover table-responsive" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:tabla-estabilidad">Table 5.11: </span>Estabilidad de las imputaciones: desviación estándar de las medias entre réplicas
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Método
+</th>
+<th style="text-align:left;">
+SD entre réplicas (Income)
+</th>
+<th style="text-align:left;">
+SD entre réplicas (MntWines)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+PMM
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">369.94</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">0.81</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+CART
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: firebrick !important;">194.51</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">0.56</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Ridge
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">400.28</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: firebrick !important;">0.17</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="criterio-2-preservación-de-momentos" class="section level4 hasAnchor" number="5.6.3.2">
+<h4><span class="header-section-number">5.6.3.2</span> Criterio 2: Preservación de momentos<a href="procesamiento.html#criterio-2-preservaci%C3%B3n-de-momentos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>La Tabla <a href="procesamiento.html#tab:tabla-momentos">5.12</a> compara las diferencias relativas entre las medias y desviaciones estándar imputadas y las observadas en los datos completos. Un valor menor indica que el método distorsiona menos la distribución original.</p>
+<table class="table table-striped table-hover table-responsive" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:tabla-momentos">Table 5.12: </span>Preservación de momentos: diferencia relativa (%) respecto a datos observados
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Método
+</th>
+<th style="text-align:left;">
+Δ% Media Income
+</th>
+<th style="text-align:left;">
+Δ% SD Income
+</th>
+<th style="text-align:left;">
+Δ% Media MntWines
+</th>
+<th style="text-align:left;">
+Δ% SD MntWines
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+PMM
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">0.47</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">0.64</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">1.63</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">1.15</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+CART
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: firebrick !important;">0.37</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: firebrick !important;">0.42</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">1.7</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">1.24</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Ridge
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">0.5</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">0.57</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: firebrick !important;">1.6</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: firebrick !important;">0.92</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="criterio-3-preservación-de-correlaciones" class="section level4 hasAnchor" number="5.6.3.3">
+<h4><span class="header-section-number">5.6.3.3</span> Criterio 3: Preservación de correlaciones<a href="procesamiento.html#criterio-3-preservaci%C3%B3n-de-correlaciones" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>La Tabla <a href="procesamiento.html#tab:tabla-cor">5.13</a> compara las correlaciones de Pearson entre <em>Income</em>, <em>MntWines</em> y <em>Age</em> para cada método (promedio de las 5 imputaciones) frente a la correlación observada en los datos completos. Se resalta en color el método cuya correlación es más cercana a la observada en cada par de variables.</p>
+<table class="table table-striped table-hover table-responsive" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:tabla-cor">Table 5.13: </span>Correlaciones promedio (5 imputaciones) comparadas con las observadas
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Metodo
+</th>
+<th style="text-align:left;">
+Income ~ MntWines
+</th>
+<th style="text-align:left;">
+Income ~ Age
+</th>
+<th style="text-align:left;">
+MntWines ~ Age
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;font-style: italic;background-color: rgba(240, 240, 240, 255) !important;">
+Observado
+</td>
+<td style="text-align:left;font-style: italic;background-color: rgba(240, 240, 240, 255) !important;">
+0.726
+</td>
+<td style="text-align:left;font-style: italic;background-color: rgba(240, 240, 240, 255) !important;">
+0.217
+</td>
+<td style="text-align:left;font-style: italic;background-color: rgba(240, 240, 240, 255) !important;">
+0.168
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+PMM
+</td>
+<td style="text-align:left;">
+0.724
+</td>
+<td style="text-align:left;">
+0.21
+</td>
+<td style="text-align:left;">
+0.168
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+CART
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: firebrick !important;">0.726</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: firebrick !important;">0.212</span>
+</td>
+<td style="text-align:left;">
+0.166
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Ridge
+</td>
+<td style="text-align:left;">
+0.725
+</td>
+<td style="text-align:left;">
+0.209
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: firebrick !important;">0.168</span>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- ================================================================== -->
+<!-- JUSTIFICACIÓN PENDIENTE: la redacción interpretativa de estas      -->
+<!-- tablas se completará en una etapa posterior.                        -->
+<!-- ================================================================== -->
+<p>Con base en los resultados de las Tablas <a href="procesamiento.html#tab:tabla-estabilidad">5.11</a>, <a href="procesamiento.html#tab:tabla-momentos">5.12</a> y <a href="procesamiento.html#tab:tabla-cor">5.13</a>, se selecciona <strong>CART</strong> como método final de imputación.</p>
+</div>
+</div>
+<div id="verificación-de-estabilidad-y-construcción-del-dataset-imputado" class="section level3 hasAnchor" number="5.6.4">
+<h3><span class="header-section-number">5.6.4</span> Verificación de estabilidad y construcción del dataset imputado<a href="procesamiento.html#verificaci%C3%B3n-de-estabilidad-y-construcci%C3%B3n-del-dataset-imputado" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para confirmar que las cinco imputaciones generadas por CART producen resultados consistentes, la Tabla <a href="procesamiento.html#tab:consistencia-imputaciones">5.14</a> presenta las medias de <em>Income</em> y <em>MntWines</em> en cada una de las réplicas.</p>
+<table class="table table-striped table-hover table-responsive" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:consistencia-imputaciones">Table 5.14: </span>Medias por imputación (CART): verificación de estabilidad
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+Imputación
+</th>
+<th style="text-align:right;">
+Media Income
+</th>
+<th style="text-align:right;">
+Media MntWines
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;font-weight: bold;">
+1
+</td>
+<td style="text-align:right;">
+517160.6
+</td>
+<td style="text-align:right;">
+305.56
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-weight: bold;">
+2
+</td>
+<td style="text-align:right;">
+517072.1
+</td>
+<td style="text-align:right;">
+304.84
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-weight: bold;">
+3
+</td>
+<td style="text-align:right;">
+517248.9
+</td>
+<td style="text-align:right;">
+305.01
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-weight: bold;">
+4
+</td>
+<td style="text-align:right;">
+517285.7
+</td>
+<td style="text-align:right;">
+305.40
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-weight: bold;">
+5
+</td>
+<td style="text-align:right;">
+517585.5
+</td>
+<td style="text-align:right;">
+304.12
+</td>
+</tr>
+</tbody>
+</table>
+<p>La baja variabilidad entre imputaciones confirma la estabilidad del método. Se utiliza la primera imputación para la construcción del dataset final, sobre el cual se recalculan las variables derivadas previamente excluidas.</p>
+</div>
+<div id="comparación-de-estadísticos-antes-y-después-de-la-imputación" class="section level3 hasAnchor" number="5.6.5">
+<h3><span class="header-section-number">5.6.5</span> Comparación de estadísticos antes y después de la imputación<a href="procesamiento.html#comparaci%C3%B3n-de-estad%C3%ADsticos-antes-y-despu%C3%A9s-de-la-imputaci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La Tabla <a href="procesamiento.html#tab:antes-despues">5.15</a> presenta los principales estadísticos descriptivos de <em>Income</em> y <em>MntWines</em> calculados antes de la imputación (sobre los datos observados, excluyendo NA) y después de la imputación (sobre el dataset completo). Esta comparación permite verificar que el método CART no introdujo distorsiones relevantes en la estructura de los datos.</p>
+<div style="overflow-x: auto; width: 100%;">
+<table class="table table-striped table-hover table-responsive" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:antes-despues">Table 5.15: </span>Estadísticos descriptivos de Income y MntWines antes y después de la imputación
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:left;">
+Etapa
+</th>
+<th style="text-align:right;">
+n
+</th>
+<th style="text-align:right;">
+Mín
+</th>
+<th style="text-align:right;">
+Q1
+</th>
+<th style="text-align:right;">
+Mediana
+</th>
+<th style="text-align:right;">
+Media
+</th>
+<th style="text-align:right;">
+Q3
+</th>
+<th style="text-align:right;">
+Máx
+</th>
+<th style="text-align:right;">
+SD
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;vertical-align: middle !important;" rowspan="2">
+Income
+</td>
+<td style="text-align:left;">
+Antes (observados)
+</td>
+<td style="text-align:right;">
+1971
+</td>
+<td style="text-align:right;">
+17300
+</td>
+<td style="text-align:right;">
+353310
+</td>
+<td style="text-align:right;">
+514790
+</td>
+<td style="text-align:right;">
+517222.29
+</td>
+<td style="text-align:right;">
+682110.0
+</td>
+<td style="text-align:right;">
+1137340
+</td>
+<td style="text-align:right;">
+207048.22
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Después (imputado)
+</td>
+<td style="text-align:right;">
+2039
+</td>
+<td style="text-align:right;">
+17300
+</td>
+<td style="text-align:right;">
+352210
+</td>
+<td style="text-align:right;">
+515180
+</td>
+<td style="text-align:right;">
+517160.58
+</td>
+<td style="text-align:right;">
+681340.0
+</td>
+<td style="text-align:right;">
+1137340
+</td>
+<td style="text-align:right;">
+206601.02
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;vertical-align: middle !important;" rowspan="2">
+MntWines
+</td>
+<td style="text-align:left;">
+Antes (observados)
+</td>
+<td style="text-align:right;">
+2019
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+174
+</td>
+<td style="text-align:right;">
+301.82
+</td>
+<td style="text-align:right;">
+500.5
+</td>
+<td style="text-align:right;">
+1493
+</td>
+<td style="text-align:right;">
+332.90
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Después (imputado)
+</td>
+<td style="text-align:right;">
+2039
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:right;">
+179
+</td>
+<td style="text-align:right;">
+305.56
+</td>
+<td style="text-align:right;">
+508.0
+</td>
+<td style="text-align:right;">
+1493
+</td>
+<td style="text-align:right;">
+335.13
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>También se puede confirmar que la imputación no haya distorsionado las distribuciones originales revisando la Figura <a href="procesamiento.html#fig:densidad-compa">5.10</a> que también compara las curvas de densidad de <em>Income</em> y <em>MntWines</em> antes y después de la imputación.</p>
+<div class="figure"><span style="display:block;" id="fig:densidad-compa"></span>
+<img src="Informe-descriptivo_files/figure-html/densidad-compa-1.png" alt="Densidades originales vs. imputadas para Income y MntWines." width="1152" />
+<p class="caption">
+Figure 5.10: Densidades originales vs. imputadas para Income y MntWines.
+</p>
+</div>
+<p>Las curvas muestran una superposición prácticamente completa, sin distorsiones visibles en la forma ni en la localización de las distribuciones.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="datos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="resultados-y-discusión.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

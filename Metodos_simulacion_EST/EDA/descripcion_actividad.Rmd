@@ -1,0 +1,4 @@
+# Descripción
+
+La segmentación de clientes permite identificar perfiles diferenciados a partir de características demográficas, comportamientos de compra y respuestas a acciones comerciales. En este estudio, la empresa busca sentar las bases para el desarrollo de un modelo predictivo orientado a maximizar la efectividad de una próxima campaña de marketing directo, destinada a la comercialización de un nuevo dispositivo entre clientes existentes. Para ello, se dispone de información proveniente de una campaña piloto, en la que se registró la respuesta de los clientes a la oferta. En esta primera etapa, el análisis se centra en la limpieza y exploración estadística de los datos, con el fin de identificar patrones y rasgos distintivos entre clientes que aceptaron la oferta y aquellos que no.
+

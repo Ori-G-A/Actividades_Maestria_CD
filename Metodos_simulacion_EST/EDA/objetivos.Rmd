@@ -1,0 +1,14 @@
+# Objetivos
+
+## Objetivo general
+
+Analizar, diferenciar e interpretar las características demográficas, comportamientos de compra y respuestas a campañas previas de los clientes de la empresa, identificando patrones relevantes que sirvan como base para la posterior construcción de un modelo predictivo de segmentación y respuesta para la campaña de marketing del nuevo producto.
+
+
+## Objetivos específicos
+
+* Caracterizar el perfil sociodemográfico y económico de los clientes, analizando variables como edad, nivel educativo, estado civil, composición del hogar e ingresos.
+
+* Analizar los patrones de consumo y comportamiento de compra de los clientes, evaluando el gasto por categoría de producto y los canales de adquisición utilizados.
+
+* Identificar las variables que diferencian a los clientes que aceptaron ofertas comerciales de aquellos que no lo hicieron, mediante análisis comparativos entre ambos grupos.

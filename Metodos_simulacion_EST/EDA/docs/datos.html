@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Datos | Informe-descriptivo</title>
+  <meta name="description" content="4 Datos | Informe-descriptivo" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Datos | Informe-descriptivo" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Datos | Informe-descriptivo" />
+  
+  
+  
+
+<meta name="author" content="Oriana Giraldo Arcia" />
+
+
+<meta name="date" content="2026-02-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="objetivos.html"/>
+<link rel="next" href="procesamiento.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Índice</a></li>
+<li class="chapter" data-level="2" data-path="descripción.html"><a href="descripción.html"><i class="fa fa-check"></i><b>2</b> Descripción</a></li>
+<li class="chapter" data-level="3" data-path="objetivos.html"><a href="objetivos.html"><i class="fa fa-check"></i><b>3</b> Objetivos</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="objetivos.html"><a href="objetivos.html#objetivo-general"><i class="fa fa-check"></i><b>3.1</b> Objetivo general</a></li>
+<li class="chapter" data-level="3.2" data-path="objetivos.html"><a href="objetivos.html#objetivos-espec%C3%ADficos"><i class="fa fa-check"></i><b>3.2</b> Objetivos específicos</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="datos.html"><a href="datos.html"><i class="fa fa-check"></i><b>4</b> Datos</a></li>
+<li class="chapter" data-level="5" data-path="procesamiento.html"><a href="procesamiento.html"><i class="fa fa-check"></i><b>5</b> Procesamiento</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="procesamiento.html"><a href="procesamiento.html#resumen-estad%C3%ADstico"><i class="fa fa-check"></i><b>5.1</b> Resumen estadístico</a></li>
+<li class="chapter" data-level="5.2" data-path="procesamiento.html"><a href="procesamiento.html#identificaci%C3%B3n-y-eliminaci%C3%B3n-de-duplicados"><i class="fa fa-check"></i><b>5.2</b> Identificación y eliminación de duplicados</a></li>
+<li class="chapter" data-level="5.3" data-path="procesamiento.html"><a href="procesamiento.html#errores-e-inconsistencias"><i class="fa fa-check"></i><b>5.3</b> Errores e inconsistencias</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="procesamiento.html"><a href="procesamiento.html#identificaci%C3%B3n-de-valores-at%C3%ADpicos-para-variables-cualitativas-binarias"><i class="fa fa-check"></i><b>5.3.1</b> Identificación de valores atípicos para variables cualitativas binarias</a></li>
+<li class="chapter" data-level="5.3.2" data-path="procesamiento.html"><a href="procesamiento.html#identificaci%C3%B3n-de-valores-at%C3%ADpicos-para-variables-discretas"><i class="fa fa-check"></i><b>5.3.2</b> Identificación de valores atípicos para variables discretas</a></li>
+<li class="chapter" data-level="5.3.3" data-path="procesamiento.html"><a href="procesamiento.html#identificaci%C3%B3n-de-valores-at%C3%ADpicos-para-variables-continuas"><i class="fa fa-check"></i><b>5.3.3</b> Identificación de valores atípicos para variables continuas</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="procesamiento.html"><a href="procesamiento.html#soluci%C3%B3n-de-inconsistencias"><i class="fa fa-check"></i><b>5.4</b> Solución de inconsistencias</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="procesamiento.html"><a href="procesamiento.html#inspecci%C3%B3n-y-depuraci%C3%B3n-de-la-variable-marital_divorced"><i class="fa fa-check"></i><b>5.4.1</b> Inspección y depuración de la variable <em>marital_Divorced</em></a></li>
+<li class="chapter" data-level="5.4.2" data-path="procesamiento.html"><a href="procesamiento.html#inspecci%C3%B3n-y-depuraci%C3%B3n-de-la-variable-age"><i class="fa fa-check"></i><b>5.4.2</b> Inspección y depuración de la variable <em>Age</em></a></li>
+<li class="chapter" data-level="5.4.3" data-path="procesamiento.html"><a href="procesamiento.html#inspecci%C3%B3n-y-depuraci%C3%B3n-de-la-variable-mntregularprods"><i class="fa fa-check"></i><b>5.4.3</b> Inspección y depuración de la variable <em>MntRegularProds</em></a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="procesamiento.html"><a href="procesamiento.html#identificaci%C3%B3n-de-datos-faltantes"><i class="fa fa-check"></i><b>5.5</b> Identificación de datos faltantes</a></li>
+<li class="chapter" data-level="5.6" data-path="procesamiento.html"><a href="procesamiento.html#tratamiento-de-datos-faltantes"><i class="fa fa-check"></i><b>5.6</b> Tratamiento de datos faltantes</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="procesamiento.html"><a href="procesamiento.html#evaluaci%C3%B3n-de-la-aleatoriedad-de-los-datos-faltantes"><i class="fa fa-check"></i><b>5.6.1</b> Evaluación de la aleatoriedad de los datos faltantes</a></li>
+<li class="chapter" data-level="5.6.2" data-path="procesamiento.html"><a href="procesamiento.html#preparaci%C3%B3n-del-conjunto-de-datos-para-imputaci%C3%B3n"><i class="fa fa-check"></i><b>5.6.2</b> Preparación del conjunto de datos para imputación</a></li>
+<li class="chapter" data-level="5.6.3" data-path="procesamiento.html"><a href="procesamiento.html#comparaci%C3%B3n-de-m%C3%A9todos-de-imputaci%C3%B3n"><i class="fa fa-check"></i><b>5.6.3</b> Comparación de métodos de imputación</a></li>
+<li class="chapter" data-level="5.6.4" data-path="procesamiento.html"><a href="procesamiento.html#verificaci%C3%B3n-de-estabilidad-y-construcci%C3%B3n-del-dataset-imputado"><i class="fa fa-check"></i><b>5.6.4</b> Verificación de estabilidad y construcción del dataset imputado</a></li>
+<li class="chapter" data-level="5.6.5" data-path="procesamiento.html"><a href="procesamiento.html#comparaci%C3%B3n-de-estad%C3%ADsticos-antes-y-despu%C3%A9s-de-la-imputaci%C3%B3n"><i class="fa fa-check"></i><b>5.6.5</b> Comparación de estadísticos antes y después de la imputación</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html"><i class="fa fa-check"></i><b>6</b> Resultados y discusión</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html#matriz-de-correlaciones-del-dataset-procesado"><i class="fa fa-check"></i><b>6.1</b> Matriz de correlaciones del dataset procesado</a></li>
+<li class="chapter" data-level="6.2" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html#relaci%C3%B3n-entre-response-y-acceptedcmpoverall"><i class="fa fa-check"></i><b>6.2</b> Relación entre Response y AcceptedCmpOverall</a></li>
+<li class="chapter" data-level="6.3" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html#an%C3%A1lisis-bivariado-variables-num%C3%A9ricas-por-grupo-de-respuesta"><i class="fa fa-check"></i><b>6.3</b> Análisis bivariado: variables numéricas por grupo de respuesta</a></li>
+<li class="chapter" data-level="6.4" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html#an%C3%A1lisis-bivariado-variables-categ%C3%B3ricas-por-grupo-de-respuesta"><i class="fa fa-check"></i><b>6.4</b> Análisis bivariado: variables categóricas por grupo de respuesta</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html#nivel-educativo"><i class="fa fa-check"></i><b>6.4.1</b> Nivel educativo</a></li>
+<li class="chapter" data-level="6.4.2" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html#estado-civil"><i class="fa fa-check"></i><b>6.4.2</b> Estado civil</a></li>
+<li class="chapter" data-level="6.4.3" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html#composici%C3%B3n-del-hogar"><i class="fa fa-check"></i><b>6.4.3</b> Composición del hogar</a></li>
+<li class="chapter" data-level="6.4.4" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html#pruebas-de-independencia"><i class="fa fa-check"></i><b>6.4.4</b> Pruebas de independencia</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html#perfil-del-gasto-por-categor%C3%ADa-de-producto-y-canal-de-compra"><i class="fa fa-check"></i><b>6.5</b> Perfil del gasto por categoría de producto y canal de compra</a></li>
+<li class="chapter" data-level="6.6" data-path="resultados-y-discusión.html"><a href="resultados-y-discusión.html#discusi%C3%B3n"><i class="fa fa-check"></i><b>6.6</b> Discusión</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="conclusiones.html"><a href="conclusiones.html"><i class="fa fa-check"></i><b>7</b> Conclusiones</a></li>
+<li class="chapter" data-level="8" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>8</b> Referencias</a></li>
+<li class="chapter" data-level="9" data-path="anexos.html"><a href="anexos.html"><i class="fa fa-check"></i><b>9</b> Anexos</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Informe-descriptivo</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="datos" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Datos<a href="datos.html#datos" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>La base de datos corresponde a la muestra obtenida durante la campaña piloto en la que se seleccionó aleatoriamente un subconjunto de clientes que fueron contactados por vía telefónica. En total, se recopiló información de 2220 clientes, donde cada uno reportó información sociodemográfica, hábitos de compra y respuesta a campañas de marketing. Cada registro contiene información sobre la aceptación de campañas anteriores (<em>AcceptedCmp1</em>, <em>AcceptedCmp2</em>, <em>AcceptedCmp3</em>, <em>AcceptedCmp4</em>, <em>AcceptedCmp5</em>), un indicador global de aceptación (<em>AcceptedCmpOverall</em>), la respuesta a la campaña piloto (<em>Response</em>), la existencia de quejas (<em>Complain</em>), y la antigüedad del cliente en días (<em>Customer_Days</em>).</p>
+<p>Asimismo, se incluye información sociodemográfica como el nivel educativo (<em>education_2n Cycle</em>, <em>education_Basic</em>, <em>education_Graduation</em>, <em>education_Master</em>, <em>education_PhD</em>), el estado civil (<em>marital_Single</em>, <em>marital_Together</em>, <em>marital_Married</em>, <em>marital_Divorced</em>, <em>marital_Widow</em>), el número de niños en el hogar (<em>Kidhome</em>), el número de adolescentes en el hogar (<em>Teenhome</em>), el ingreso anual del cliente (<em>Income</em>) y la edad (<em>Age</em>).</p>
+<p>Finalmente, la base de datos incorpora variables de comportamiento de compra, tales como el gasto en diferentes categorías de productos (<em>MntFishProducts</em>, <em>MntMeatProducts</em>, <em>MntFruits</em>, <em>MntSweetProducts</em>, <em>MntWines</em>, <em>MntGoldProds</em>), el gasto total (<em>MntTotal</em>), el gasto en productos regulares (<em>MntRegularProds</em>), el número de compras con descuento (<em>NumDealsPurchases</em>), compras por catálogo (<em>NumCatalogPurchases</em>), compras en tienda física (<em>NumStorePurchases</em>), compras en la web (<em>NumWebPurchases</em>), el número de visitas mensuales al sitio web (<em>NumWebVisitsMonth</em>) y la recencia de la última compra (<em>Recency</em>).</p>
+<p>Desde la perspectiva de su naturaleza, el dataset contiene un total de 17 variables cualitativas binarias que representan principalmente indicadores de respuesta a campañas previas y variables dummy asociadas a características educativas y del estado civil.</p>
+<p>Asimismo, se identifican 11 variables cuantitativas discretas que corresponden, en su mayoría, a métricas de comportamiento de compra, estructura del hogar e interacciones con la empresa, tales como número de adquisiciones, visitas a canales digitales, composición familiar y quejas.</p>
+<p>Finalmente, se incluyen 9 variables cuantitativas continuas que abarcan variables económicas y de gasto acumulado por categoría de producto, las cuales permiten aproximar el valor monetario del cliente para la organización.</p>
+<p>La Tabla <a href="datos.html#tab:data">4.1</a> presenta la descripción y la clasificación de cada variable de acuerdo con su naturaleza.</p>
+<table class="table table-striped table-hover table-responsive" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:data">Table 4.1: </span>Diccionario de variables del dataset
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Nombre
+</th>
+<th style="text-align:left;">
+Descripcion
+</th>
+<th style="text-align:left;">
+Tipo
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmp1
+</td>
+<td style="text-align:left;">
+Aceptó la oferta en la primera campaña
+</td>
+<td style="text-align:left;">
+Cualitativa binaria
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmp2
+</td>
+<td style="text-align:left;">
+Aceptó la oferta en la segunda campaña
+</td>
+<td style="text-align:left;">
+Cualitativa binaria
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmp3
+</td>
+<td style="text-align:left;">
+Aceptó la oferta en la tercera campaña
+</td>
+<td style="text-align:left;">
+Cualitativa binaria
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmp4
+</td>
+<td style="text-align:left;">
+Aceptó la oferta en la cuarta campaña
+</td>
+<td style="text-align:left;">
+Cualitativa binaria
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmp5
+</td>
+<td style="text-align:left;">
+Aceptó la oferta en la quinta campaña
+</td>
+<td style="text-align:left;">
+Cualitativa binaria
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+AcceptedCmpOverall
+</td>
+<td style="text-align:left;">
+Número total de campañas aceptadas
+</td>
+<td style="text-align:left;">
+Cuantitativa discreta
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Response
+</td>
+<td style="text-align:left;">
+Aceptó la oferta en la última campaña
+</td>
+<td style="text-align:left;">
+Cualitativa binaria
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Complain
+</td>
+<td style="text-align:left;">
+Presentó una queja en los últimos dos años
+</td>
+<td style="text-align:left;">
+Cualitativa binaria
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+education_2n Cycle
+</td>
+<td style="text-align:left;">
+Cliente con educación secundaria
+</td>
+<td style="text-align:left;">
+Cualitativa binaria
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+education_Basic
+</td>
+<td style="text-align:left;">
+Cliente con educación básica
+</td>
+<td style="text-align:left;">
+Cualitativa binaria
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+education_Graduation
+</td>
+<td style="text-align:left;">
+Cliente con título universitario
+</td>
+<td style="text-align:left;">
+Cualitativa binaria
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+education_Master
+</td>
+<td style="text-align:left;">
+Cliente con maestría
+</td>
+<td style="text-align:left;">
+Cualitativa binaria
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+education_PhD
+</td>
+<td style="text-align:left;">
+Cliente con doctorado
+</td>
+<td style="text-align:left;">
+Cualitativa binaria
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+marital_Single
+</td>
+<td style="text-align:left;">
+Cliente divorciado
+</td>
+<td style="text-align:left;">
+Cualitativa binaria
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+marital_Together
+</td>
+<td style="text-align:left;">
+Cliente casado
+</td>
+<td style="text-align:left;">
+Cualitativa binaria
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+marital_Married
+</td>
+<td style="text-align:left;">
+Cliente soltero
+</td>
+<td style="text-align:left;">
+Cualitativa binaria
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+marital_Divorced
+</td>
+<td style="text-align:left;">
+Cliente en relación
+</td>
+<td style="text-align:left;">
+Cualitativa binaria
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+marital_Widow
+</td>
+<td style="text-align:left;">
+Cliente viudo
+</td>
+<td style="text-align:left;">
+Cualitativa binaria
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Kidhome
+</td>
+<td style="text-align:left;">
+Número de niños pequeños en el hogar
+</td>
+<td style="text-align:left;">
+Cuantitativa discreta
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Teenhome
+</td>
+<td style="text-align:left;">
+Número de adolescentes en el hogar
+</td>
+<td style="text-align:left;">
+Cuantitativa discreta
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Income
+</td>
+<td style="text-align:left;">
+Ingreso anual del hogar
+</td>
+<td style="text-align:left;">
+Cuantitativa continua
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntFishProducts
+</td>
+<td style="text-align:left;">
+Gasto en productos de pescado en los últimos dos años
+</td>
+<td style="text-align:left;">
+Cuantitativa continua
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntMeatProducts
+</td>
+<td style="text-align:left;">
+Gasto en productos cárnicos en los últimos dos años
+</td>
+<td style="text-align:left;">
+Cuantitativa continua
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntFruits
+</td>
+<td style="text-align:left;">
+Gasto en frutas en los últimos dos años
+</td>
+<td style="text-align:left;">
+Cuantitativa continua
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntSweetProducts
+</td>
+<td style="text-align:left;">
+Gasto en productos dulces en los últimos dos años
+</td>
+<td style="text-align:left;">
+Cuantitativa continua
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntWines
+</td>
+<td style="text-align:left;">
+Gasto en vinos en los últimos dos años
+</td>
+<td style="text-align:left;">
+Cuantitativa continua
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntGoldProds
+</td>
+<td style="text-align:left;">
+Gasto en productos de oro en los últimos dos años
+</td>
+<td style="text-align:left;">
+Cuantitativa continua
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntTotal
+</td>
+<td style="text-align:left;">
+Gasto total en todos los productos
+</td>
+<td style="text-align:left;">
+Cuantitativa continua
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+MntRegularProds
+</td>
+<td style="text-align:left;">
+Gasto total en productos regulares
+</td>
+<td style="text-align:left;">
+Cuantitativa continua
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumDealsPurchases
+</td>
+<td style="text-align:left;">
+Número de compras con descuento
+</td>
+<td style="text-align:left;">
+Cuantitativa discreta
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumCatalogPurchases
+</td>
+<td style="text-align:left;">
+Número de compras por catálogo
+</td>
+<td style="text-align:left;">
+Cuantitativa discreta
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumStorePurchases
+</td>
+<td style="text-align:left;">
+Número de compras en tienda física
+</td>
+<td style="text-align:left;">
+Cuantitativa discreta
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumWebPurchases
+</td>
+<td style="text-align:left;">
+Número de compras vía web
+</td>
+<td style="text-align:left;">
+Cuantitativa discreta
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+NumWebVisitsMonth
+</td>
+<td style="text-align:left;">
+Número de visitas al sitio web en el último mes
+</td>
+<td style="text-align:left;">
+Cuantitativa discreta
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Recency
+</td>
+<td style="text-align:left;">
+Días desde la última compra
+</td>
+<td style="text-align:left;">
+Cuantitativa discreta
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Customer_Days
+</td>
+<td style="text-align:left;">
+Número de días desde el registro del cliente
+</td>
+<td style="text-align:left;">
+Cuantitativa discreta
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Age
+</td>
+<td style="text-align:left;">
+Edad del cliente
+</td>
+<td style="text-align:left;">
+Cuantitativa discreta
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="objetivos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="procesamiento.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
