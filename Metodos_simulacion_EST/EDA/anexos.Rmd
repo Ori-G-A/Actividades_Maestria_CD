@@ -1,6 +1,6 @@
 # Anexos
 
-- El repositorio en GitHub incluye un archivo ZIP en el siguiente enlace (https://github.com/Centromagis/Informe.git) con los ficheros fuente de bookdown para reproducir el informe:
+- El repositorio en GitHub incluye un archivo ZIP en el siguiente enlace (https://github.com/Ori-G-A/Actividades_Maestria_CD/tree/main/Metodos_simulacion_EST/EDA) con los ficheros fuente de bookdown para reproducir el informe:
 
   - `index.Rmd`
   - `descripcion_actividad.Rmd`

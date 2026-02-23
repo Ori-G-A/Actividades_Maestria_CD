@@ -1262,13 +1262,7 @@ AcceptedCmpOverall
 </tr>
 </tbody>
 </table>
-<p>A continuación, se procederá con una revisión detallada de valores faltantes, datos atípicos e inconsistencias. Sin embargo, desde esta primera visualización ya emergen algunos aspectos relevantes que merecen atención.</p>
-<p>En primer lugar, resulta llamativa la magnitud de la desviación estándar en la variable <em>Income</em>, así como en todas aquellas variables cuyo nombre inicia con <em>Mnt</em>, lo que sugiere una alta dispersión en los ingresos reportados y en los niveles de gasto, especialmente en el caso de las variables de gasto específico. Esta variabilidad se refleja también en la diferencia observable entre media y mediana, lo cual podría indicar la presencia de asimetrías positivas.</p>
-<p>Particularmente en <em>Income</em>, se observa una diferencia cercana al millón entre el valor mínimo y el máximo. Además, esta variable, junto con <em>MntWines</em>, son las únicas que presentan valores nulos, lo que sugiere que el tratamiento de datos faltantes deberá considerarse con especial cuidado en el análisis posterior.</p>
-<p>Otro aspecto relevante es que <em>MntRegularProds</em> es la única variable cuyo valor mínimo es negativo, lo que podría indicar un posible error de registro, ajustes contables o devoluciones que deben ser verificados en etapas posteriores del análisis de calidad de datos.</p>
-<p>Así mismo, la variable <em>marital_Divorced</em> tenga como valor valor máximo 100. Esto teniendo en cuenta que, junto a las otras variables relacionadas al estado civil, fue clasificada como variable cualitativa binaria, por lo que se presume un error de registo.</p>
-<p>También, llama la atención que <em>AcceptedCmpOverall</em> presenta tiene como mediana el valor 0.0, lo que podría sugerir que, en su gran mayoría, los cientes contactados no respondieron de manera positiva a ninguna de las 5 campañas anteriores.</p>
-<p>Finalmente, dentro de las variables de gasto específico, se observa que <em>MntWines</em> y <em>MntMeatProducts</em> son las únicas que presentan valores máximos superiores a 1000 unidades monetarias, lo que podría señalar categorías de consumo con alta concentración de gasto en determinados clientes.</p>
+<p>Desde esta primera visualización emergen aspectos que requieren atención en etapas posteriores: alta dispersión en <em>Income</em> y en las variables de gasto (<em>Mnt</em>), con diferencias entre media y mediana que sugieren asimetrías positivas; valores faltantes exclusivamente en <em>Income</em> y <em>MntWines</em>; un valor mínimo negativo en <em>MntRegularProds</em> que podría indicar un error de registro; un máximo de 100 en <em>marital_Divorced</em> incompatible con su naturaleza binaria; una mediana de 0 en <em>AcceptedCmpOverall</em>, indicando que la mayoría de los clientes no aceptaron ninguna de las 5 campañas previas; y valores máximos superiores a 1000 u.m. en <em>MntWines</em> y <em>MntMeatProducts</em>, señalando categorías con alta concentración de gasto en determinados clientes.</p>
 </div>
 <div id="identificación-y-eliminación-de-duplicados" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> Identificación y eliminación de duplicados<a href="procesamiento.html#identificaci%C3%B3n-y-eliminaci%C3%B3n-de-duplicados" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -2413,8 +2407,7 @@ AcceptedCmpOverall
 </tr>
 </tbody>
 </table>
-<p>Tomando como referencia los aspectos clave presentados en la Tabla <a href="procesamiento.html#tab:resumenestadistico">5.1</a>, y tras contrastarlos con la información contenida en la Tabla <a href="procesamiento.html#tab:resumenpostlimpieza">5.3</a>, se concluye que no se produjo cambios observaron cambios significativos tras la eliminación de los registros duplicados. Únicamente se evidenciaron ligeras variaciones en algunas medidas de tendencia central, sin modificaciones en los valores mínimos, máximos ni en la cantidad de datos faltantes. Asimismo, los patrones previamente identificados (como la alta dispersión en <em>Income</em> y en las variables de gasto, así como la presencia de valores extremos) se mantienen.</p>
-<p>Esto sugiere que los registros duplicados no estaban concentrados en perfiles atípicos ni alteraban de forma sustancial la estructura descriptiva del dataset, sino que se encontraban distribuidos de manera relativamente homogénea.</p>
+<p>Al comparar las Tablas <a href="procesamiento.html#tab:resumenestadistico">5.1</a> y <a href="procesamiento.html#tab:resumenpostlimpieza">5.3</a>, no se observan cambios significativos tras la eliminación de duplicados: las ligeras variaciones en medidas de tendencia central no alteran los patrones previamente identificados, lo que indica que los registros duplicados se encontraban distribuidos de manera homogénea en el dataset.</p>
 </div>
 <div id="errores-e-inconsistencias" class="section level2 hasAnchor" number="5.3">
 <h2><span class="header-section-number">5.3</span> Errores e inconsistencias<a href="procesamiento.html#errores-e-inconsistencias" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -2428,11 +2421,8 @@ AcceptedCmpOverall
 Figure 5.1: Distribución de variables binarias
 </p>
 </div>
-<p>El análisis gráfico obtenido de la Figura <a href="procesamiento.html#fig:barplotbinarias">5.1</a> permite identificar varios patrones relevantes en las variables binarias.</p>
-<p>En primer lugar, la respuesta de los clientes a las campañas 1 a la 5 fue considerablemente baja oscilando entre 27 y 158 respuestas afirmativas. En contraste, la campaña piloto presenta 314 respuestas positivas, lo que sugiere una mejora sustancial en la efectividad de la estrategia implementada o en la segmentación utilizada para su ejecución.</p>
-<p>En relación con la variable <em>Complain</em>, únicamente se registran 19 quejas, lo que evidencia una baja proporción de inconformidades. Este resultado podría interpretarse como un indicador favorable en términos de calidad del servicio y satisfacción del cliente; sin embargo, también conviene verificar que el proceso de registro de quejas sea exhaustivo y consistente.</p>
-<p>Respecto al estado civil, se observa que la mayoría de los clientes se encuentran casados o conviven en unión libre. No obstante, llama la atención que para 6 clientes aparece una tercera respuesta en la categoría <em>marital_Divorced</em>, que como se había mencionado en el estudio del resumen estadístico está codificada con el valor 100. Dado que se trata de una variable binaria, la presencia de un valor distinto de 0 y 1 constituye una inconsistencia que debe ser corregida.</p>
-<p>En cuanto al nivel educativo, aproximadamente la mitad de los clientes (1023) cuentan con título universitario, lo que sugiere un perfil educativo relativamente alto dentro de la muestra.</p>
+<p>El análisis gráfico de la Figura <a href="procesamiento.html#fig:barplotbinarias">5.1</a> permite identificar varios patrones relevantes. La respuesta a las campañas 1 a 5 fue considerablemente baja (entre 27 y 158 aceptaciones), mientras que la campaña piloto alcanzó 314 respuestas positivas, lo que sugiere una mejora en la estrategia o segmentación. La variable <em>Complain</em> registra únicamente 19 quejas, evidenciando baja proporción de inconformidades.</p>
+<p>Respecto al estado civil, la mayoría de los clientes se encuentran casados o en unión libre. Se detecta que 6 registros en <em>marital_Divorced</em> presentan el valor 100, lo cual constituye una inconsistencia que debe corregirse dado su dominio binario. En cuanto al nivel educativo, aproximadamente la mitad de los clientes (1023) cuentan con título universitario.</p>
 </div>
 <div id="identificación-de-valores-atípicos-para-variables-discretas" class="section level3 hasAnchor" number="5.3.2">
 <h3><span class="header-section-number">5.3.2</span> Identificación de valores atípicos para variables discretas<a href="procesamiento.html#identificaci%C3%B3n-de-valores-at%C3%ADpicos-para-variables-discretas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -2578,10 +2568,7 @@ NumWebVisitsMonth
 </tr>
 </tbody>
 </table>
-<p>Al analizar la distribución de valores atípicos en la Tabla <a href="procesamiento.html#tab:tablaatipicosdiscretos">5.4</a> se observa que la variable Age presenta únicamente 2 observaciones extremas (≈0.1% del total).</p>
-<p>En variables asociadas al comportamiento de compra y navegación (NumWebPurchases y NumWebVisitsMonth) se identifican menos de 10 valores atípicos en cada caso (menos del 0.5% de la muestra). Estos registros podrían corresponder a clientes con una actividad comercial particularmente intensa, pero no constituyen una proporción preocupante desde el punto de vista estadístico.</p>
-<p>Por su parte, NumDealsPurchases (compras en oferta) registra 74 valores atípicos (≈3.6%), mientras que NumCatalogPurchases presenta 19 (≈0.9%). En el primer caso, la magnitud sugiere la posible existencia de un subgrupo de clientes altamente sensibles a promociones.</p>
-<p>El resultado más llamativo corresponde a AcceptedCmpOverall, con 431 valores atípicos (≈21.1% de la muestra).</p>
+<p>La Tabla <a href="procesamiento.html#tab:tablaatipicosdiscretos">5.4</a> muestra que <em>Age</em> presenta únicamente 2 observaciones extremas (≈0.1%), mientras que <em>NumWebPurchases</em> y <em>NumWebVisitsMonth</em> registran menos de 10 cada una (&lt;0.5%). Las variables <em>NumDealsPurchases</em> (74 atípicos, ≈3.6%) y <em>NumCatalogPurchases</em> (19, ≈0.9%) presentan concentraciones moderadas. El caso más llamativo es <em>AcceptedCmpOverall</em>, con 431 valores atípicos (≈21.1%), consecuencia de la fuerte concentración en el valor 0.</p>
 <p>Con el fin de emitir un juicio más preciso sobre estos casos, se realiza a continuación una inspección visual mediante diagramas de caja (boxplots) para cada variable discreta.</p>
 <div class="figure"><span style="display:block;" id="fig:boxplotdiscreta"></span>
 <img src="Informe-descriptivo_files/figure-html/boxplotdiscreta-1.png" alt="Distribución de variables discretas" width="672" />
@@ -2589,11 +2576,8 @@ NumWebVisitsMonth
 Figure 5.2: Distribución de variables discretas
 </p>
 </div>
-<p>La inspección visual de los diagramas de caja en la Figura <a href="procesamiento.html#fig:boxplotdiscreta">5.2</a> permite complementar la lectura obtenida a partir del criterio del rango intercuartílico (IQR) y aportar mayor claridad sobre la naturaleza de los valores identificados como atípicos.</p>
-<p>En el caso de la variable <em>Age</em>, los valores extremos detectados corresponden a edades superiores a 200 años. Desde una perspectiva demográfica, estos registros son imposibles en términos de expectativa de vida humana, por lo que no pueden interpretarse como comportamientos extremos plausibles, sino como errores evidentes en los datos. En consecuencia, estos casos requieren corrección o depuración antes de cualquier análisis posterior.</p>
-<p>Por su parte, en <em>AcceptedCmpOverall</em> se observa una fuerte concentración en el valor 0. Visualmente, no se aprecia una caja definida; únicamente se distingue la línea correspondiente a la mediana, ubicada en 0, junto con cuatro puntos aislados en las alturas 1, 2, 3 y 4. Esta configuración gráfica confirma lo mencionado durante la inspección de las estadísticas del dataset: que la mayoría de los clientes no aceptaron campañas, lo que hace que aceptar una o más campañas constituya un comportamiento poco frecuente dentro del conjunto de datos.</p>
-<p>Una situación similar se observa en <em>NumDealsPurchases</em> y <em>NumCatalogPurchases</em>, cuyas distribuciones también se encuentran fuertemente concentradas en valores cercanos a cero. La cercanía de la caja al origen y la presencia de algunos valores superiores aislados sugieren que la mayoría de los clientes realiza pocas compras en oferta o por catálogo, mientras que un grupo reducido presenta una actividad más intensa en estos canales.</p>
-<p>En conjunto, los boxplots evidencian que, salvo en el caso de <em>Age</em>, los valores identificados como atípicos responden principalmente a distribuciones discretas con alta concentración en cero y marcada asimetría positiva.</p>
+<p>La Figura <a href="procesamiento.html#fig:boxplotdiscreta">5.2</a> complementa el análisis del IQR. En <em>Age</em>, los valores extremos corresponden a edades superiores a 200 años, registros biológicamente imposibles que constituyen errores evidentes y requieren depuración. En <em>AcceptedCmpOverall</em>, no se aprecia una caja definida sino únicamente la mediana en 0 con puntos aislados en 1, 2, 3 y 4, confirmando que la aceptación de campañas es un comportamiento poco frecuente. Un patrón similar se observa en <em>NumDealsPurchases</em> y <em>NumCatalogPurchases</em>, con distribuciones concentradas en valores bajos y algunos valores superiores aislados.</p>
+<p>En conjunto, salvo en <em>Age</em>, los valores atípicos responden a distribuciones discretas con alta concentración en cero y marcada asimetría positiva.</p>
 </div>
 <div id="identificación-de-valores-atípicos-para-variables-continuas" class="section level3 hasAnchor" number="5.3.3">
 <h3><span class="header-section-number">5.3.3</span> Identificación de valores atípicos para variables continuas<a href="procesamiento.html#identificaci%C3%B3n-de-valores-at%C3%ADpicos-para-variables-continuas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -2716,11 +2700,7 @@ MntRegularProds
 </tr>
 </tbody>
 </table>
-<p>En el estudio de la Tabla <a href="procesamiento.html#tab:resumenestadistico">5.1</a> se señaló que, dentro de las variables de gasto específico, <em>MntWines</em> y <em>MntMeatProducts</em> eran las únicas que presentaban valores máximos superiores a 1000 unidades monetarias, lo que podía indicar categorías con alta concentración de gasto en determinados clientes.</p>
-<p>Sin embargo, el análisis formal de valores atípicos mediante el criterio del rango intercuartílico (IQR) de la Tabla <a href="procesamiento.html#tab:tablaatipicoscontinuas">5.5</a> muestra un comportamiento diferente al esperado. Las variables con mayor número de observaciones extremas no son necesariamente aquellas con los máximos absolutos más elevados. En particular, <em>MntFruits</em>, <em>MntFishProducts</em> y <em>MntSweetProducts</em> registran más de 200 valores atípicos cada una.</p>
-<p>Este resultado sugiere que, aunque los montos máximos en estas categorías no superen los de vinos o carnes, su distribución presenta una asimetría importante y una fuerte concentración en valores bajos, lo que provoca que los consumos relativamente altos queden rápidamente por fuera del rango intercuartílico.</p>
-<p>En segundo lugar, se encuentra <em>MntMeatProducts</em>, con 170 valores atípicos. Este comportamiento resulta coherente con lo anticipado en el análisis descriptivo, dado que se trata de una categoría con altos montos máximos y, por tanto, mayor dispersión potencial.</p>
-<p>La única variable de esta naturaleza que no presenta datos atípicos es <em>Income</em></p>
+<p>Si bien en la Tabla <a href="procesamiento.html#tab:resumenestadistico">5.1</a> se anticipaba que <em>MntWines</em> y <em>MntMeatProducts</em> serían las variables con mayor presencia de atípicos por sus elevados valores máximos, la Tabla <a href="procesamiento.html#tab:tablaatipicoscontinuas">5.5</a> muestra un resultado diferente: <em>MntFruits</em>, <em>MntFishProducts</em> y <em>MntSweetProducts</em> registran más de 200 valores atípicos cada una. Esto se explica por su fuerte concentración en valores bajos y su marcada asimetría, que provoca que consumos relativamente moderados excedan el rango intercuartílico. <em>MntMeatProducts</em> presenta 170 atípicos, coherente con su alta dispersión. La única variable continua sin datos atípicos es <em>Income</em>.</p>
 <p>Con el fin de emitir un juicio más preciso sobre estos casos, se realiza a continuación una inspección visual mediante diagramas de caja (boxplots) para cada variable continua.</p>
 <div class="figure"><span style="display:block;" id="fig:boxplotcontinuas"></span>
 <img src="Informe-descriptivo_files/figure-html/boxplotcontinuas-1.png" alt="Distribución de variables continuas" width="672" />
@@ -2728,9 +2708,7 @@ MntRegularProds
 Figure 5.3: Distribución de variables continuas
 </p>
 </div>
-<p>Al revisar los diagramas de caja de la Figura <a href="procesamiento.html#fig:boxplotcontinuas">5.3</a> notamos que todas las cajas de las variables de gasto que inician con <em>Mnt</em> se concentran en la parte inferior de la figura. Este comportamiento indica una fuerte acumulación de observaciones en niveles bajos de gasto, acompañada de colas superiores extendidas que reflejan consumos elevados en un grupo reducido de clientes.</p>
-<p>La única excepción parcial es <em>MntRegularProds</em>, cuyo eje se extiende ligeramente más hacia la parte inferior debido a la presencia de valores negativos previamente detectados en la Tabla <a href="procesamiento.html#tab:resumenestadistico">5.1</a>.</p>
-<p>La concentración de las cajas en la zona baja del gráfico sugiere que, la mayoría de las categorías de producto estudiadas no son consumidos de manera homogénea por la totalidad de los clientes, es decir, una proporción importante de clientes presenta gasto nulo o reducido. Esto implica que los valores identificados como atípicos no necesariamente representan anomalías, sino que más bien un subconjunto de clientes actúa como consumidor habitual o intensivo en cada categoría, aspecto que, de hecho, ayudaría mucho en la tarea de análisis y segmentación de los clientes.</p>
+<p>En la Figura <a href="procesamiento.html#fig:boxplotcontinuas">5.3</a>, todas las cajas de las variables <em>Mnt</em> se concentran en la parte inferior, reflejando una fuerte acumulación en niveles bajos de gasto con colas superiores extendidas. La excepción parcial es <em>MntRegularProds</em>, cuyo eje se extiende hacia valores negativos (previamente detectados en la Tabla <a href="procesamiento.html#tab:resumenestadistico">5.1</a>). Esta configuración indica que una proporción importante de clientes presenta gasto nulo o reducido en cada categoría, y que los valores atípicos no representan necesariamente anomalías, sino un subconjunto de consumidores intensivos relevante para la segmentación.</p>
 </div>
 </div>
 <div id="solución-de-inconsistencias" class="section level2 hasAnchor" number="5.4">
@@ -2836,21 +2814,8 @@ Figure 5.4: Distribución de Estado de Divorcio
 </tr>
 </tbody>
 </table>
-<p>Dado que en el resto de variables dummy de estado civil los valores posibles son 0 o 1, y que por definición el estado civil de cada cliente debe tomar el valor 1 en <strong>una sola</strong> de las variables indicadoras, puede concluirse que el valor 100 observado en <em>marital_Divorced</em> corresponde a un error de digitación. No existe una justificación lógica ni estructural para que esta variable adopte dicho valor dentro del esquema de codificación binaria.</p>
-<p>En consecuencia, y priorizando la integridad estructural del conjunto de datos (es decir, preservando la coherencia del sistema de variables dummy sin eliminar registros, mientras sea posible) se procede a reemplazar el valor 100 por 1.</p>
-<p>Para evaluar el impacto de esta corrección, se comparan las proporciones antes y después del ajuste.</p>
-<p>Antes de la corrección, la distribución era la siguiente:</p>
-<ul>
-<li>1826 registros con valor 0 (≈ 89.47%)</li>
-<li>209 registros con valor 1 (≈ 10.24%)</li>
-<li>6 registros con valor 100 (≈ 0.29%)</li>
-</ul>
-<p>Tras la corrección, la distribución pasa a ser:</p>
-<ul>
-<li>1826 registros con valor 0 (≈ 89.47%)</li>
-<li>215 registros con valor 1 (≈ 10.53%)</li>
-</ul>
-<p>El incremento en la proporción de clientes clasificados como divorciados es de apenas 0.29 puntos porcentuales, lo que constituye una variación mínima. Es decir, este cambio es demasiado pequeño para suponer una alteración significativa en la estructura de la variable <em>marital_Divorced</em>, de manera que, la corrección preserva la coherencia interna de las variables de estado civil sin introducir distorsiones relevantes en la distribución original.</p>
+<p>Dado que las variables dummy de estado civil solo admiten valores 0 o 1 y cada cliente debe tomar el valor 1 en exactamente una de ellas, el valor 100 en <em>marital_Divorced</em> constituye un error de digitación. Se procede a reemplazarlo por 1, preservando la integridad del sistema de variables dummy.</p>
+<p>La corrección incrementa la proporción de clientes divorciados en apenas 0.29 puntos porcentuales (de 10.24% a 10.53%), una variación mínima que preserva la estructura original de la variable sin introducir distorsiones.</p>
 </div>
 <div id="inspección-y-depuración-de-la-variable-age" class="section level3 hasAnchor" number="5.4.2">
 <h3><span class="header-section-number">5.4.2</span> Inspección y depuración de la variable <em>Age</em><a href="procesamiento.html#inspecci%C3%B3n-y-depuraci%C3%B3n-de-la-variable-age" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -2861,9 +2826,7 @@ Figure 5.4: Distribución de Estado de Divorcio
 Figure 5.5: Distribución de la variable Edad con histograma y curva de densidad
 </p>
 </div>
-<p>Tal como se observa en la Figura <a href="procesamiento.html#fig:inspedades">5.5</a>, la mayor concentración de edades se acumula aproximadamente entre los 25 y 75 años, con una distribución continua y como se podría comprobar revisando también el boxplot correspondiente en la Figura <a href="procesamiento.html#fig:boxplotdiscreta">5.2</a>, no hay indicios visuales de valores extremos en el rango superior, salvo los dos casos mencionados.</p>
-<p>Si el valor 240 correspondiera a un error de digitación, una hipótesis razonable sería que el valor correcto fuese 24. No obstante, realizar dicha sustitución implicaría introducir un supuesto no verificable, además de modificar potencialmente al menos una de las medidas descriptivas globales del conjunto de datos (mínimo, media, desviación estándar y asimetría).</p>
-<p>Dado que únicamente se trata de 2 registros sobre un total de 2041 observaciones (≈ 0.098%), y considerando la urgencia de no alterar innecesariamente los datos originales cuando no existe información adicional que permita una imputación fundamentada, se opta por eliminar dichos registros del conjunto de datos quedando con un total de 2039 registros.</p>
+<p>Como se observa en la Figura <a href="procesamiento.html#fig:inspedades">5.5</a> y en el boxplot de la Figura <a href="procesamiento.html#fig:boxplotdiscreta">5.2</a>, la distribución de edades se concentra entre los 25 y 75 años sin indicios de otros valores extremos salvo los dos registros con valor 240. Aunque podría tratarse de un error de digitación (e.g., 24), realizar dicha sustitución introduciría un supuesto no verificable. Dado que se trata de solo 2 registros (≈0.098% de 2041), se opta por eliminarlos, quedando el dataset con 2039 observaciones.</p>
 </div>
 <div id="inspección-y-depuración-de-la-variable-mntregularprods" class="section level3 hasAnchor" number="5.4.3">
 <h3><span class="header-section-number">5.4.3</span> Inspección y depuración de la variable <em>MntRegularProds</em><a href="procesamiento.html#inspecci%C3%B3n-y-depuraci%C3%B3n-de-la-variable-mntregularprods" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -2875,16 +2838,7 @@ Figure 5.5: Distribución de la variable Edad con histograma y curva de densidad
 Figure 5.6: Distribución original de MntRegularProds con histograma y curva de densidad
 </p>
 </div>
-<p>Dado que no se dispone de documentación que respalde la hipótesis de devoluciones o ajustes contables, y considerando que se cuenta con el detalle de los montos por tipo de producto, se plantea la hipótesis de que MntRegularProds podría corresponder a:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Monto total menos productos de oro</strong>.</li>
-<li><strong>Suma de productos regulares específicos (vinos, frutas, carne, pescado y dulces)</strong>.</li>
-</ol>
-<p>Para evitar decisiones arbitrarias, se calcularon ambos métodos únicamente para los registros inconsistentes y se compararon los resultados, donde la decisión metodológica se tomará según el siguiente criterio:</p>
-<ul>
-<li>Si la columna <strong>Diferencia</strong> es igual a 0 en todos los registros, se procederá a recalcular los valores inconsistentes.</li>
-<li>En caso contrario, y ante la imposibilidad de justificar el origen del error, se eliminarán los registros afectados.</li>
-</ul>
+<p>Sin documentación que respalde devoluciones o ajustes contables, se planteó la hipótesis de que <em>MntRegularProds</em> corresponde a la suma de los productos regulares (vinos, frutas, carne, pescado y dulces). Para verificarlo, se calcularon dos métodos (suma directa y monto total menos oro) sobre los tres registros inconsistentes, comparando sus resultados.</p>
 <table>
 <caption><span id="tab:tablaverificacionmntregular">Table 5.8: </span>Comparación de métodos de cálculo para registros con MntRegularProds negativo</caption>
 <thead>
@@ -2912,8 +2866,7 @@ Figure 5.6: Distribución original de MntRegularProds con histograma y curva de 
 </tr>
 </tbody>
 </table>
-<p>Los resultados presentados en la Tabla <a href="procesamiento.html#tab:tablaverificacionmntregular">5.8</a> muestran que la columna Diferencia toma valor 0 en los tres registros evaluados. Esto confirma que ambos métodos de cálculo producen exactamente el mismo resultado y, por tanto, valida la hipótesis de que la variable <em>MntRegularProds</em> corresponde a la suma de los productos regulares (excluyendo oro).</p>
-<p>En consecuencia, se optó por recalcular los valores inconsistentes, preservando así los registros originales y manteniendo la coherencia interna de las variables de gasto.</p>
+<p>La Tabla <a href="procesamiento.html#tab:tablaverificacionmntregular">5.8</a> muestra que la columna Diferencia es 0 en los tres registros, validando la hipótesis. En consecuencia, se recalcularon los valores inconsistentes preservando los registros originales.</p>
 <p>Dado que únicamente tres observaciones (3/2039) fueron modificadas, se espera que el impacto distributivo sea mínimo. A continuación, se presentan las comparaciones gráficas del dataset original y el dataset corregido .</p>
 <div class="figure"><span style="display:block;" id="fig:comparacionmntregularfinal"></span>
 <img src="Informe-descriptivo_files/figure-html/comparacionmntregularfinal-1.png" alt="Distribución comparativa de MntRegularProds antes (rosa) y después (verde) de la corrección" width="672" />
@@ -3040,7 +2993,7 @@ Figure 5.8: Gráfico de agregación: Proporción de nulos y combinaciones de co-
 Figure 5.9: Mapa de valores faltantes (Matriz de presencia espacial).
 </p>
 </div>
-<p>La revisión conjunta de las Figuras <a href="procesamiento.html#fig:aggrfaltantes">5.8</a> y <a href="procesamiento.html#fig:missingmap">5.9</a> confirma que los faltantes aparecen de forma esporádica y dispersa, sin evidencia de patrones estructurados ni bloques sistemáticos de co-ausencia; en particular, la ausencia en <em>Income</em> no se encuentra ligada a la ausencia en <em>MntWines</em>. Dado que ambas proporciones se sitúan por debajo del umbral del 5% sugerido por la literatura (Little y Rubin, 2002), se espera un impacto limitado sobre los análisis posteriores. No obstante, el tratamiento definitivo de estos datos se determinará tras la ejecución de la prueba de aleatoriedad de Little.</p>
+<p>La revisión conjunta de las Figuras <a href="procesamiento.html#fig:aggrfaltantes">5.8</a> y <a href="procesamiento.html#fig:missingmap">5.9</a> confirma que los faltantes aparecen de forma dispersa, sin patrones estructurados de co-ausencia: la ausencia en <em>Income</em> no está ligada a la de <em>MntWines</em>. Ambas proporciones se sitúan por debajo del 5% (Little y Rubin, 2002), por lo que se espera un impacto limitado sobre los análisis posteriores.</p>
 </div>
 <div id="tratamiento-de-datos-faltantes" class="section level2 hasAnchor" number="5.6">
 <h2><span class="header-section-number">5.6</span> Tratamiento de datos faltantes<a href="procesamiento.html#tratamiento-de-datos-faltantes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -3081,18 +3034,11 @@ p_valor
 <p>La Tabla <a href="procesamiento.html#tab:test-mcar">5.10</a> presenta el resultado del test de Little, cuyas hipótesis son:</p>
 <p><span class="math display">\[H_0: \text{Los datos faltantes son MCAR (completamente al azar)}\]</span>
 <span class="math display">\[H_1: \text{Los datos faltantes NO son MCAR}\]</span></p>
-<p>Dado que el p-valor = 0.0034 resulta inferior al nivel de significancia convencional (<span class="math inline">\(\alpha = 0.05\)</span>), se rechaza <span class="math inline">\(H_0\)</span>. En consecuencia, los datos no siguen un mecanismo completamente aleatorio (MCAR).</p>
-<p>Dado el bajo porcentaje de ausencia (inferior al 5% en ambas variables) y la falta de evidencia estructural que sugiera un mecanismo de tipo MNAR (Missing Not At Random), se seguirá un mecanismo MAR (Missing At Random) para realizar la imputación de los datos. Es decir, se asume que la eliminación de los registros podría inducir sesgo en el estudio, por lo que se opta por imputación múltiple según el marco de Rubin (1987).</p>
+<p>Dado el p-valor = 0.0034 &lt; 0.05, se rechaza <span class="math inline">\(H_0\)</span>: los datos no siguen un mecanismo MCAR. Ante el bajo porcentaje de ausencia (&lt;5%) y la ausencia de evidencia que sugiera MNAR, se asume un mecanismo MAR y se procede con imputación múltiple (Rubin, 1987).</p>
 </div>
 <div id="preparación-del-conjunto-de-datos-para-imputación" class="section level3 hasAnchor" number="5.6.2">
 <h3><span class="header-section-number">5.6.2</span> Preparación del conjunto de datos para imputación<a href="procesamiento.html#preparaci%C3%B3n-del-conjunto-de-datos-para-imputaci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Antes de realizar la imputación, es necesario excluir las variables que son el resultado de realizar combinaciones lineales exactas de otras ya presentes en el dataset, esto con el fin de evitar la multicolinealidad perfecta y por lo tanto que resulten matrices singulares en el algoritmo de imputación. Las variables excluidas son:</p>
-<ul>
-<li><strong>MntTotal</strong>: suma de todos los montos de gasto por categoría.</li>
-<li><strong>MntRegularProds</strong>: suma de los montos de productos regulares (vinos, frutas, cárnicos, pescado y dulces).</li>
-<li><strong>AcceptedCmpOverall</strong>: suma de las respuestas a las cinco campañas anteriores.</li>
-</ul>
-<p>Estas variables serán recalculadas a partir de sus componentes una vez completada la imputación.</p>
+<p>Antes de imputar, se excluyen las variables que son combinaciones lineales de otras (<em>MntTotal</em>, <em>MntRegularProds</em> y <em>AcceptedCmpOverall</em>) para evitar multicolinealidad perfecta en el algoritmo. Estas serán recalculadas tras la imputación.</p>
 </div>
 <div id="comparación-de-métodos-de-imputación" class="section level3 hasAnchor" number="5.6.3">
 <h3><span class="header-section-number">5.6.3</span> Comparación de métodos de imputación<a href="procesamiento.html#comparaci%C3%B3n-de-m%C3%A9todos-de-imputaci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h3>
