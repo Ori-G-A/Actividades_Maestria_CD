@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ciclo de Vida de un Proyecto de Datos</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Paleta Cálida inspirada en Beto y Enrique */
+  --bg: #120e0a;
+  --surface: #1c1510;
+  --border: #33261c;
+  --text: #fdf6e3;
+  --text-dim: #b8a694;
+  
+  --bg-primary: #0f0b07;
+  --bg-card: #1c1510;
+  --text-muted: #8c7a6b;
+  --text-secondary: #d1bfae;
+
+  /* Acentos cálidos */
+  --accent1: #FACC15; /* Amarillo Beto */
+  --accent2: #FB923C; /* Naranja Claro */
+  --accent3: #F87171; /* Rojo Suave */
+  --accent4: #F59E0B; /* Ámbar */
+  
+  /* Colores de los Nodos del Ciclo */
+  --n1-color: #FDE047; /* Amarillo muy claro */
+  --n2-color: #FBBF24; /* Amarillo Ámbar */
+  --n3-color: #F59E0B; /* Ámbar Naranja */
+  --n4-color: #EA580C; /* Naranja Oscuro */
+  --n5-color: #EF4444; /* Rojo */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.35;
+  height: 100vh;
+  overflow: hidden; 
+  display: flex;
+  justify-content: center;
+}
+
+.noise {
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1800px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5vh 2vw;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── HEADER ── */
+header {
+  text-align: center;
+  padding: 0 0 1.5vh 0;
+  flex-shrink: 0;
+}
+.tag {
+  display: inline-block;
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--accent1);
+  border: 1px solid rgba(250, 204, 21, 0.3);
+  padding: 3px 12px; border-radius: 20px;
+  margin-bottom: 6px;
+}
+h1 {
+  font-size: clamp(20px, 2.2vw, 30px);
+  font-weight: 700; letter-spacing: -1px;
+  background: linear-gradient(135deg, #fff 0%, #FACC15 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  margin-bottom: 4px;
+}
+header p { color: var(--text-dim); font-size: 13px; margin: 0 auto; max-width: 640px; }
+
+/* ── LAYOUT PRINCIPAL (3 COLUMNAS AJUSTADAS) ── */
+.main-layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr; /* Más espacio a los textos */
+  gap: 16px;
+  flex: 1;
+  min-height: 0;
+}
+
+/* ── COLUMNA 1: CICLO ── */
+.cycle-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+}
+.cycle-scale-wrapper {
+  transform: scale(1); /* Reducción para encajar bien sin superponerse */
+  transform-origin: center center;
+  width: 620px; height: 620px;
+  position: relative;
+}
+.cycle-ring { position: relative; width: 100%; height: 100%; }
+.cycle-center {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 180px; height: 180px;
+  background: radial-gradient(circle, var(--bg-card) 0%, var(--bg-primary) 100%);
+  border: 2px solid var(--border); border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 10;
+}
+.cycle-center-icon { font-size: 36px; margin-bottom: 6px; }
+.cycle-center span {
+  font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--text-muted); text-align: center;
+}
+.cycle-node {
+  position: absolute; width: 180px; text-align: center; transform: translate(-50%, -50%);
+}
+.node-circle {
+  width: 72px; height: 72px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; margin: 0 auto 8px;
+  font-size: 28px; border: 2px solid; background: rgba(255,255,255,0.03);
+}
+.node-number {
+  font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 2px;
+  color: var(--text-muted); margin-bottom: 2px;
+}
+.node-title { font-size: 13px; font-weight: 700; line-height: 1.2; }
+.node-sub { font-size: 11px; color: var(--text-secondary); margin-top: 4px; }
+
+/* Posiciones y colores de los Nodos */
+.n1 { top: 8%; left: 50%; }
+.n1 .node-circle { border-color: var(--n1-color); color: var(--n1-color); box-shadow: 0 0 20px rgba(253,224,71,0.1); }
+.n1 .node-title { color: var(--n1-color); }
+
+.n2 { top: 35%; left: 95%; }
+.n2 .node-circle { border-color: var(--n2-color); color: var(--n2-color); box-shadow: 0 0 20px rgba(251,191,36,0.1); }
+.n2 .node-title { color: var(--n2-color); }
+
+.n3 { top: 80%; left: 82%; }
+.n3 .node-circle { border-color: var(--n3-color); color: var(--n3-color); box-shadow: 0 0 20px rgba(245,158,11,0.1); }
+.n3 .node-title { color: var(--n3-color); }
+
+.n4 { top: 80%; left: 22%; }
+.n4 .node-circle { border-color: var(--n4-color); color: var(--n4-color); box-shadow: 0 0 20px rgba(234,88,12,0.1); }
+.n4 .node-title { color: var(--n4-color); }
+
+.n5 { top: 32%; left: 5%; }
+.n5 .node-circle { border-color: var(--n5-color); color: var(--n5-color); box-shadow: 0 0 20px rgba(239,68,68,0.1); }
+.n5 .node-title { color: var(--n5-color); }
+
+.cycle-svg { position: absolute; top:0; left:0; width: 100%; height: 100%; z-index: 1; }
+
+/* ── COLUMNAS 2 Y 3: TEXTOS COMPLETOS SIN SCROLL ── */
+.levels-section, .cases-section {
+  display: flex;
+  flex-direction: column;
+}
+.section-header { text-align: left; margin-bottom: 8px; }
+.section-header h2 { font-size: 16px; font-weight: 700; color: #fff; }
+
+.levels-grid, .cases-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.level-card, .case-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: center;
+}
+
+.level-badge, .case-label {
+  display: inline-block; font-size: 9px; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 6px; margin-bottom: 6px;
+  width: fit-content;
+}
+.l1 .level-badge { background: rgba(250,204,21,0.12); color: var(--n1-color); border: 1px solid rgba(250,204,21,0.2); }
+.l2 .level-badge { background: rgba(245,158,11,0.12); color: var(--n3-color); border: 1px solid rgba(245,158,11,0.2); }
+.case-a .case-label { background: rgba(251,146,60,0.12); color: var(--n4-color); border: 1px solid rgba(251,146,60,0.2); }
+.case-b .case-label { background: rgba(239,68,68,0.12); color: var(--n5-color); border: 1px solid rgba(239,68,68,0.2); }
+
+.level-card h3, .case-card h3 { font-size: 13px; font-weight: 700; margin-bottom: 4px; line-height: 1.2; color: #fff; }
+.level-card > p { color: var(--text-dim); font-size: 10.5px; margin-bottom: 8px; line-height: 1.3; }
+
+.trans-item {
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 5px 8px; border-radius: 6px;
+  background: rgba(255,255,255,0.02); margin-bottom: 4px;
+}
+.trans-icon {
+  width: 18px; height: 18px; border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: 9px; font-weight: 700;
+}
+.trans-item .t-label { font-size: 11px; font-weight: 700; line-height: 1.2; }
+.trans-item .t-desc { font-size: 9.5px; color: var(--text-dim); line-height: 1.3; margin-top: 1px; }
+
+.ps { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 6px; }
+.ps-dot {
+  width: 16px; height: 16px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: 9px; font-weight: 700; margin-top: 2px;
+}
+.case-a .ps-dot { background: rgba(251,146,60,0.15); color: var(--n4-color); }
+.case-b .ps-dot { background: rgba(239,68,68,0.15); color: var(--n5-color); }
+.ps .ps-title { font-size: 11px; font-weight: 700; margin-bottom: 1px; }
+.ps .ps-desc { font-size: 9.5px; color: var(--text-dim); line-height: 1.3; }
+
+/* Contenedor de la Imagen */
+.beto-inline {
+  margin: 6px 0; display: flex; align-items: center; gap: 10px;
+  padding: 6px 8px; background: rgba(255,255,255,0.02);
+  border-radius: 8px; border: 1px solid var(--border);
+}
+.beto-inline img {
+  width: 70px; height: 48px; object-fit: cover; border-radius: 6px; border: 1px solid var(--border);
+}
+.beto-inline-text { font-size: 9.5px; color: var(--text-dim); line-height: 1.3; }
+.beto-inline-text strong { color: var(--text); }
+.beto-lbl {
+  display: inline-block; font-size: 8.5px; font-weight: 700;
+  padding: 2px 5px; border-radius: 4px; margin-right: 3px;
+}
+.lbl-b { background: rgba(250,204,21,0.15); color: var(--n1-color); }
+.lbl-r { background: rgba(239,68,68,0.15); color: var(--n5-color); }
+
+/* ── FOOTER ── */
+footer {
+  text-align: center;
+  padding-top: 1vh;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted); font-size: 10px;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+footer .uni { font-weight: 600; color: var(--text-secondary); }
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="container">
+
+  <header>
+    <div class="tag">Taxonomía de Modelos</div>
+    <h1>Ciclo de Vida de un Proyecto de Minería de Datos</h1>
+  </header>
+
+  <div class="main-layout">
+      
+    <section class="cycle-section">
+      <div class="cycle-scale-wrapper">
+        <div class="cycle-ring">
+          <svg class="cycle-svg" viewBox="0 0 620 620">
+            <defs>
+              <marker id="arrowT" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#FDE047" opacity="0.8"/></marker>
+              <marker id="arrowB" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#FBBF24" opacity="0.8"/></marker>
+              <marker id="arrowP" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#F59E0B" opacity="0.8"/></marker>
+              <marker id="arrowO" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#EA580C" opacity="0.8"/></marker>
+              <marker id="arrowR" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#EF4444" opacity="0.8"/></marker>
+            </defs>
+            <circle cx="310" cy="310" r="230" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0" stroke-dasharray="8 6"/>
+            <path d="M 370 55 Q 510 90, 555 155" fill="none" stroke="#FBBF24" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrowB)" opacity="0.6"/>
+            <path d="M 580 300 Q 570 400, 550 420" fill="none" stroke="#F59E0B" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrowP)" opacity="0.6"/>
+            <path d="M 450 490 Q 310 550, 180 490" fill="none" stroke="#EA580C" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrowO)" opacity="0.6"/>
+            <path d="M 90 430 Q 40 370, 35 280" fill="none" stroke="#EF4444" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrowR)" opacity="0.6"/>
+            <path d="M 70 135 Q 130 70, 260 55" fill="none" stroke="#FDE047" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrowT)" opacity="0.6"/>
+          </svg>
+          <div class="cycle-center">
+            <div class="cycle-center-icon">⟳</div>
+            <span>Ciclo<br>Continuo</span>
+          </div>
+          <div class="cycle-node n1">
+            <div class="node-circle">&#128230;</div>
+            <div class="node-number">ETAPA 01</div>
+            <div class="node-title">Entrada y Preprocesamiento</div>
+            <div class="node-sub">Limpieza &middot; Preparación</div>
+          </div>
+          <div class="cycle-node n2">
+            <div class="node-circle">&#129504;</div>
+            <div class="node-number">ETAPA 02</div>
+            <div class="node-title">Entrenamiento</div>
+            <div class="node-sub">Algoritmos &middot; Modelos</div>
+          </div>
+          <div class="cycle-node n3">
+            <div class="node-circle">&#128200;</div>
+            <div class="node-number">ETAPA 03</div>
+            <div class="node-title">Validación y Evaluación</div>
+            <div class="node-sub">Métricas &middot; Pruebas</div>
+          </div>
+          <div class="cycle-node n4">
+            <div class="node-circle">&#128640;</div>
+            <div class="node-number">ETAPA 04</div>
+            <div class="node-title">Implementación y Despliegue</div>
+            <div class="node-sub">Producción &middot; Deploy</div>
+          </div>
+          <div class="cycle-node n5">
+            <div class="node-circle">&#128260;</div>
+            <div class="node-number">ETAPA 05</div>
+            <div class="node-title">Actualización Continua</div>
+            <div class="node-sub">Cierre &middot; Reinicio</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="levels-section">
+      <div class="section-header">
+        <h2>Dos Niveles de Clasificación</h2>
+      </div>
+      <div class="levels-grid">
+        <div class="level-card l1">
+          <span class="level-badge">Nivel 1 · Tareas</span>
+          <h3>¿Qué hace el modelo?</h3>
+          <p>Define la naturaleza del problema que el modelo resuelve. Cada algoritmo se ubica según su uso más frecuente.</p>
+          <div class="trans-item">
+            <div>
+              <div class="t-label" style="color:var(--n1-color)">Clasificación</div>
+              <div class="t-desc">Decision Tree, Naive Bayes, Reg. Logística, SVM, XGBoost</div>
+            </div>
+          </div>
+          <div class="trans-item">
+            <div>
+              <div class="t-label" style="color:var(--n2-color)">Regresión</div>
+              <div class="t-desc">Lineal, Polinomial, MLP</div>
+            </div>
+          </div>
+          <div class="trans-item">
+            <div>
+              <div class="t-label" style="color:var(--n3-color)">Clustering</div>
+              <div class="t-desc">K-means, DBSCAN, BIRCH</div>
+            </div>
+          </div>
+          <div class="trans-item">
+            <div>
+              <div class="t-label" style="color:var(--n4-color)">Asociación / Recomendación</div>
+              <div class="t-desc">Apriori, FP-Growth, Filtrado Colaborativo</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="level-card l2">
+          <span class="level-badge">Nivel 2 · Dominios Transversales</span>
+          <h3>¿Dónde cruzan las tareas?</h3>
+          <p>No compiten con el Nivel 1; lo <strong>cruzan</strong>. Un dominio emplea múltiples tareas.</p>
+          <div class="trans-item">
+            <div class="trans-icon" style="background:rgba(250,204,21,0.1);color:var(--n1-color);">T</div>
+            <div>
+              <div class="t-label">Minería de Textos</div>
+              <div class="t-desc">Clasificación de sentimientos (BETO, RoBERTa), clustering de documentos (TF-IDF + K-means).</div>
+            </div>
+          </div>
+          <div class="trans-item">
+            <div class="trans-icon" style="background:rgba(245,158,11,0.1);color:var(--n3-color);">S</div>
+            <div>
+              <div class="t-label">Series de Tiempo</div>
+              <div class="t-desc">Predicción con ARIMA/Prophet (regresión), detección de anomalías con LSTM (clasificación).</div>
+            </div>
+          </div>
+          <div class="trans-item">
+            <div class="trans-icon" style="background:rgba(239,68,68,0.1);color:var(--n5-color);">N</div>
+            <div>
+              <div class="t-label">Redes Neuronales</div>
+              <div class="t-desc">BETO/RoBERTa (Transformer → clasificación), MLP (regresión), Autoencoders + K-means (clustering).</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cases-section">
+      <div class="section-header">
+        <h2>Casos de Estudio</h2>
+      </div>
+      <div class="cases-grid">
+        <div class="case-card case-a">
+          <span class="case-label">Caso A · Clasificación Tabular</span>
+          <h3>Predicción de Resiliencia Académica en Zonas Afectadas por el Conflicto</h3>
+          <div class="ps">
+            <div class="ps-dot">1</div>
+            <div>
+              <div class="ps-title">Preprocesamiento</div>
+              <div class="ps-desc">1.6M+ registros ICFES. StandardScaler, OneHotEncoder, 62 variables. Undersampling 60/40 para desbalance (76% vs 24%).</div>
+            </div>
+          </div>
+          <div class="ps">
+            <div class="ps-dot">2</div>
+            <div>
+              <div class="ps-title">Modelos</div>
+              <div class="ps-desc">Reg. Logística (línea base), SVM lineal, XGBoost (grilla 48 comb., scale_pos_weight), MLP (dropout + batch norm).</div>
+            </div>
+          </div>
+          <div class="ps">
+            <div class="ps-dot">3</div>
+            <div>
+              <div class="ps-title">Evaluación</div>
+              <div class="ps-desc">AUC-ROC, Recall, Precision, F1, matrices de confusión, curvas ROC. XGBoost 60/40: AUC 0.85, F1 0.62. MLP: recall ~0.76.</div>
+            </div>
+          </div>
+          <div class="ps">
+            <div class="ps-dot">4</div>
+            <div>
+              <div class="ps-title">Despliegue</div>
+              <div class="ps-desc">Sistema predictivo para identificar estudiantes resilientes en contextos vulnerables e intervención educativa.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card case-b">
+          <span class="case-label">Caso B · NLP / Minería de Textos</span>
+          <h3>Percepción Mediática de la Reforma a la Salud en Colombia</h3>
+          <div class="ps" style="margin-bottom: 2px;">
+            <div class="ps-dot">1</div>
+            <div>
+              <div class="ps-title">Preprocesamiento</div>
+              <div class="ps-desc">Web scraping de 1 401 noticias (2022–2024). Tokenización, lematización, eliminación de stopwords/emojis. Filtro IQR → 1 362 noticias.</div>
+            </div>
+          </div>
+          <div class="ps" style="margin-bottom: 2px;">
+            <div class="ps-dot">2</div>
+            <div>
+              <div class="ps-title">Modelos</div>
+              <div class="ps-desc">Fine-tuning de BETO y RoBERTa (Transformers encoder). ChatGPT-4o como contraste. Similitud: TF-IDF, Doc2Vec, MPNet.</div>
+            </div>
+          </div>
+          
+          <div class="beto-inline">
+            <img src="unnamed (1).jpg" alt="BETO y RoBERTa (Beto y Enrique)">
+            <div class="beto-inline-text">
+              <span class="beto-lbl lbl-b">BETO</span><span class="beto-lbl lbl-r">RoBERTa</span><br>
+              Transformers encoder fine-tuneados para clasificación de sentimiento (NEG/NEU/POS).<br> <strong>BETO → F1: 0.91</strong> · <strong>RoBERTa → F1: 0.89</strong>
+            </div>
+          </div>
+
+          <div class="ps" style="margin-bottom: 2px;">
+            <div class="ps-dot">3</div>
+            <div>
+              <div class="ps-title">Evaluación</div>
+              <div class="ps-desc">Precision, Recall, F1, Accuracy por clase. Etiquetado manual del 26.43% del corpus. ChatGPT-4o como contraste: 67.3% accuracy.</div>
+            </div>
+          </div>
+          <div class="ps" style="margin-bottom: 0;">
+            <div class="ps-dot">4</div>
+            <div>
+              <div class="ps-title">Despliegue</div>
+              <div class="ps-desc">Dashboard Power BI interactivo con distribución de sentimiento por región (Andina, Caribe, Pacífica).</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <span class="uni">Pontificia Universidad Javeriana — Cali</span> · Facultad de Ingeniería y Ciencias · Ciencia de Datos · Oriana Giraldo Arcia · 2026
+  </footer>
+
+</div>
+</body>
+</html>
