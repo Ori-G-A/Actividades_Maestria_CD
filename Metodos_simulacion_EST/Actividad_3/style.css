@@ -1,0 +1,289 @@
+/* ============================================================
+   ACTIVIDAD 3 — Métodos y Simulación Estadística
+   Estilos para bookdown::html_document2
+   Consistente con el estilo de la Actividad 1
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   TABLAS — heredado de Actividad 1 + mejoras
+   ------------------------------------------------------------ */
+table {
+  width: auto;
+  min-width: 100%;
+  display: table;
+}
+
+/* Scroll horizontal en tablas anchas */
+.book .book-body .page-wrapper .page-inner section.normal table {
+  overflow-x: auto;
+  display: block;
+  width: 100%;
+}
+
+.book .book-body .page-wrapper .page-inner {
+  overflow-x: auto;
+}
+
+/* Cabecera de tabla */
+thead th {
+  background-color: #2C3E50;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-bottom: 2px solid #1A252F;
+}
+
+/* Filas alternas */
+tbody tr:nth-child(even) {
+  background-color: #F2F4F4;
+}
+
+tbody tr:hover {
+  background-color: #D6EAF8;
+  transition: background-color 0.15s ease;
+}
+
+/* Celdas */
+td, th {
+  padding: 6px 10px;
+  vertical-align: middle;
+  border-top: 1px solid #dee2e6;
+}
+
+/* Caption de tabla */
+caption {
+  caption-side: top;
+  font-size: 0.92em;
+  font-style: italic;
+  color: #555555;
+  padding-bottom: 6px;
+  text-align: left;
+}
+
+
+/* ------------------------------------------------------------
+   ENCABEZADOS DE SECCIÓN
+   ------------------------------------------------------------ */
+h1.title {
+  color: #2C3E50;
+  font-size: 2em;
+  font-weight: 700;
+  border-bottom: 3px solid #2980B9;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+h4.author, h4.date {
+  color: #666666;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+h1 {
+  color: #2C3E50;
+  font-size: 1.7em;
+  font-weight: 700;
+  border-left: 5px solid #2980B9;
+  padding-left: 12px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #1A5276;
+  font-size: 1.3em;
+  font-weight: 600;
+  border-bottom: 1px solid #AED6F1;
+  padding-bottom: 4px;
+  margin-top: 30px;
+}
+
+h3 {
+  color: #154360;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+
+/* ------------------------------------------------------------
+   BLOQUES DE CÓDIGO
+   ------------------------------------------------------------ */
+pre, code {
+  font-family: "Fira Code", "Consolas", "Courier New", monospace;
+  font-size: 0.87em;
+  background-color: #F4F6F7;
+  border: 1px solid #D5D8DC;
+  border-radius: 4px;
+}
+
+pre {
+  padding: 12px 15px;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+/* Botón "Code" (code folding) */
+.code-folding-btn {
+  background-color: #2980B9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.82em;
+  cursor: pointer;
+}
+
+.code-folding-btn:hover {
+  background-color: #1A5276;
+}
+
+
+/* ------------------------------------------------------------
+   CAJAS DE NOTA / ADVERTENCIA
+   ------------------------------------------------------------ */
+blockquote {
+  border-left: 4px solid #F39C12;
+  background-color: #FEF9E7;
+  padding: 10px 15px;
+  margin: 15px 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.95em;
+  color: #7D6608;
+}
+
+/* Caja de nota metodológica */
+.nota-metodologica {
+  border-left: 4px solid #2980B9;
+  background-color: #EBF5FB;
+  padding: 10px 15px;
+  margin: 15px 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.92em;
+  color: #1A5276;
+}
+
+
+/* ------------------------------------------------------------
+   FIGURAS Y GRÁFICOS
+   ------------------------------------------------------------ */
+.figure {
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Caption de figura */
+.caption {
+  font-size: 0.88em;
+  font-style: italic;
+  color: #555555;
+  margin-top: 6px;
+  line-height: 1.4;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* ------------------------------------------------------------
+   ECUACIONES MATEMÁTICAS
+   ------------------------------------------------------------ */
+.math.display {
+  overflow-x: auto;
+  padding: 8px 0;
+}
+
+
+/* ------------------------------------------------------------
+   TOC (Tabla de contenido flotante)
+   ------------------------------------------------------------ */
+#TOC {
+  border: 1px solid #D5D8DC;
+  border-radius: 6px;
+  padding: 10px 15px;
+  background-color: #FDFEFE;
+  font-size: 0.90em;
+}
+
+#TOC ul {
+  padding-left: 15px;
+}
+
+#TOC li a {
+  color: #2C3E50;
+  text-decoration: none;
+}
+
+#TOC li a:hover {
+  color: #2980B9;
+  text-decoration: underline;
+}
+
+/* Ítem activo del TOC */
+#TOC .active > a {
+  color: #2980B9;
+  font-weight: 600;
+}
+
+
+/* ------------------------------------------------------------
+   CUERPO GENERAL
+   ------------------------------------------------------------ */
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #2C3E50;
+  background-color: #FDFEFE;
+}
+
+/* Ancho máximo del contenido */
+.main-container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Separadores */
+hr {
+  border: none;
+  border-top: 1px solid #D5D8DC;
+  margin: 25px 0;
+}
+
+/* Texto en negrita resaltado */
+strong {
+  color: #1A252F;
+}
+
+/* Notas al pie de tabla (kableExtra) */
+.table-footnote {
+  font-size: 0.83em;
+  color: #666666;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+
+/* ------------------------------------------------------------
+   RESPONSIVE — móvil
+   ------------------------------------------------------------ */
+@media (max-width: 768px) {
+  h1 { font-size: 1.4em; }
+  h2 { font-size: 1.15em; }
+  body { font-size: 14px; }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
